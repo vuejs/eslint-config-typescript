@@ -8,8 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vue-cli.git",
-    "directory": "packages/@vue/eslint-config-typescript"
+    "url": "git+https://github.com/vuejs/eslint-config-typescript.git"
   },
   "keywords": [
     "vue",
@@ -18,9 +17,9 @@
   "author": "Evan You",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/vue-cli/issues"
+    "url": "https://github.com/vuejs/eslint-config-typescript/issues"
   },
-  "homepage": "https://github.com/vuejs/vue-cli/tree/dev/packages/@vue/eslint-config-typescript#readme",
+  "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^1.7.0",
     "@typescript-eslint/parser": "^1.7.0"
