@@ -20,8 +20,10 @@
     "url": "https://github.com/vuejs/eslint-config-typescript/issues"
   },
   "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.5.0",
-    "@typescript-eslint/parser": "^2.5.0"
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint": "^6.6.0",
+    "typescript": "*"
   }
 }
