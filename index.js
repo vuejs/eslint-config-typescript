@@ -17,10 +17,5 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/issues/46
     // And several other bugs
     // '@typescript-eslint/no-unused-vars': 'error',
-
-    // temporary fix for https://github.com/vuejs/vue-cli/issues/1922
-    // very strange as somehow this rule gets different behaviors depending
-    // on the presence of @typescript-eslint/parser...
-    'strict': 'off'
   }
 }
