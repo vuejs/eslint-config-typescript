@@ -13,9 +13,5 @@ module.exports = {
   rules: {
     // The core 'no-unused-vars' rules does not work with type definitions
     'no-unused-vars': 'off',
-    
-    // https://github.com/typescript-eslint/typescript-eslint/issues/46
-    // And several other bugs
-    // '@typescript-eslint/no-unused-vars': 'error',
   }
 }
