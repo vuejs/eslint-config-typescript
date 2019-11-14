@@ -7,6 +7,9 @@
     "index.js",
     "recommended.js"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -29,6 +32,8 @@
     "@typescript-eslint/parser": "^2.7.0",
     "eslint": "^6.6.0",
     "eslint-plugin-vue": "^6.0.1",
+    "execa": "^3.3.0",
+    "jest": "^24.9.0",
     "typescript": "^3.7.2",
     "vue": "^2.6.10",
     "vue-property-decorator": "^8.3.0"
