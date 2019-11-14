@@ -5,13 +5,22 @@ module.exports = {
   // in turn delegates to the parser, specified in `parserOptions.parser`:
   // https://github.com/vuejs/eslint-plugin-vue#what-is-the-use-the-latest-vue-eslint-parser-error
   parserOptions: {
-    parser: '@typescript-eslint/parser'
+    parser: '@typescript-eslint/parser',
+    extraFileExtensions: ['.vue'],
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   extends: [
     'plugin:@typescript-eslint/eslint-recommended'
   ],
-  rules: {
-    // The core 'no-unused-vars' rules does not work with type definitions
-    'no-unused-vars': 'off',
-  }
+  overrides: [{
+    files: ['*.ts', '*.tsx'],
+    rules: {
+      // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
+      // does not work with type definitions
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'error',
+    }
+  }]
 }

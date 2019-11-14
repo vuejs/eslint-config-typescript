@@ -1,16 +1,18 @@
 module.exports = {
-  extends: ['./index'],
+  extends: [
+    './index',
+    'plugin:@typescript-eslint/recommended'
+  ],
   
+  // the ts-eslint recommended ruleset sets the parser so we need to set it back
+  parser: 'vue-eslint-parser',
+
+  rules: {
+    // this rule, if on, would require explicit return type on the `render` function
+    '@typescript-eslint/explicit-function-return-type': 'off'
+  },
+
   overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      // the ts-eslint recommended ruleset sets the parser so we need to set it back
-      parser: 'vue-eslint-parser',
-      extends: ['plugin:@typescript-eslint/recommended'],
-      rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off'
-      }
-    },
     {
       files: ['shims-tsx.d.ts'],
       rules: {
