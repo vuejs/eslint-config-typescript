@@ -20,7 +20,6 @@ module.exports = {
       // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
       // does not work with type definitions
       'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
     }
   }]
 }
