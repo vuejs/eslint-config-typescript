@@ -17,7 +17,8 @@ async function lintProject (name) {
 }
 
 test('a default project should pass lint', async () => {
-  await lintProject('default')
+  const { stdout } = await lintProject('default')
+  expect(stdout).toEqual('')
 })
 
 test('should lint .ts file', async () => {
