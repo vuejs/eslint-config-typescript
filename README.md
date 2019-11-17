@@ -56,7 +56,7 @@ An example `.eslintrc.js`:
 module.exports = {
   extends: [
     'plugin:vue/essential',
-    'eslint:recommended',
+    '@vue/airbnb',
     '@vue/typescript/recommended',
 
     'prettier',
