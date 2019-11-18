@@ -49,19 +49,20 @@ See the [originial documentation](https://github.com/typescript-eslint/typescrip
 
 Some of its rules, however, might conflict with `prettier`.
 So when used alongside other sharable configs, this config should be placed after all other configs except for the `prettier` ones in the `extends` array.
+And make sure to also include the `@typescript-eslint` sub ruleset of the `prettier` config.
 
 An example `.eslintrc.js`:
 
 ```js
 module.exports = {
+
   extends: [
     'plugin:vue/essential',
     '@vue/airbnb',
     '@vue/typescript/recommended',
 
-    'prettier',
-    'prettier/vue',
-    'prettier/@typescript-eslint'
+    '@vue/prettier',
+    '@vue/prettier/@typescript-eslint'
   ]
 }
 ```
