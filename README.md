@@ -55,7 +55,6 @@ An example `.eslintrc.js`:
 
 ```js
 module.exports = {
-
   extends: [
     'plugin:vue/essential',
     '@vue/airbnb',
