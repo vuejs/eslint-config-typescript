@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
     './index.js',
-    'plugin:shim-typescript/recommended'
+    'plugin:@typescript-eslint/recommended'
   ],
   
   // the ts-eslint recommended ruleset sets the parser so we need to set it back

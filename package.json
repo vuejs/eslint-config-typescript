@@ -45,7 +45,6 @@
     "eslint-plugin-vue": "^5.2.3 || ^6.0.0"
   },
   "dependencies": {
-    "vue-eslint-parser": "^7.0.0",
-    "eslint-plugin-shim-typescript": "file:./@typescript-eslint/eslint-plugin"
+    "vue-eslint-parser": "^7.0.0"
   }
 }

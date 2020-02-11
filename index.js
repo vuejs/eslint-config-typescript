@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['shim-typescript'],
+  plugins: ['@typescript-eslint'],
   // Prerequisite `eslint-plugin-vue`, being extended, sets
   // root property `parser` to `'vue-eslint-parser'`, which, for code parsing,
   // in turn delegates to the parser, specified in `parserOptions.parser`:
@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   extends: [
-    'plugin:shim-typescript/eslint-recommended'
+    'plugin:@typescript-eslint/eslint-recommended'
   ],
   overrides: [{
     files: ['*.ts', '*.tsx'],
