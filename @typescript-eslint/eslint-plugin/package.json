@@ -1,0 +1,8 @@
+{
+    "name": "eslint-plugin-shim-typescript",
+    "version": "0.0.1",
+    "private": true,
+    "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.7.0"
+    }
+}

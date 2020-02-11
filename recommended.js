@@ -1,11 +1,11 @@
 module.exports = {
   extends: [
     './index.js',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:shim-typescript/recommended'
   ],
   
   // the ts-eslint recommended ruleset sets the parser so we need to set it back
-  parser: 'vue-eslint-parser',
+  parser: require.resolve('vue-eslint-parser'),
 
   rules: {
     // this rule, if on, would require explicit return type on the `render` function
