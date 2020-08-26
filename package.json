@@ -33,7 +33,7 @@
     "eslint": "^6.6.0",
     "eslint-plugin-vue": "^6.0.1",
     "execa": "^3.3.0",
-    "jest": "^24.9.0",
+    "jest": "^26.4.2",
     "typescript": "^3.7.2",
     "vue": "^2.6.10",
     "vue-property-decorator": "^8.3.0"
