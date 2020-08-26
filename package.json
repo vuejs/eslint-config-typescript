@@ -1,6 +1,6 @@
 {
   "name": "@vue/eslint-config-typescript",
-  "version": "5.0.2",
+  "version": "5.1.0",
   "description": "eslint-config-typescript for vue-cli",
   "main": "index.js",
   "files": [
