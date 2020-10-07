@@ -4,7 +4,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 
-  render() {
+  render(): JSX.Element {
     return (
       <div class="hello">
         <h1>{ this.msg }</h1>
