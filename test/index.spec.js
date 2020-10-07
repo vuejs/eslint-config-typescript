@@ -49,6 +49,5 @@ test('should not override eslint:recommended rules for normal js files', async (
   expect(stdout).toMatch('no-const-assign')
 
   // errors in .js file
-  expect(stdout).toMatch('prefer-const')
   expect(stdout).toMatch('no-undef')
 })
