@@ -30,13 +30,14 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
-    "eslint": "^6.6.0",
-    "eslint-plugin-vue": "^6.0.1",
-    "execa": "^3.3.0",
-    "jest": "^26.4.2",
-    "typescript": "^3.7.2",
-    "vue": "^2.6.10",
-    "vue-property-decorator": "^8.3.0"
+    "eslint": "^7.10.0",
+    "eslint-plugin-vue": "^7.0.1",
+    "execa": "^4.0.3",
+    "jest": "^26.5.2",
+    "typescript": "^4.0.3",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.0.2"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.4.0",
