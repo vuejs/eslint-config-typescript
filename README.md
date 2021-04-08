@@ -45,7 +45,7 @@ module.exports = {
 ### `@vue/eslint-config-typescript/recommended`
 
 This is extended from the `@typescript-eslint/recommended` ruleset, which is an **_opinionated_** ruleset.
-See the [originial documentation](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs#recommended) for more information.
+See the [original documentation](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs#recommended) for more information.
 
 Some of its rules, however, might conflict with `prettier`.
 So when used alongside other sharable configs, this config should be placed after all other configs except for the `prettier` ones in the `extends` array.
