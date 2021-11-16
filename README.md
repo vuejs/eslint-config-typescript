@@ -48,8 +48,7 @@ This is extended from the `@typescript-eslint/recommended` ruleset, which is an 
 See the [original documentation](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs#recommended) for more information.
 
 Some of its rules, however, might conflict with `prettier`.
-So when used alongside other sharable configs, this config should be placed after all other configs except for the `prettier` ones in the `extends` array.
-And make sure to also include the `@typescript-eslint` sub ruleset of the `prettier` config.
+So when used alongside other sharable configs, this config should be placed after all other configs except for the one from `eslint-plugin-prettier` in the `extends` array.
 
 An example `.eslintrc.js`:
 
@@ -60,8 +59,7 @@ module.exports = {
     '@vue/airbnb',
     '@vue/typescript/recommended',
 
-    '@vue/prettier',
-    '@vue/prettier/@typescript-eslint'
+    'plugin:prettier/recommended'
   ]
 }
 ```
