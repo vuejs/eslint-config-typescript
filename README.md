@@ -60,10 +60,14 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 module.exports = {
   extends: [
     'plugin:vue/essential',
-    '@vue/airbnb',
     '@vue/typescript/recommended',
 
     'plugin:prettier/recommended'
   ]
 }
 ```
+
+### With Other Community Configs
+
+If you are following the [`standard`](https://standardjs.com/) or [`airbnb`](https://github.com/airbnb/javascript/) style guides, don't manually extend from this package.
+Please use `@vue/eslint-config-standard-typescript` or `@vue/eslint-config-airbnb-typescript` instead.
