@@ -37,7 +37,7 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
-    '@vue/typescript'
+    '@vue/eslint-config-typescript'
   ]
 }
 ```
@@ -57,7 +57,7 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     '@vue/airbnb',
-    '@vue/typescript/recommended',
+    '@vue/eslint-config-typescript/recommended',
 
     'plugin:prettier/recommended'
   ]
