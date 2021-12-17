@@ -70,4 +70,4 @@ module.exports = {
 ### With Other Community Configs
 
 If you are following the [`standard`](https://standardjs.com/) or [`airbnb`](https://github.com/airbnb/javascript/) style guides, don't manually extend from this package.
-Please use `@vue/eslint-config-standard-typescript` or `@vue/eslint-config-airbnb-typescript` instead.
+Please use `@vue/eslint-config-standard-with-typescript` or `@vue/eslint-config-airbnb-with-typescript` instead.
