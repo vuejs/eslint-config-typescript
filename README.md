@@ -39,7 +39,7 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'eslint:recommended',
-    '@vue/typescript'
+    '@vue/eslint-config-typescript'
   ]
 }
 ```
@@ -60,7 +60,7 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 module.exports = {
   extends: [
     'plugin:vue/essential',
-    '@vue/typescript/recommended',
+    '@vue/eslint-config-typescript/recommended',
 
     'plugin:prettier/recommended'
   ]
