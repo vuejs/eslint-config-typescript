@@ -14,7 +14,7 @@ extended in the same resulting config.
 
 ## Installation
 
-In order to work around [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458), we recommend you to use this package alongside `@rushstack/eslint-patch`:
+In order to work around [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458), we recommend you to use this package alongside `@rushstack/eslint-patch`, so that you don't have to install too many dependencies:
 
 ```sh
 npm install --dev @vue/eslint-config-typescript @rushstack/eslint-patch
