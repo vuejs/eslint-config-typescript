@@ -19,7 +19,9 @@
   },
   "keywords": [
     "vue",
-    "cli"
+    "cli",
+    "eslint",
+    "typescript"
   ],
   "author": "Evan You",
   "license": "MIT",
