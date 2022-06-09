@@ -14,12 +14,21 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/eslint-recommended'
   ],
-  overrides: [{
-    files: ['*.ts', '*.tsx'],
-    rules: {
-      // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
-      // does not work with type definitions
-      'no-unused-vars': 'off',
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
+        // does not work with type definitions
+        'no-unused-vars': 'off',
+      }
+    },
+    {
+      files: ['*.vue'],
+      rules: 
+        require('@typescript-eslint/eslint-plugin/dist/configs/eslint-recommended').overrides.find(
+          (override) => override.files.includes('*.ts')
+        ).rules
     }
-  }]
+  ]
 }
