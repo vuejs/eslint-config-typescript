@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    './index.js',
+    require.resolve('./index'),
     'plugin:@typescript-eslint/recommended'
   ],
   
