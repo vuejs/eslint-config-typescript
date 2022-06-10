@@ -33,14 +33,6 @@ module.exports = {
         // does not work with type definitions
         'no-unused-vars': 'off',
       }
-    },
-    {
-      files: ['*.vue'],
-      rules: 
-        require('@typescript-eslint/eslint-plugin')
-          .configs['eslint-recommended']
-          .overrides.find((override) => override.files.includes('*.ts'))
-          .rules
     }
   ]
 }
