@@ -5,12 +5,20 @@ const eslintPath = path.resolve(__dirname, '../node_modules/.bin/eslint')
 
 async function lintProject (name) {
   const projectPath = path.resolve(__dirname, 'fixtures', name)
-  const filesToLint = path.resolve(projectPath, '**')
 
   try {
-    return await execa(eslintPath, [`${filesToLint}`], {
-      cwd: projectPath
-    })
+    return await execa(
+      eslintPath,
+      [
+        `${projectPath}/`,
+        '--ext',
+        '.vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts',
+        '--no-ignore'
+      ],
+      {
+        cwd: projectPath,
+      }
+    )
   } catch (e) {
     return e
   }
