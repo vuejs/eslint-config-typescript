@@ -27,7 +27,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '.vue'],
+      files: ['*.ts', '*.tsx', '*.vue'],
       rules: {
         // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
         // does not work with type definitions
