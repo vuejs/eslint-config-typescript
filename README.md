@@ -45,7 +45,6 @@ require("@rushstack/eslint-patch/modern-module-resolution")
 
 module.exports = {
   extends: [
-    'eslint:recommended',
     'plugin:vue/vue3-essential',
     '@vue/eslint-config-typescript'
     '@vue/eslint-config-typescript/recommended-requiring-type-checking'
@@ -55,7 +54,7 @@ module.exports = {
 
 ## Migrating from v11.x
 
-- If you extended from `@vue/eslint-config-typescript` in v11.x, you should now extend from `['@vue/eslint-config-typescript/base', '@vue/eslint-config-typescript/allow-jsx-in-vue']` instead.
+- If you extended from `@vue/eslint-config-typescript` in v11.x, you should now extend from `['@vue/eslint-config-typescript/eslint-recommended', '@vue/eslint-config-typescript/allow-jsx-in-vue']` instead.
 - If you extended from `@vue/eslint-config-typescript/recommended` in v11.x, you should now extend from `['@vue/eslint-config-typescript', '@vue/eslint-config-typescript/allow-jsx-in-vue']` instead.
 - But if you don't have any plain `<script>`, `<script lang="tsx">`, or `<script lang="jsx">` in your `.vue` files, you can omit `@vue/eslint-config-typescript/allow-jsx-in-vue` from the extends array.
 
