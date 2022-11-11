@@ -9,9 +9,13 @@ module.exports = {
     parser: {
       'js': 'espree',
       'jsx': 'espree',
+      'cjs': 'espree',
+      'mjs': 'espree',
 
       'ts': require.resolve('@typescript-eslint/parser'),
       'tsx': require.resolve('@typescript-eslint/parser'),
+      'cts': require.resolve('@typescript-eslint/parser'),
+      'mts': require.resolve('@typescript-eslint/parser'),
 
       // Leave the template parser unspecified, so that it could be determined by `<script lang="...">`
     },
@@ -27,7 +31,7 @@ module.exports = {
 
   overrides: [
     {
-      files: ['*.ts', '*.tsx', '*.vue'],
+      files: ['*.ts', '*.mts', '*.tsx', '*.vue'],
       rules: {
         // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
         // does not work with type definitions
