@@ -124,7 +124,4 @@ A workaround is to create a separate `tsconfig.eslint.json` as follows:
 ## Further Improvements
 
 - Support [ESLint Flag Config](https://eslint.org/docs/latest/user-guide/configuring/configuration-files-new).
-- It seems possible to lift the TSX/JSX restriction in `.vue` files without disabling the type-aware linting rules.
-[`@typescript-eslint/parser` allows passing `program` instance](https://github.com/typescript-eslint/typescript-eslint/tree/v5.30.7/packages/parser#parseroptionsprograms) to override any programs that would have been computed from `parserOptions.project`.
-If we provide a `program` created by [Volar](https://github.com/johnsoncodehk/volar), maybe it can have better support for `.vue` files?
-I haven't yet got the time to try it out.
+- Keep an eye on [`@volar-plugins/eslint`](https://github.com/johnsoncodehk/volar/discussions/2204) for potentially better TypeScript integrations.
