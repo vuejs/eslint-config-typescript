@@ -32,6 +32,9 @@ module.exports = {
         // The core 'no-unused-vars' rules (in the eslint:recommeded ruleset)
         // does not work with type definitions
         'no-unused-vars': 'off',
+        // TS already checks for that, and Typescript-Eslint recommends to disable it
+        // https://typescript-eslint.io/linting/troubleshooting#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+        'no-undef': 'off',
         '@typescript-eslint/no-unused-vars': 'warn'
       }
     }
