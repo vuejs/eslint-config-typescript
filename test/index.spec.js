@@ -31,24 +31,24 @@ test('a default project should pass lint', async () => {
 
 test('should lint .ts file', async () => {
   const { stdout } = await lintProject('ts')
-  expect(stdout).toMatch('@typescript-eslint/no-empty-interface')
+  expect(stdout).toMatch('@typescript-eslint/no-unused-vars')
 })
 
 test('should lint .vue file', async () => {
   const { stdout } = await lintProject('sfc')
-  expect(stdout).toMatch('@typescript-eslint/no-empty-interface')
+  expect(stdout).toMatch('@typescript-eslint/no-unused-vars')
 })
 
 test('should lint .tsx', async () => {
   const { stdout } = await lintProject('tsx')
   expect(stdout).not.toMatch('Parsing error')
-  expect(stdout).toMatch('@typescript-eslint/no-empty-interface')
+  expect(stdout).toMatch('@typescript-eslint/no-unused-vars')
 })
 
 test('should lint tsx block in .vue file', async () => {
   const { stdout } = await lintProject('tsx-in-sfc')
   expect(stdout).not.toMatch('Parsing error')
-  expect(stdout).toMatch('@typescript-eslint/no-empty-interface')
+  expect(stdout).toMatch('@typescript-eslint/no-unused-vars')
 })
 
 test('should not override eslint:recommended rules for normal js files', async () => {
