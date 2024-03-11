@@ -5,7 +5,8 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "recommended.js"
+    "recommended.js",
+    "recommended-type-checked.js"
   ],
   "scripts": {
     "test": "jest"
