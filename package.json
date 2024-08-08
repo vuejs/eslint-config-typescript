@@ -2,10 +2,10 @@
   "name": "@vue/eslint-config-typescript",
   "version": "13.0.0",
   "description": "eslint-config-typescript for vue-cli",
-  "main": "index.js",
+  "main": "index.mjs",
   "files": [
-    "index.js",
-    "recommended.js"
+    "index.mjs",
+    "recommended.mjs"
   ],
   "scripts": {
     "test": "jest"
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
   "devDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-vue": "^9.22.0",
     "execa": "^4.1.0",
     "jest": "^26.6.3",
@@ -40,7 +40,7 @@
     "vue-property-decorator": "^9.1.2"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-vue": "^9.0.0",
     "typescript": ">=4.7.4"
   },
@@ -50,8 +50,8 @@
     }
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
+    "@eslint/js": "^9.8.0",
+    "typescript-eslint": "^8.0.1",
     "vue-eslint-parser": "^9.3.1"
   },
   "engines": {
