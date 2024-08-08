@@ -11,8 +11,6 @@ async function lintProject (name) {
       eslintPath,
       [
         `${projectPath}/`,
-        '--ext',
-        '.vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts',
         '--no-ignore'
       ],
       {
