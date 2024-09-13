@@ -26,7 +26,7 @@ Please also make sure that you have `typescript` and `eslint` installed.
 
 Because of the complexity of this config, it is exported as a factory function that takes an options object and returns an ESLint configuration object.
 
-### Minimal setup
+### Minimal Setup
 
 ```js
 // eslint.config.mjs
@@ -43,7 +43,7 @@ The above configuration enables [the essential rules for Vue 3](https://eslint.v
 
 All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
 
-### Advanced setup
+### Advanced Setup
 
 ```js
 // eslint.config.mjs
