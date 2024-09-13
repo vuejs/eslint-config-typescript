@@ -54,7 +54,7 @@ export default [
   ...pluginVue.configs["flat/essential"],
 
   ...vueTsEslintConfig({
-    // Supports all the configurations in https://typescript-eslint.io/users/configs#getting-started
+    // Supports all the recommended configurations in https://typescript-eslint.io/users/configs#recommended-configurations
     extends: [
       // By default, only the recommended rules are enabled.
       "recommended",
@@ -62,6 +62,9 @@ export default [
       // "stylistic",
 
       // The ones with `-type-checked` are not yet tested.
+
+      // Other utility configurations, such as `eslint-recommended`,
+      // are also extendable here. But we don't recommend using them directly.
     ],
 
     // Optional: specify the script langs in `.vue` files
