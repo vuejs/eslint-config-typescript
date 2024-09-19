@@ -1,3 +1,4 @@
+// FIXME: migrate to Vitest
 const path = require('path')
 const execa = require('execa')
 

@@ -69,12 +69,13 @@ export default [
 
     // Optional: specify the script langs in `.vue` files
     // Defaults to `{ ts: true, js: false, tsx: false, jsx: false }`
-    scriptLang: {
+    supportedScriptLangs: {
       ts: true,
 
       // [Discouraged]
       // Set to `true` to allow plain `<script>` or `<script setup>` blocks.
       // This might result-in false positive or negatives in some rules for `.vue` files.
+      // Note you also need to configure `allowJs: true` in corresponding `tsconfig.json` files.
       js: false,
 
       // [Strongly discouraged]
