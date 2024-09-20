@@ -18,10 +18,12 @@
     }
   },
   "scripts": {
+    "dev": "pkgroll --watch",
+    "build": "pkgroll",
     "format": "prettier --write src",
     "type-check": "tsc --noEmit",
-    "test": "vitest",
-    "prepublishOnly": "pkgroll"
+    "test": "pkgroll && vitest --dir test",
+    "prepublishOnly": "pkgroll --clean-dist"
   },
   "publishConfig": {
     "access": "public"
@@ -32,7 +34,6 @@
   },
   "keywords": [
     "vue",
-    "cli",
     "create-vue",
     "create-eslint-config",
     "eslint",
@@ -53,7 +54,7 @@
     "pkgroll": "^2.5.0",
     "prettier": "^3.3.3",
     "tsx": "^4.19.1",
-    "typescript": "~5.6.2",
+    "typescript": "~5.5.4",
     "vitest": "^2.1.1",
     "vue": "^3.5.6"
   },

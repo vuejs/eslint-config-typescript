@@ -12,7 +12,8 @@ A part of its design is that this config may implicitly depend on
 other parts of `create-vue` setups, such as `eslint-plugin-vue` being
 extended in the same resulting config.
 
-> Note: the current version doesn't support the legacy `.eslintrc*` configuraion format. For that you need to use version 9 or earlier. See the [corresponding README](https://www.npmjs.com/package/@vue/eslint-config-typescript/v/legacy-eslintrc) for more usage instructions.
+> [!NOTE]
+> The current version doesn't support the legacy `.eslintrc*` configuraion format. For that you need to use version 9 or earlier. See the [corresponding README](https://www.npmjs.com/package/@vue/eslint-config-typescript/v/legacy-eslintrc) for more usage instructions.
 
 ## Installation
 
@@ -36,7 +37,7 @@ import vueTsEslintConfig from "@vue/eslint-config-typescript";
 export default [
   ...pluginVue.configs["flat/essential"],
   ...vueTsEslintConfig(),
-}]
+]
 ```
 
 The above configuration enables [the essential rules for Vue 3](https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention) and [the recommended rules for TypeScript](https://typescript-eslint.io/rules/?=recommended).
@@ -54,14 +55,15 @@ export default [
   ...pluginVue.configs["flat/essential"],
 
   ...vueTsEslintConfig({
-    // Supports all the recommended configurations in https://typescript-eslint.io/users/configs#recommended-configurations
+    // Optional: extend additional configurations from `typescript-eslint`.
+    // Supports all the configurations in https://typescript-eslint.io/users/configs#recommended-configurations
     extends: [
       // By default, only the recommended rules are enabled.
       "recommended",
       // You can also manually enable the stylistic rules.
       // "stylistic",
 
-      // The ones with `-type-checked` are not yet tested.
+      // [!NOTE] The ones with `-type-checked` are not yet tested.
 
       // Other utility configurations, such as `eslint-recommended`,
       // are also extendable here. But we don't recommend using them directly.
@@ -72,24 +74,24 @@ export default [
     supportedScriptLangs: {
       ts: true,
 
-      // [Discouraged]
+      // [!DISCOURAGED]
       // Set to `true` to allow plain `<script>` or `<script setup>` blocks.
       // This might result-in false positive or negatives in some rules for `.vue` files.
       // Note you also need to configure `allowJs: true` in corresponding `tsconfig.json` files.
       js: false,
 
-      // [Strongly discouraged]
+      // [!STRONGLY DISCOURAGED]
       // Set to `true` to allow `<script lang="tsx">` blocks.
       // This would be in conflict with all type-aware rules.
       tsx: false,
 
-      // [Strongly discouraged]
+      // [!STRONGLY DISCOURAGED]
       // Set to `true` to allow `<script lang="jsx">` blocks.
       // This would be in conflict with all type-aware rules and may result in false positives.
       jsx: false,
     },
 
-    // [Not yet implemented]
+    // [!NOT YET IMPLEMENTED]
     // <https://github.com/vuejs/eslint-plugin-vue/issues/1910#issuecomment-1819993961>
     // Optional: the root directory to resolve the `.vue` files, defaults to `process.cwd()`.
     // 

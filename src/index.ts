@@ -1,5 +1,6 @@
 import * as tseslint from 'typescript-eslint'
 import * as tseslintParser from '@typescript-eslint/parser'
+import pluginVue from 'eslint-plugin-vue'
 
 type ExtendableConfigName = keyof typeof tseslint.configs
 type ScriptLang = 'ts' | 'tsx' | 'js' | 'jsx'
@@ -19,9 +20,22 @@ export default function createConfig({
   return tseslint.config(
     ...configNamesToExtend
       .map(configName => tseslint.configs[configName])
-      .flat(),
+      .flat()
+      .map(config =>
+        config.files && config.files.includes('**/*.ts')
+          ? {
+              ...config,
+              files: [...config.files, '**/*.vue'],
+            }
+          : config,
+      ),
+
+    // Must set eslint-plugin-vue's base config again no matter whether the user
+    // has set it before. Otherwise it would be overriden by the tseslint's config.
+    ...pluginVue.configs['flat/base'],
 
     {
+      name: 'vue-typescript/setup',
       files: ['*.vue', '**/*.vue'],
       languageOptions: {
         parserOptions: {
@@ -29,8 +43,8 @@ export default function createConfig({
           extraFileExtensions: ['vue'],
           jsx: mayHaveJsx,
           // type-aware linting is in conflict with jsx syntax in `.vue` files
-          projectService: !mayHaveJsx
-        }
+          projectService: !mayHaveJsx,
+        },
       },
       rules: {
         'vue/block-lang': [
@@ -48,3 +62,4 @@ export default function createConfig({
     },
   )
 }
+

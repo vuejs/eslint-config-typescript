@@ -1,0 +1,37 @@
+{
+  "name": "with-cypress",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:e2e": "start-server-and-test preview http://localhost:4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' http://localhost:4173 'cypress open --e2e'",
+    "test:unit": "cypress run --component",
+    "test:unit:dev": "cypress open --component",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "vue": "^3.5.6"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.16.5",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/eslint-config-typescript": "workspace:*",
+    "@vue/tsconfig": "^0.5.1",
+    "cypress": "^13.14.2",
+    "eslint": "^9.10.0",
+    "eslint-plugin-cypress": "^3.5.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "npm-run-all2": "^6.2.3",
+    "start-server-and-test": "^2.0.8",
+    "typescript": "~5.5.4",
+    "vite": "^5.4.6",
+    "vue-tsc": "^2.1.6"
+  }
+}
