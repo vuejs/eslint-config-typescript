@@ -4,7 +4,7 @@ import vueTsEslintConfig from '@vue/eslint-config-typescript'
 export default [
   {
     name: 'app/files-to-lint',
-    files: ['**/*.ts', '**/*.mts', '**/*.vue'],
+    files: ['**/*.js', '**/*.mjs', '**/*.jsx', '**/*.ts', '**/*.mts', '**/*.tsx', '**/*.vue'],
     ignores: ['**/dist/**'],
   },
 

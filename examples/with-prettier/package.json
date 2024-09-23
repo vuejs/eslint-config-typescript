@@ -19,7 +19,7 @@
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.16.5",
     "@vitejs/plugin-vue": "^5.1.4",
-    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-prettier": "^10.0.0-rc.2",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^9.10.0",

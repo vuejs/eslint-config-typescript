@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-object-type, @typescript-eslint/no-unused-vars */
 import { NightwatchCustomAssertions, NightwatchCustomCommands } from 'nightwatch'
 
 declare module 'nightwatch' {

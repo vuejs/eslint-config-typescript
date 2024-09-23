@@ -1,4 +1,5 @@
 import pluginVue from 'eslint-plugin-vue'
+import pluginPlaywright from 'eslint-plugin-playwright'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
 
 export default [
@@ -10,4 +11,9 @@ export default [
 
   ...pluginVue.configs['flat/essential'],
   ...vueTsEslintConfig(),
+
+  {
+    ...pluginPlaywright.configs['flat/recommended'],
+    files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+  },
 ]
