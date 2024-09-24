@@ -2,7 +2,7 @@
   "name": "@vue/eslint-config-typescript",
   "version": "13.0.0",
   "description": "ESLint config for TypeScript + Vue.js projects",
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "type": "module",
   "files": [
     "dist"
