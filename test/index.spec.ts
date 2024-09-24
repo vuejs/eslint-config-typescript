@@ -89,7 +89,7 @@ describe('should report error on recommended rule violations in .vue files', () 
       restore()
 
       expect(failed).toBe(true)
-      expect(stdout).toContain('src/App.vue')
+      expect(stdout).toContain('App.vue')
       expect(stdout).toContain('@typescript-eslint/ban-ts-comment')
     })
   }
