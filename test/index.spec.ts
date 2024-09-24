@@ -14,7 +14,11 @@ function runLintAgainst(projectName: string) {
   const projectDir = path.join(__dirname, '../examples', projectName)
   // Use `pnpm` to avoid locating each `eslint` bin ourselves.
   // Use `--silent` to only print the output of the command, stripping the pnpm log.
-  return execa({ preferLocal: true, cwd: projectDir, reject: false })`pnpm --silent lint`
+  return execa({
+    preferLocal: true,
+    cwd: projectDir,
+    reject: false,
+  })`pnpm --silent lint`
 }
 
 function setupFileMutations(filename: string) {
@@ -55,6 +59,9 @@ describe('should pass lint without error in new projects', () => {
 })
 
 describe('should report error on recommended rule violations in .vue files', () => {
+  function appendBannedTsCommentToVueScript(oldContents: string) {
+    return oldContents.replace('</script>', '// @ts-ignore\n</script>')
+  }
   for (const projectName of [
     'minimal',
     'allow-js',
@@ -68,45 +75,106 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-playwright',
     'with-vitest',
   ]) {
-    test(projectName, async () => {
+    test(`src/App.vue in ${projectName}`, async () => {
       const appVuePath = path.join(
         __dirname,
         '../examples',
         projectName,
         'src/App.vue',
       )
-      const { modify, restore } = setupFileMutations(appVuePath)
-      
-      modify(oldContents =>
-        oldContents.replace('</script>', '// @ts-ignore\n</script>'),
-      )
 
+      const { modify, restore } = setupFileMutations(appVuePath)
+      modify(appendBannedTsCommentToVueScript)
       const { failed, stdout } = await runLintAgainst(projectName)
       restore()
 
       expect(failed).toBe(true)
-      expect(stdout).toContain(' @typescript-eslint/ban-ts-comment')
+      expect(stdout).toContain('src/App.vue')
+      expect(stdout).toContain('@typescript-eslint/ban-ts-comment')
     })
   }
 })
 
-describe.todo(
-  'should report error on recommended rule violations in other script files',
-  () => {
-    test.todo('minimal', () => {})
-    test.todo('allow-js', () => {})
+describe('should report error on recommended rule violations in other script files', () => {
+  function appendBannedTsComment(oldContents: string) {
+    return oldContents + '\n// @ts-ignore\n'
+  }
 
-    test.todo('with-tsx', () => {})
-    test.todo('with-tsx-in-vue', () => {})
-    test.todo('with-jsx', () => {})
-    test.todo('with-jsx-in-vue', () => {})
+  for (const projectName of [
+    'minimal',
+    'allow-js',
+    'with-tsx',
+    'with-tsx-in-vue',
+    'with-jsx',
+    'with-jsx-in-vue',
+    'with-prettier',
+    'with-cypress',
+    'with-nightwatch',
+    'with-playwright',
+    'with-vitest',
+  ]) {
+    test(`main.ts in ${projectName}`, async () => {
+      const mainTsPath = path.join(
+        __dirname,
+        '../examples',
+        projectName,
+        'src/main.ts',
+      )
 
-    test.todo('with-prettier', () => {})
+      const { modify, restore } = setupFileMutations(mainTsPath)
+      modify(appendBannedTsComment)
+      const { failed, stdout } = await runLintAgainst(projectName)
+      restore()
 
-    test.todo('with-cypress', () => {})
-    test.todo('with-nightwatch', () => {})
-    test.todo('with-playwright', () => {})
+      expect(failed).toBe(true)
+      expect(stdout).toContain('main.ts')
+      expect(stdout).toContain(' @typescript-eslint/ban-ts-comment')
+    })
+  }
 
-    test.todo('with-vitest', () => {})
-  },
-)
+  function appendThisAlias(oldContents: string) {
+    return (
+      oldContents +
+      `
+class Example {
+  method() {
+    const that = this;
+    console.log(that.method)
+  }
+}
+new Example()
+`
+    )
+  }
+
+  test('.js in allow-js', async () => {
+    const jsPath = path.join(__dirname, '../examples/allow-js/src/foo.js')
+    const { modify, restore } = setupFileMutations(jsPath)
+    modify(appendThisAlias)
+    const { failed, stdout } = await runLintAgainst('allow-js')
+    restore()
+
+    expect(failed).toBe(true)
+    expect(stdout).toContain('@typescript-eslint/no-this-alias')
+  })
+  test('.tsx in with-tsx', async () => {
+    const tsxPath = path.join(__dirname, '../examples/with-tsx/src/FooComp.tsx')
+    const { modify, restore } = setupFileMutations(tsxPath)
+    modify(appendThisAlias)
+    const { failed, stdout } = await runLintAgainst('with-tsx')
+    restore()
+
+    expect(failed).toBe(true)
+    expect(stdout).toContain('@typescript-eslint/no-this-alias')
+  })
+  test('.jsx in with-jsx', async () => {
+    const jsxPath = path.join(__dirname, '../examples/with-jsx/src/FooComp.jsx')
+    const { modify, restore } = setupFileMutations(jsxPath)
+    modify(appendThisAlias)
+    const { failed, stdout } = await runLintAgainst('with-jsx')
+    restore()
+
+    expect(failed).toBe(true)
+    expect(stdout).toContain('@typescript-eslint/no-this-alias')
+  })
+})
