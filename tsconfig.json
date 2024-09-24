@@ -14,6 +14,7 @@
 
 		// Allow JS files to be imported from TS and vice versa
 		"allowJs": true,
+		"checkJs": true,
 
 		// Use correct ESM import behavior
 		"esModuleInterop": true,
