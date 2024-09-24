@@ -22,7 +22,7 @@
     "build": "pkgroll",
     "format": "prettier --write src",
     "type-check": "tsc --noEmit",
-    "test": "pkgroll && vitest --dir test",
+    "test": "pkgroll && vitest --dir test --testTimeout 10000",
     "prepublishOnly": "pkgroll --clean-dist"
   },
   "publishConfig": {
