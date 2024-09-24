@@ -1,75 +1,120 @@
 # @vue/eslint-config-typescript
 
-> eslint-config-typescript for Vue
+ESLint configuration for Vue 3 + TypeScript projects.
 
 See [@typescript-eslint/eslint-plugin](https://typescript-eslint.io/rules/) for available rules.
 
-This config is specifically designed to be used by `@vue/cli` & `create-vue` setups
+This config is specifically designed to be used by `create-vue` setups
 and is not meant for outside use (it can be used but some adaptations
 on the user side might be needed - for details see the config file).
 
 A part of its design is that this config may implicitly depend on
-other parts of `@vue/cli`/`create-vue` setups, such as `eslint-plugin-vue` being
+other parts of `create-vue` setups, such as `eslint-plugin-vue` being
 extended in the same resulting config.
+
+> [!NOTE]
+> The current version doesn't support the legacy `.eslintrc*` configuraion format. For that you need to use version 13 or earlier. See the [corresponding README](https://www.npmjs.com/package/@vue/eslint-config-typescript/v/legacy-eslintrc) for more usage instructions.
 
 ## Installation
 
-In order to work around [a known limitation in ESLint](https://github.com/eslint/eslint/issues/3458), we recommend you to use this package alongside `@rushstack/eslint-patch`, so that you don't have to install too many dependencies:
-
 ```sh
-npm add --dev @vue/eslint-config-typescript @rushstack/eslint-patch
+npm add --dev @vue/eslint-config-typescript
 ```
+
+Please also make sure that you have `typescript` and `eslint` installed.
 
 ## Usage
 
-This package comes with 2 rulesets.
+Because of the complexity of this config, it is exported as a factory function that takes an options object and returns an ESLint configuration object.
 
-### `@vue/eslint-config-typescript`
-
-This ruleset is the base configuration for Vue-TypeScript projects.
-Besides setting the parser and plugin options, it also turns off several conflicting rules in the `eslint:recommended` ruleset.
-So when used alongside other sharable configs, this config should be placed at the end of the `extends` array.
-
-An example `.eslintrc.cjs`:
+### Minimal Setup
 
 ```js
-/* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution")
+// eslint.config.mjs
+import pluginVue from "eslint-plugin-vue";
+import vueTsEslintConfig from "@vue/eslint-config-typescript";
 
-module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-essential',
-    '@vue/eslint-config-typescript'
-  ]
-}
+export default [
+  ...pluginVue.configs["flat/essential"],
+  ...vueTsEslintConfig(),
+]
 ```
 
-### `@vue/eslint-config-typescript/recommended`
+The above configuration enables [the essential rules for Vue 3](https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention) and [the recommended rules for TypeScript](https://typescript-eslint.io/rules/?=recommended).
 
-This is extended from the `@typescript-eslint/recommended` ruleset, which is an **_opinionated_** ruleset.
-See the [original documentation](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin/src/configs#recommended) for more information.
+All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
 
-Some of its rules, however, might conflict with `prettier`.
-So when used alongside other sharable configs, this config should be placed after all other configs except for the one from `@vue/eslint-config-prettier` or `eslint-plugin-prettier` in the `extends` array.
-
-An example `.eslintrc.cjs`:
+### Advanced Setup
 
 ```js
-/* eslint-env node */
-require("@rushstack/eslint-patch/modern-module-resolution")
+// eslint.config.mjs
+import pluginVue from "eslint-plugin-vue";
+import vueTsEslintConfig from "@vue/eslint-config-typescript";
 
-module.exports = {
-  extends: [
-    'plugin:vue/vue3-essential',
-    '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier'
-  ]
-}
+export default [
+  ...pluginVue.configs["flat/essential"],
+
+  ...vueTsEslintConfig({
+    // Optional: extend additional configurations from `typescript-eslint`.
+    // Supports all the configurations in https://typescript-eslint.io/users/configs#recommended-configurations
+    extends: [
+      // By default, only the recommended rules are enabled.
+      "recommended",
+      // You can also manually enable the stylistic rules.
+      // "stylistic",
+
+      // [!NOTE] The ones with `-type-checked` are not yet tested.
+
+      // Other utility configurations, such as `eslint-recommended`,
+      // are also extendable here. But we don't recommend using them directly.
+    ],
+
+    // Optional: specify the script langs in `.vue` files
+    // Defaults to `{ ts: true, js: false, tsx: false, jsx: false }`
+    supportedScriptLangs: {
+      ts: true,
+
+      // [!DISCOURAGED]
+      // Set to `true` to allow plain `<script>` or `<script setup>` blocks.
+      // This might result-in false positive or negatives in some rules for `.vue` files.
+      // Note you also need to configure `allowJs: true` and `checkJs: true`
+      // in corresponding `tsconfig.json` files.
+      js: false,
+
+      // [!STRONGLY DISCOURAGED]
+      // Set to `true` to allow `<script lang="tsx">` blocks.
+      // This would be in conflict with all type-aware rules.
+      tsx: false,
+
+      // [!STRONGLY DISCOURAGED]
+      // Set to `true` to allow `<script lang="jsx">` blocks.
+      // This would be in conflict with all type-aware rules and may result in false positives.
+      jsx: false,
+    },
+
+    // [!NOT YET IMPLEMENTED]
+    // <https://github.com/vuejs/eslint-plugin-vue/issues/1910#issuecomment-1819993961>
+    // Optional: the root directory to resolve the `.vue` files, defaults to `process.cwd()`.
+    // 
+    // This is useful when you allow any other languages than `ts` in `.vue` files.
+    // Our config helper would resolve and parse all the `.vue` files under `rootDir`,
+    // and only apply the loosened rules to the files that do need them.
+    // 
+    // rootDir: __dirname,
+  })
+]
 ```
+
+## Further Reading
+
+TODO
 
 ### With Other Community Configs
 
 Work-In-Progress.
 
 ~~If you are following the [`standard`](https://standardjs.com/) or [`airbnb`](https://github.com/airbnb/javascript/) style guides, don't manually extend from this package. Please use `@vue/eslint-config-standard-with-typescript` or `@vue/eslint-config-airbnb-with-typescript` instead.~~
+
+## Migrating from `.eslintrc.cjs`
+
+TODO
