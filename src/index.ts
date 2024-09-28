@@ -39,9 +39,22 @@ export default function createConfig({
       files: ['*.vue', '**/*.vue'],
       languageOptions: {
         parserOptions: {
-          parser: tseslintParser,
+          parser: {
+            // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
+            // for better performance.
+            'js': 'espree',
+            'jsx': 'espree',
+
+            'ts': tseslintParser,
+            'tsx': tseslintParser,
+
+            // Leave the template parser unspecified,
+            // so that it could be determined by `<script lang="...">`
+          },
+          ecmaFeatures: {
+            jsx: mayHaveJsx,
+          },
           extraFileExtensions: ['vue'],
-          jsx: mayHaveJsx,
           // type-aware linting is in conflict with jsx syntax in `.vue` files
           projectService: !mayHaveJsx,
         },
