@@ -15,7 +15,37 @@ export default function createConfig({
   extends: configNamesToExtend = ['recommended'],
   supportedScriptLangs = { ts: true, tsx: false, js: false, jsx: false },
 }: ConfigOptions = {}): ConfigArray {
-  const mayHaveJsx = supportedScriptLangs.jsx || supportedScriptLangs.tsx
+  const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
+  const needsTypeAwareLinting = configNamesToExtend.some(name =>
+    name.endsWith('-type-checked'),
+  )
+
+  // Type-aware linting is in conflict with JSX syntax in `.vue` files
+  // [!NOTE TO MYSELF] There's room for improvement here.
+  // We could disable type-aware linting *only* for `.vue` files with JSX syntax.
+  // Then the following error can be changed to a warning.
+  if (needsTypeAwareLinting && mayHaveJsxInSfc) {
+    throw new Error(
+      'Type-aware linting is not supported in Vue SFCs with JSX syntax. ' +
+        'Please disable type-aware linting or set `supportedScriptLangs.jsx` ' +
+        'and `supportedScriptLangs.tsx` to `false`.',
+    )
+  }
+
+  const noProjectServiceForVue = mayHaveJsxInSfc
+  const projectServiceConfigs: ConfigArray = []
+
+  if (noProjectServiceForVue) {
+    projectServiceConfigs.push({
+      name: 'vue-typescript/project-service-for-vue',
+      files: ['*.vue', '**/*.vue'],
+      languageOptions: {
+        parserOptions: {
+          projectService: false,
+        },
+      },
+    })
+  }
 
   return tseslint.config(
     ...configNamesToExtend
@@ -42,21 +72,19 @@ export default function createConfig({
           parser: {
             // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
             // for better performance.
-            'js': 'espree',
-            'jsx': 'espree',
+            js: 'espree',
+            jsx: 'espree',
 
-            'ts': tseslintParser,
-            'tsx': tseslintParser,
+            ts: tseslintParser,
+            tsx: tseslintParser,
 
             // Leave the template parser unspecified,
             // so that it could be determined by `<script lang="...">`
           },
           ecmaFeatures: {
-            jsx: mayHaveJsx,
+            jsx: mayHaveJsxInSfc,
           },
           extraFileExtensions: ['vue'],
-          // type-aware linting is in conflict with jsx syntax in `.vue` files
-          projectService: !mayHaveJsx,
         },
       },
       rules: {
@@ -73,5 +101,7 @@ export default function createConfig({
         ],
       },
     },
+
+    ...projectServiceConfigs,
   )
 }
