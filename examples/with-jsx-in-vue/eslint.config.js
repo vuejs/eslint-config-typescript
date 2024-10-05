@@ -5,7 +5,11 @@ export default [
   {
     name: 'app/files-to-lint',
     files: ['**/*.js', '**/*.mjs', '**/*.jsx', '**/*.ts', '**/*.mts', '**/*.tsx', '**/*.vue'],
-    ignores: ['**/dist/**'],
+  },
+
+  {
+    name: 'app/files-to-ignore',
+    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
   ...pluginVue.configs['flat/essential'],
