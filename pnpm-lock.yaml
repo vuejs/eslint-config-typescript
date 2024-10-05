@@ -527,6 +527,9 @@ importers:
       '@vitejs/plugin-vue':
         specifier: ^5.1.4
         version: 5.1.4(vite@5.4.6(@types/node@20.16.5))(vue@3.5.6(typescript@5.5.4))
+      '@vitest/eslint-plugin':
+        specifier: ^1.1.6
+        version: 1.1.6(@typescript-eslint/utils@8.6.0(eslint@9.10.0)(typescript@5.5.4))(eslint@9.10.0)(typescript@5.5.4)(vitest@1.6.0(@types/node@20.16.5)(jsdom@25.0.0))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -1749,6 +1752,17 @@ packages:
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
+
+  '@vitest/eslint-plugin@1.1.6':
+    resolution: {integrity: sha512-sFuAnD9iycnOzLHHhNCULXeb6ejOSo5Lcq/ODhdlUOoUrXkQPcVeYqXurZMA3neOqf+wNCQ6YuU1zyoYH/WEcg==}
+    peerDependencies:
+      '@typescript-eslint/utils': '>= 8.0'
+      eslint: '>= 8.57.0'
+      typescript: '>= 5.0.0'
+      vitest: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   '@vitest/expect@1.6.0':
     resolution: {integrity: sha512-ixEvFVQjycy/oNgHjqsL6AZCDduC+tflRluaHIzKIsdbzkLn2U/iBnVeJwB6HsIjQBdfMR8Z0tRxKUsvFJEeWQ==}
@@ -5753,6 +5767,14 @@ snapshots:
     dependencies:
       vite: 5.4.6(@types/node@20.16.5)
       vue: 3.5.6(typescript@5.5.4)
+
+  '@vitest/eslint-plugin@1.1.6(@typescript-eslint/utils@8.6.0(eslint@9.10.0)(typescript@5.5.4))(eslint@9.10.0)(typescript@5.5.4)(vitest@1.6.0(@types/node@20.16.5)(jsdom@25.0.0))':
+    dependencies:
+      '@typescript-eslint/utils': 8.6.0(eslint@9.10.0)(typescript@5.5.4)
+      eslint: 9.10.0
+      vitest: 1.6.0(@types/node@20.16.5)(jsdom@25.0.0)
+    optionalDependencies:
+      typescript: 5.5.4
 
   '@vitest/expect@1.6.0':
     dependencies:

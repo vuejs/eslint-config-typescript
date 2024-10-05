@@ -20,6 +20,7 @@
     "@types/jsdom": "^21.1.7",
     "@types/node": "^20.16.5",
     "@vitejs/plugin-vue": "^5.1.4",
+    "@vitest/eslint-plugin": "^1.1.6",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
