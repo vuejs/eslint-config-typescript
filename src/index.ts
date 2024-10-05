@@ -17,7 +17,7 @@ export default function createConfig({
 }: ConfigOptions = {}): ConfigArray {
   const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
   const needsTypeAwareLinting = configNamesToExtend.some(name =>
-    name.endsWith('-type-checked'),
+    name.includes('TypeChecked') && name !== 'disableTypeChecked',
   )
 
   // Type-aware linting is in conflict with JSX syntax in `.vue` files
