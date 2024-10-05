@@ -12,6 +12,7 @@ export default [
   ...vueTsEslintConfig(),
 
   {
+    // nightwatch specs
     files: ['tests/e2e/**/*.{js,ts}', '**/__tests__/**/*.{js,ts}'],
     rules: {
       'no-unused-expressions': 'off',
