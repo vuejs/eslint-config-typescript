@@ -13,7 +13,7 @@ other parts of `create-vue` setups, such as `eslint-plugin-vue` being
 extended in the same resulting config.
 
 > [!NOTE]
-> The current version doesn't support the legacy `.eslintrc*` configuraion format. For that you need to use version 13 or earlier. See the [corresponding README](https://www.npmjs.com/package/@vue/eslint-config-typescript/v/legacy-eslintrc) for more usage instructions.
+> The current version doesn't support the legacy `.eslintrc*` configuration format. For that you need to use version 13 or earlier. See the [corresponding README](https://www.npmjs.com/package/@vue/eslint-config-typescript/v/legacy-eslintrc) for more usage instructions.
 
 ## Installation
 

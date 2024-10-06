@@ -61,7 +61,7 @@ export default function createConfig({
       ),
 
     // Must set eslint-plugin-vue's base config again no matter whether the user
-    // has set it before. Otherwise it would be overriden by the tseslint's config.
+    // has set it before. Otherwise it would be overridden by the tseslint's config.
     ...pluginVue.configs['flat/base'],
 
     {
