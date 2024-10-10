@@ -10,8 +10,13 @@ const WHITESPACE_ONLY = /^\s*$/
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-function runLintAgainst(projectName: string) {
-  const projectDir = path.join(__dirname, '../examples', projectName)
+const FROM_EXAMPLES = 'FROM_EXAMPLES'
+const FROM_FIXTURES = 'FROM_FIXTURES'
+type ProjectType = 'FROM_EXAMPLES' | 'FROM_FIXTURES'
+
+function runLintAgainst(projectName: string, projectType: ProjectType = FROM_EXAMPLES) {
+  const parentDir = path.join(__dirname, projectType === FROM_EXAMPLES ? '../examples' : './fixtures')
+  const projectDir = path.join(parentDir, projectName)
   // Use `pnpm` to avoid locating each `eslint` bin ourselves.
   // Use `--silent` to only print the output of the command, stripping the pnpm log.
   return execa({
@@ -177,4 +182,9 @@ new Example()
     expect(failed).toBe(true)
     expect(stdout).toContain('@typescript-eslint/no-this-alias')
   })
+})
+
+test('#87: should not error if the project root has an older version of espree installed', async () => {
+  const { stdout } = await runLintAgainst('with-older-espree', FROM_FIXTURES)
+  expect(stdout).toMatch(WHITESPACE_ONLY)
 })

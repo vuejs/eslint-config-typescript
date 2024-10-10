@@ -13,23 +13,23 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.6"
+    "vue": "^3.5.11"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.16.5",
+    "@types/node": "^20.16.11",
     "@vitejs/plugin-vue": "^5.1.4",
-    "@vitest/eslint-plugin": "^1.1.6",
+    "@vitest/eslint-plugin": "^1.1.7",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.10.0",
+    "eslint": "^9.12.0",
     "eslint-plugin-vue": "^9.28.0",
-    "jsdom": "^25.0.0",
+    "jsdom": "^25.0.1",
     "npm-run-all2": "^6.2.3",
     "typescript": "~5.5.4",
-    "vite": "^5.4.6",
+    "vite": "^5.4.8",
     "vitest": "^1.6.0",
     "vue-tsc": "^2.1.6"
   }
