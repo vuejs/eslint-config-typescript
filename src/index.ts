@@ -81,6 +81,14 @@ export default function createConfig({
             // Leave the template parser unspecified,
             // so that it could be determined by `<script lang="...">`
           },
+          // The internal espree version used by vue-eslint-parser is 9.x, which supports ES2024 at most.
+          // While the parser may try to load the latest version of espree, it's not guaranteed to work.
+          // For example, if npm accidentally hoists the older version to the top of the node_modules,
+          // or if the user installs the older version of espree at the project root,
+          // the older versions would be used.
+          // But ESLint 9 allows setting the ecmaVersion to 2025, which may cause a crash.
+          // So we set the ecmaVersion to 2024 here to avoid the potential issue.
+          ecmaVersion: 2024,
           ecmaFeatures: {
             jsx: mayHaveJsxInSfc,
           },
