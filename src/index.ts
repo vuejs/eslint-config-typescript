@@ -1,50 +1,124 @@
+import fs from 'node:fs'
+import process from 'node:process'
+
 import * as tseslint from 'typescript-eslint'
-import * as tseslintParser from '@typescript-eslint/parser'
+import vueParser from 'vue-eslint-parser'
 import pluginVue from 'eslint-plugin-vue'
+
+import fg from 'fast-glob'
 
 type ExtendableConfigName = keyof typeof tseslint.configs
 type ScriptLang = 'ts' | 'tsx' | 'js' | 'jsx'
 type ConfigOptions = {
   extends?: Array<ExtendableConfigName>
   supportedScriptLangs?: Record<ScriptLang, boolean>
+  rootDir?: string
 }
 
 type ConfigArray = ReturnType<typeof tseslint.config>
 
+// https://typescript-eslint.io/troubleshooting/typed-linting/performance#changes-to-extrafileextensions-with-projectservice
+const extraFileExtensions = ['.vue']
+
 export default function createConfig({
   extends: configNamesToExtend = ['recommended'],
   supportedScriptLangs = { ts: true, tsx: false, js: false, jsx: false },
+  rootDir = process.cwd(),
 }: ConfigOptions = {}): ConfigArray {
+  // Only `.vue` files with `<script lang="ts">` or `<script setup lang="ts">` can be type-checked.
+  const { vueFilesWithScriptTs, otherVueFiles } = fg
+    .sync(['**/*.vue'], {
+      cwd: rootDir,
+      ignore: ['**/node_modules/**'],
+    })
+    .reduce(
+      (acc, file) => {
+        const contents = fs.readFileSync(file, 'utf8')
+        // contents matches the <script lang="ts"> (there can be anything but `>` between `script` and `lang`)
+        if (/<script[^>]*\blang\s*=\s*"ts"[^>]*>/i.test(contents)) {
+          acc.vueFilesWithScriptTs.push(file)
+        } else {
+          acc.otherVueFiles.push(file)
+        }
+        return acc
+      },
+      { vueFilesWithScriptTs: [] as string[], otherVueFiles: [] as string[] },
+    )
+
+  const projectServiceConfigs: ConfigArray = [
+    {
+      name: 'vue-typescript/skip-type-checking-for-js-files',
+      files: ['**/*.js', '**/*.jsx'],
+      ...tseslint.configs.disableTypeChecked,
+    },
+    {
+      name: 'vue-typescript/skip-type-checking-for-vue-files-without-ts',
+      files: otherVueFiles,
+      ...tseslint.configs.disableTypeChecked,
+      rules: {
+        ...tseslint.configs.disableTypeChecked.rules,
+        // Although some rules don't require type information in theory,
+        // in practice, when used in vue files, they still throw errors claiming that type information is needed.
+        // (If I understand correctly, they are the rules that have called `getParserServices` in its implementation.)
+        // https://github.com/typescript-eslint/typescript-eslint/issues/4755#issuecomment-1080961338
+        '@typescript-eslint/consistent-type-imports': 'off',
+        '@typescript-eslint/prefer-optional-chain': 'off',
+      }
+    },
+  ]
+
   const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
-  const needsTypeAwareLinting = configNamesToExtend.some(name =>
-    name.includes('TypeChecked') && name !== 'disableTypeChecked',
+  const needsTypeAwareLinting = configNamesToExtend.some(
+    name =>
+      name === 'all' ||
+      (name.includes('TypeChecked') && name !== 'disableTypeChecked'),
   )
 
-  // Type-aware linting is in conflict with JSX syntax in `.vue` files
-  // [!NOTE TO MYSELF] There's room for improvement here.
-  // We could disable type-aware linting *only* for `.vue` files with JSX syntax.
-  // Then the following error can be changed to a warning.
-  if (needsTypeAwareLinting && mayHaveJsxInSfc) {
-    throw new Error(
-      'Type-aware linting is not supported in Vue SFCs with JSX syntax. ' +
-        'Please disable type-aware linting or set `supportedScriptLangs.jsx` ' +
-        'and `supportedScriptLangs.tsx` to `false`.',
-    )
-  }
-
-  const noProjectServiceForVue = mayHaveJsxInSfc
-  const projectServiceConfigs: ConfigArray = []
-
-  if (noProjectServiceForVue) {
+  if (needsTypeAwareLinting) {
     projectServiceConfigs.push({
-      name: 'vue-typescript/project-service-for-vue',
-      files: ['*.vue', '**/*.vue'],
+      name: 'vue-typescript/default-project-service-for-ts-files',
+      files: ['**/*.ts', '**/*.tsx', '**/*.mts'],
       languageOptions: {
+        parser: tseslint.parser,
         parserOptions: {
-          projectService: false,
+          projectService: true,
+          extraFileExtensions,
         },
       },
     })
+
+    projectServiceConfigs.push({
+      name: 'vue-typescript/default-project-service-for-vue-files',
+      files: vueFilesWithScriptTs,
+      languageOptions: {
+        parser: vueParser,
+        parserOptions: {
+          projectService: true,
+          parser: tseslint.parser,
+          extraFileExtensions,
+        },
+      },
+    })
+
+    // Vue's own typing inevitably contains some `any`s, so some of the `no-unsafe-*` rules can't be used.
+    projectServiceConfigs.push({
+      name: 'vue-typescript/type-aware-rules-in-conflit-with-vue',
+      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
+      rules: {
+        '@typescript-eslint/no-unsafe-argument': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+      },
+    })
+
+    if (mayHaveJsxInSfc) {
+      console.warn(
+        'Type-aware linting is not supported in Vue SFCs with JSX syntax.' +
+          'Rules that require type information are skipped in these files.',
+      )
+    }
   }
 
   return tseslint.config(
@@ -68,6 +142,7 @@ export default function createConfig({
       name: 'vue-typescript/setup',
       files: ['*.vue', '**/*.vue'],
       languageOptions: {
+        parser: vueParser,
         parserOptions: {
           parser: {
             // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
@@ -75,8 +150,8 @@ export default function createConfig({
             js: 'espree',
             jsx: 'espree',
 
-            ts: tseslintParser,
-            tsx: tseslintParser,
+            ts: tseslint.parser,
+            tsx: tseslint.parser,
 
             // Leave the template parser unspecified,
             // so that it could be determined by `<script lang="...">`
@@ -92,7 +167,7 @@ export default function createConfig({
           ecmaFeatures: {
             jsx: mayHaveJsxInSfc,
           },
-          extraFileExtensions: ['.vue'],
+          extraFileExtensions,
         },
       },
       rules: {

@@ -63,8 +63,6 @@ export default [
       // You can also manually enable the stylistic rules.
       // "stylistic",
 
-      // [!NOTE] The ones with `-type-checked` are not yet tested.
-
       // Other utility configurations, such as `eslint-recommended`,
       // are also extendable here. But we don't recommend using them directly.
     ],
@@ -92,15 +90,13 @@ export default [
       jsx: false,
     },
 
-    // [!NOT YET IMPLEMENTED]
     // <https://github.com/vuejs/eslint-plugin-vue/issues/1910#issuecomment-1819993961>
     // Optional: the root directory to resolve the `.vue` files, defaults to `process.cwd()`.
-    // 
+    // You may need to set this to the root directory of your project if you have a monorepo.
     // This is useful when you allow any other languages than `ts` in `.vue` files.
     // Our config helper would resolve and parse all the `.vue` files under `rootDir`,
     // and only apply the loosened rules to the files that do need them.
-    // 
-    // rootDir: __dirname,
+    rootDir: import.meta.dirname,
   })
 ]
 ```
