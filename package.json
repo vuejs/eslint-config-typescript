@@ -1,6 +1,6 @@
 {
   "name": "@vue/eslint-config-typescript",
-  "version": "14.0.1",
+  "version": "14.1.0",
   "description": "ESLint config for TypeScript + Vue.js projects",
   "main": "./dist/index.mjs",
   "type": "module",
