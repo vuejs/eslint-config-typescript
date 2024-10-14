@@ -101,16 +101,42 @@ export default [
 ]
 ```
 
+### Linting with Type Information
+
+Some `typescript-eslint` rules utilizes type information to provide deeper insights into your code.
+But type-checking is a much slower process than linting with only syntax information.
+It is not always easy to set up the type-checking environment for ESLint without severe performance penalties.
+
+So we don't recommend you to configure individual type-aware rules and the corresponding language options all by yourself.
+Instead, you can start by extending from the `recommendedTypeChecked` configuration and then turn on/off the rules you need.
+
+```js
+// eslint.config.mjs
+import pluginVue from "eslint-plugin-vue";
+import vueTsEslintConfig from "@vue/eslint-config-typescript";
+
+export default [
+  ...pluginVue.configs["flat/essential"],
+  ...vueTsEslintConfig({ extends: ['recommendedTypeChecked'] }),
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
+    rules: {
+      // Turn off the recommended rules that you don't need.
+      '@typescript-eslint/no-redundant-type-constituents': 'off',
+
+      // Turn on other rules that you need.
+      '@typescript-eslint/require-array-sort-compare': 'error'
+  }
+]
+```
+
 ## Further Reading
 
-TODO
+- [All the extendable configurations from `typescript-eslint`](https://typescript-eslint.io/users/configs).
+- [All the available rules from `typescript-eslint`](https://typescript-eslint.io/rules/).
 
 ### With Other Community Configs
 
 Work-In-Progress.
 
 ~~If you are following the [`standard`](https://standardjs.com/) or [`airbnb`](https://github.com/airbnb/javascript/) style guides, don't manually extend from this package. Please use `@vue/eslint-config-standard-with-typescript` or `@vue/eslint-config-airbnb-with-typescript` instead.~~
-
-## Migrating from `.eslintrc.cjs`
-
-TODO
