@@ -14,7 +14,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.11"
+    "vue": "^3.5.12"
   },
   "devDependencies": {
     "@nightwatch/vue": "^3.1.2",
@@ -26,7 +26,7 @@
     "@vue/tsconfig": "^0.5.1",
     "chromedriver": "^129.0.4",
     "eslint": "^9.12.0",
-    "eslint-plugin-vue": "^9.28.0",
+    "eslint-plugin-vue": "^9.29.0",
     "geckodriver": "^4.5.1",
     "nightwatch": "^3.8.0",
     "npm-run-all2": "^6.2.3",
