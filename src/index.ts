@@ -92,7 +92,7 @@ export default function createConfig({
           ecmaFeatures: {
             jsx: mayHaveJsxInSfc,
           },
-          extraFileExtensions: ['vue'],
+          extraFileExtensions: ['.vue'],
         },
       },
       rules: {
