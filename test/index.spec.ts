@@ -55,6 +55,7 @@ describe('should pass lint without error in new projects', () => {
     'with-nightwatch',
     'with-playwright',
     'with-vitest',
+    'type-checked',
   ]) {
     test(projectName, async () => {
       const { stdout } = await runLintAgainst(projectName)
@@ -79,6 +80,7 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-nightwatch',
     'with-playwright',
     'with-vitest',
+    'type-checked',
   ]) {
     test(`src/App.vue in ${projectName}`, async () => {
       const appVuePath = path.join(
@@ -117,6 +119,7 @@ describe('should report error on recommended rule violations in other script fil
     'with-nightwatch',
     'with-playwright',
     'with-vitest',
+    'type-checked',
   ]) {
     test(`main.ts in ${projectName}`, async () => {
       const mainTsPath = path.join(
