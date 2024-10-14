@@ -56,7 +56,8 @@ export default [
 
   ...vueTsEslintConfig({
     // Optional: extend additional configurations from `typescript-eslint`.
-    // Supports all the configurations in https://typescript-eslint.io/users/configs#recommended-configurations
+    // Supports all the configurations in
+    // https://typescript-eslint.io/users/configs#recommended-configurations
     extends: [
       // By default, only the recommended rules are enabled.
       "recommended",
