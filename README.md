@@ -63,7 +63,7 @@ export default [
       // You can also manually enable the stylistic rules.
       // "stylistic",
 
-      // Other utility configurations, such as `eslint-recommended`,
+      // Other utility configurations, such as `eslintRecommended`, (note that it's in camelCase)
       // are also extendable here. But we don't recommend using them directly.
     ],
 
