@@ -51,7 +51,10 @@ export default function createConfig({
       files: ['**/*.js', '**/*.jsx'],
       ...tseslint.configs.disableTypeChecked,
     },
-    {
+  ]
+
+  if (otherVueFiles.length > 0) {
+    projectServiceConfigs.push({
       name: 'vue-typescript/skip-type-checking-for-vue-files-without-ts',
       files: otherVueFiles,
       ...tseslint.configs.disableTypeChecked,
@@ -63,9 +66,9 @@ export default function createConfig({
         // https://github.com/typescript-eslint/typescript-eslint/issues/4755#issuecomment-1080961338
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/prefer-optional-chain': 'off',
-      }
-    },
-  ]
+      },
+    })
+  }
 
   const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
   const needsTypeAwareLinting = configNamesToExtend.some(
@@ -87,18 +90,20 @@ export default function createConfig({
       },
     })
 
-    projectServiceConfigs.push({
-      name: 'vue-typescript/default-project-service-for-vue-files',
-      files: vueFilesWithScriptTs,
-      languageOptions: {
-        parser: vueParser,
-        parserOptions: {
-          projectService: true,
-          parser: tseslint.parser,
-          extraFileExtensions,
+    if (vueFilesWithScriptTs.length > 0) {
+      projectServiceConfigs.push({
+        name: 'vue-typescript/default-project-service-for-vue-files',
+        files: vueFilesWithScriptTs,
+        languageOptions: {
+          parser: vueParser,
+          parserOptions: {
+            projectService: true,
+            parser: tseslint.parser,
+            extraFileExtensions,
+          },
         },
-      },
-    })
+      })
+    }
 
     // Vue's own typing inevitably contains some `any`s, so some of the `no-unsafe-*` rules can't be used.
     projectServiceConfigs.push({
