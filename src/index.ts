@@ -50,8 +50,11 @@ export default function createConfig({
       name: 'vue-typescript/skip-type-checking-for-js-files',
       files: ['**/*.js', '**/*.jsx'],
       ...tseslint.configs.disableTypeChecked,
-    },
-    {
+    }
+  ]
+
+  if (otherVueFiles.length) {
+    projectServiceConfigs.push({
       name: 'vue-typescript/skip-type-checking-for-vue-files-without-ts',
       files: otherVueFiles,
       ...tseslint.configs.disableTypeChecked,
@@ -64,8 +67,8 @@ export default function createConfig({
         '@typescript-eslint/consistent-type-imports': 'off',
         '@typescript-eslint/prefer-optional-chain': 'off',
       }
-    },
-  ]
+    });
+  }
 
   const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
   const needsTypeAwareLinting = configNamesToExtend.some(
