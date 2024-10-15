@@ -111,6 +111,8 @@ It is not always easy to set up the type-checking environment for ESLint without
 So we don't recommend you to configure individual type-aware rules and the corresponding language options all by yourself.
 Instead, you can start by extending from the `recommendedTypeChecked` configuration and then turn on/off the rules you need.
 
+As of now, all the rules you need to turn on must appear *before* calling `...vueTsEslintConfig({ extends: ['recommendedTypeChecked'] })`, and all the rules you need to turn off must appear *after* calling it.
+
 ```js
 // eslint.config.mjs
 import pluginVue from "eslint-plugin-vue";
@@ -118,15 +120,20 @@ import vueTsEslintConfig from "@vue/eslint-config-typescript";
 
 export default [
   ...pluginVue.configs["flat/essential"],
+
+  {
+    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
+    rules: {
+      // Turn on other rules that you need.
+      '@typescript-eslint/require-array-sort-compare': 'error'
+    }
+  },
   ...vueTsEslintConfig({ extends: ['recommendedTypeChecked'] }),
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
     rules: {
       // Turn off the recommended rules that you don't need.
       '@typescript-eslint/no-redundant-type-constituents': 'off',
-
-      // Turn on other rules that you need.
-      '@typescript-eslint/require-array-sort-compare': 'error'
   }
 ]
 ```
