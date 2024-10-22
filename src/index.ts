@@ -70,6 +70,25 @@ export default function createConfig({
     })
   }
 
+  // More meaningful error message for the user, in case they didn't know the correct config name.
+  for (const name of configNamesToExtend) {
+    if (!tseslint.configs[name]) {
+      const nameInCamelCase = name.replace(/-([a-z])/g, (_, letter) =>
+        letter.toUpperCase(),
+      )
+
+      // @ts-expect-error
+      if (tseslint.configs[nameInCamelCase]) {
+        throw new Error(
+          `The config name "${name}" is not supported in "extends". ` +
+            `Please use "${nameInCamelCase}" instead.`,
+        )
+      }
+
+      throw new Error(`Unknown config name in "extends": ${name}.`)
+    }
+  }
+
   const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
   const needsTypeAwareLinting = configNamesToExtend.some(
     name =>

@@ -191,3 +191,14 @@ test('#87: should not error if the project root has an older version of espree i
   const { stdout } = await runLintAgainst('with-older-espree', FROM_FIXTURES)
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
+
+test('should guide user to use camelCase names in "extends"', async () => {
+  const eslintConfigPath = path.join(__dirname, '../examples/type-checked/eslint.config.js')
+  const { modify, restore } = setupFileMutations(eslintConfigPath)
+  modify((oldContents) => oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'))
+  const { failed, stderr } = await runLintAgainst('type-checked')
+  restore()
+
+  expect(failed).toBe(true)
+  expect(stderr).contain('Please use "recommendedTypeChecked"')
+})
