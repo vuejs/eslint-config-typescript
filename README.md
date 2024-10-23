@@ -134,6 +134,7 @@ export default [
     rules: {
       // Turn off the recommended rules that you don't need.
       '@typescript-eslint/no-redundant-type-constituents': 'off',
+    }
   }
 ]
 ```
