@@ -48,7 +48,7 @@ export default function createConfig({
   const projectServiceConfigs: ConfigArray = [
     {
       name: 'vue-typescript/skip-type-checking-for-js-files',
-      files: ['**/*.js', '**/*.jsx'],
+      files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
       ...tseslint.configs.disableTypeChecked,
     },
   ]
