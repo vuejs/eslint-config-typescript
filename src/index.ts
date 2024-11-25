@@ -56,7 +56,7 @@ export default function createConfig({
   if (otherVueFiles.length > 0) {
     projectServiceConfigs.push({
       name: 'vue-typescript/skip-type-checking-for-vue-files-without-ts',
-      files: otherVueFiles,
+      files: otherVueFiles.map(escapePathForGlob),
       ...tseslint.configs.disableTypeChecked,
       rules: {
         ...tseslint.configs.disableTypeChecked.rules,
@@ -112,7 +112,7 @@ export default function createConfig({
     if (vueFilesWithScriptTs.length > 0) {
       projectServiceConfigs.push({
         name: 'vue-typescript/default-project-service-for-vue-files',
-        files: vueFilesWithScriptTs,
+        files: vueFilesWithScriptTs.map(escapePathForGlob),
         languageOptions: {
           parser: vueParser,
           parserOptions: {
@@ -211,4 +211,14 @@ export default function createConfig({
 
     ...projectServiceConfigs,
   )
+}
+
+// Note that ESLint uses minimatch while we use fast-glob (which uses micromatch underlyingly). They differ on how to handle backslashes.
+// <https://github.com/micromatch/micromatch#backslashes>
+// Here we use `[]` to escape the special characters in the glob pattern.
+// This should work with any glob implementation.
+// Inspired by CPython's `glob.escape` function.
+// <https://github.com/python/cpython/blob/f0c47ea22e0980b4ff9683430b60c418a813021e/Lib/glob.py#L249-L259>
+function escapePathForGlob(path: string) {
+  return path.replace(/([*?{}[\]()])/g, '[$1]')
 }

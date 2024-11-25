@@ -192,6 +192,11 @@ test('#87: should not error if the project root has an older version of espree i
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
 
+test('#102: should set configs correctly for paths with glob-like syntax (e.g. file-based-routing patterns)', async () => {
+  const { stdout } = await runLintAgainst('file-based-routing', FROM_FIXTURES)
+  expect(stdout).toMatch(WHITESPACE_ONLY)
+})
+
 test('should guide user to use camelCase names in "extends"', async () => {
   const eslintConfigPath = path.join(__dirname, '../examples/type-checked/eslint.config.js')
   const { modify, restore } = setupFileMutations(eslintConfigPath)
