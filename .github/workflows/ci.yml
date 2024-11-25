@@ -29,7 +29,7 @@ jobs:
           submodules: 'recursive'
       - uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
