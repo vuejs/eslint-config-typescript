@@ -30,6 +30,7 @@ export default function createConfig({
     .sync(['**/*.vue'], {
       cwd: rootDir,
       ignore: ['**/node_modules/**'],
+      absolute: true
     })
     .reduce(
       (acc, file) => {
