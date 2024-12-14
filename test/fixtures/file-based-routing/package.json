@@ -13,16 +13,16 @@
   },
   "dependencies": {
     "vue": "^3.5.13",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
-    "@types/node": "^22.9.3",
+    "@types/node": "^22.10.2",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.5.1",
-    "eslint": "^9.15.0",
-    "eslint-plugin-vue": "^9.31.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-vue": "^9.32.0",
     "npm-run-all2": "^7.0.1",
     "typescript": "~5.6.3",
     "unplugin-vue-router": "^0.10.8",
