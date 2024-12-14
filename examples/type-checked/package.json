@@ -16,33 +16,33 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "pinia": "^2.2.6",
+    "pinia": "^2.3.0",
     "vue": "^3.5.13",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^20.17.7",
+    "@types/node": "^20.17.10",
     "@vitejs/plugin-vue": "^5.2.0",
     "@vitejs/plugin-vue-jsx": "^4.1.0",
-    "@vitest/eslint-plugin": "1.1.7",
+    "@vitest/eslint-plugin": "1.1.16",
     "@vue/eslint-config-prettier": "^10.1.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.5.1",
-    "cypress": "^13.16.0",
-    "eslint": "^9.15.0",
+    "cypress": "^13.16.1",
+    "eslint": "^9.17.0",
     "eslint-plugin-cypress": "^3.6.0",
-    "eslint-plugin-vue": "^9.31.0",
+    "eslint-plugin-vue": "^9.32.0",
     "jsdom": "^25.0.1",
     "npm-run-all2": "^6.2.6",
-    "prettier": "^3.3.3",
-    "start-server-and-test": "^2.0.8",
+    "prettier": "^3.4.2",
+    "start-server-and-test": "^2.0.9",
     "typescript": "~5.5.4",
     "vite": "^5.4.11",
     "vite-plugin-vue-devtools": "^7.6.4",
-    "vitest": "^2.1.5",
+    "vitest": "^2.1.8",
     "vue-tsc": "^2.1.10"
   }
 }
