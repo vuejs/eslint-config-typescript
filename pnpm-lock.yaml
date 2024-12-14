@@ -56,7 +56,7 @@ importers:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -66,7 +66,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -83,20 +83,20 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/minimal:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -106,7 +106,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -123,26 +123,26 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/type-checked:
     dependencies:
       pinia:
         specifier: ^2.3.0
-        version: 2.3.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
       vue-router:
         specifier: ^4.5.0
-        version: 4.5.0(vue@3.5.13(typescript@5.5.4))
+        version: 4.5.0(vue@3.5.13(typescript@5.6.3))
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -155,13 +155,13 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx':
         specifier: ^4.1.0
-        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitest/eslint-plugin':
         specifier: 1.1.16
-        version: 1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@2.1.8(@types/node@20.17.10)(jsdom@25.0.1))
+        version: 1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@20.17.10)(jsdom@25.0.1))
       '@vue/eslint-config-prettier':
         specifier: ^10.1.0
         version: 10.1.0(eslint@9.17.0)(prettier@3.4.2)
@@ -199,26 +199,26 @@ importers:
         specifier: ^2.0.9
         version: 2.0.9
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vite-plugin-vue-devtools:
         specifier: ^7.6.4
-        version: 7.6.4(rollup@4.27.4)(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 7.6.4(rollup@4.27.4)(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@20.17.10)(jsdom@25.0.1)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-cypress:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -228,7 +228,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -254,20 +254,20 @@ importers:
         specifier: ^2.0.9
         version: 2.0.9
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-jsx:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -277,10 +277,10 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx':
         specifier: ^4.1.0
-        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -297,20 +297,20 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-jsx-in-vue:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -320,10 +320,10 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx':
         specifier: ^4.1.0
-        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -340,24 +340,24 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-nightwatch:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@nightwatch/vue':
         specifier: ^3.1.2
-        version: 3.1.2(@types/node@20.17.10)(vue@3.5.13(typescript@5.5.4))
+        version: 3.1.2(@types/node@20.17.10)(vue@3.5.13(typescript@5.6.3))
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -366,7 +366,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -396,10 +396,10 @@ importers:
         version: 6.2.6
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.17.10)(typescript@5.5.4)
+        version: 10.9.2(@types/node@20.17.10)(typescript@5.6.3)
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
@@ -408,13 +408,13 @@ importers:
         version: 0.4.6
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-playwright:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@playwright/test':
         specifier: ^1.49.1
@@ -427,7 +427,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -447,20 +447,20 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-prettier:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -470,7 +470,7 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-prettier':
         specifier: ^10.1.0
         version: 10.1.0(eslint@9.17.0)(prettier@3.4.2)
@@ -493,20 +493,20 @@ importers:
         specifier: ^3.4.2
         version: 3.4.2
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-tsx:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -516,10 +516,10 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx':
         specifier: ^4.1.0
-        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -536,20 +536,20 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-tsx-in-vue:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -559,10 +559,10 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitejs/plugin-vue-jsx':
         specifier: ^4.1.0
-        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -579,20 +579,20 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   examples/with-vitest:
     dependencies:
       vue:
         specifier: ^3.5.13
-        version: 3.5.13(typescript@5.5.4)
+        version: 3.5.13(typescript@5.6.3)
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.4
@@ -605,10 +605,10 @@ importers:
         version: 20.17.10
       '@vitejs/plugin-vue':
         specifier: ^5.2.0
-        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+        version: 5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vitest/eslint-plugin':
         specifier: ^1.1.16
-        version: 1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@1.6.0(@types/node@20.17.10)(jsdom@25.0.1))
+        version: 1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@1.6.0(@types/node@20.17.10)(jsdom@25.0.1))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -631,8 +631,8 @@ importers:
         specifier: ^6.2.6
         version: 6.2.6
       typescript:
-        specifier: ~5.5.4
-        version: 5.5.4
+        specifier: ~5.6.3
+        version: 5.6.3
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@20.17.10)
@@ -641,7 +641,7 @@ importers:
         version: 1.6.0(@types/node@20.17.10)(jsdom@25.0.1)
       vue-tsc:
         specifier: ^2.1.10
-        version: 2.1.10(typescript@5.5.4)
+        version: 2.1.10(typescript@5.6.3)
 
   test/fixtures/file-based-routing:
     dependencies:
@@ -5793,10 +5793,10 @@ snapshots:
     dependencies:
       archiver: 5.3.2
 
-  '@nightwatch/vue@3.1.2(@types/node@20.17.10)(vue@3.5.13(typescript@5.5.4))':
+  '@nightwatch/vue@3.1.2(@types/node@20.17.10)(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@nightwatch/esbuild-utils': 0.2.1
-      '@vitejs/plugin-vue': 4.6.2(vite@4.5.5(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+      '@vitejs/plugin-vue': 4.6.2(vite@4.5.5(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       get-port: 5.1.1
       vite: 4.5.5(@types/node@20.17.10)
       vite-plugin-nightwatch: 0.4.6
@@ -6100,20 +6100,6 @@ snapshots:
 
   '@typescript-eslint/types@8.18.0': {}
 
-  '@typescript-eslint/typescript-estree@8.18.0(typescript@5.5.4)':
-    dependencies:
-      '@typescript-eslint/types': 8.18.0
-      '@typescript-eslint/visitor-keys': 8.18.0
-      debug: 4.3.7(supports-color@8.1.1)
-      fast-glob: 3.3.2
-      is-glob: 4.0.3
-      minimatch: 9.0.5
-      semver: 7.6.3
-      ts-api-utils: 1.4.1(typescript@5.5.4)
-      typescript: 5.5.4
-    transitivePeerDependencies:
-      - supports-color
-
   '@typescript-eslint/typescript-estree@8.18.0(typescript@5.6.3)':
     dependencies:
       '@typescript-eslint/types': 8.18.0
@@ -6125,17 +6111,6 @@ snapshots:
       semver: 7.6.3
       ts-api-utils: 1.4.1(typescript@5.6.3)
       typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
-  '@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.5.4)':
-    dependencies:
-      '@eslint-community/eslint-utils': 4.4.1(eslint@9.17.0)
-      '@typescript-eslint/scope-manager': 8.18.0
-      '@typescript-eslint/types': 8.18.0
-      '@typescript-eslint/typescript-estree': 8.18.0(typescript@5.5.4)
-      eslint: 9.17.0
-      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -6155,25 +6130,25 @@ snapshots:
       '@typescript-eslint/types': 8.18.0
       eslint-visitor-keys: 4.2.0
 
-  '@vitejs/plugin-vue-jsx@4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))':
+  '@vitejs/plugin-vue-jsx@4.1.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-typescript': 7.25.9(@babel/core@7.26.0)
       '@vue/babel-plugin-jsx': 1.2.5(@babel/core@7.26.0)
       vite: 5.4.11(@types/node@20.17.10)
-      vue: 3.5.13(typescript@5.5.4)
+      vue: 3.5.13(typescript@5.6.3)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@4.6.2(vite@4.5.5(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))':
+  '@vitejs/plugin-vue@4.6.2(vite@4.5.5(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       vite: 4.5.5(@types/node@20.17.10)
-      vue: 3.5.13(typescript@5.5.4)
+      vue: 3.5.13(typescript@5.6.3)
 
-  '@vitejs/plugin-vue@5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))':
+  '@vitejs/plugin-vue@5.2.0(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       vite: 5.4.11(@types/node@20.17.10)
-      vue: 3.5.13(typescript@5.5.4)
+      vue: 3.5.13(typescript@5.6.3)
 
   '@vitejs/plugin-vue@5.2.0(vite@5.4.11(@types/node@20.17.7))(vue@3.5.13(typescript@5.5.4))':
     dependencies:
@@ -6185,20 +6160,20 @@ snapshots:
       vite: 5.4.11(@types/node@22.10.2)
       vue: 3.5.13(typescript@5.6.3)
 
-  '@vitest/eslint-plugin@1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@1.6.0(@types/node@20.17.10)(jsdom@25.0.1))':
+  '@vitest/eslint-plugin@1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@1.6.0(@types/node@20.17.10)(jsdom@25.0.1))':
     dependencies:
-      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0)(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0)(typescript@5.6.3)
       eslint: 9.17.0
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.3
       vitest: 1.6.0(@types/node@20.17.10)(jsdom@25.0.1)
 
-  '@vitest/eslint-plugin@1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@2.1.8(@types/node@20.17.10)(jsdom@25.0.1))':
+  '@vitest/eslint-plugin@1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@20.17.10)(jsdom@25.0.1))':
     dependencies:
-      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0)(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.18.0(eslint@9.17.0)(typescript@5.6.3)
       eslint: 9.17.0
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.3
       vitest: 2.1.8(@types/node@20.17.10)(jsdom@25.0.1)
 
   '@vitest/expect@1.6.0':
@@ -6370,7 +6345,7 @@ snapshots:
 
   '@vue/devtools-api@6.6.4': {}
 
-  '@vue/devtools-core@7.6.4(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))':
+  '@vue/devtools-core@7.6.4(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))':
     dependencies:
       '@vue/devtools-kit': 7.6.4
       '@vue/devtools-shared': 7.6.4
@@ -6378,7 +6353,7 @@ snapshots:
       nanoid: 3.3.7
       pathe: 1.1.2
       vite-hot-client: 0.2.3(vite@5.4.11(@types/node@20.17.10))
-      vue: 3.5.13(typescript@5.5.4)
+      vue: 3.5.13(typescript@5.6.3)
     transitivePeerDependencies:
       - vite
 
@@ -8740,13 +8715,13 @@ snapshots:
 
   pify@2.3.0: {}
 
-  pinia@2.3.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4)):
+  pinia@2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@vue/devtools-api': 6.6.4
-      vue: 3.5.13(typescript@5.5.4)
-      vue-demi: 0.14.10(vue@3.5.13(typescript@5.5.4))
+      vue: 3.5.13(typescript@5.6.3)
+      vue-demi: 0.14.10(vue@3.5.13(typescript@5.6.3))
     optionalDependencies:
-      typescript: 5.5.4
+      typescript: 5.6.3
     transitivePeerDependencies:
       - '@vue/composition-api'
 
@@ -9298,15 +9273,11 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  ts-api-utils@1.4.1(typescript@5.5.4):
-    dependencies:
-      typescript: 5.5.4
-
   ts-api-utils@1.4.1(typescript@5.6.3):
     dependencies:
       typescript: 5.6.3
 
-  ts-node@10.9.2(@types/node@20.17.10)(typescript@5.5.4):
+  ts-node@10.9.2(@types/node@20.17.10)(typescript@5.6.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
@@ -9320,7 +9291,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.5.4
+      typescript: 5.6.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -9543,9 +9514,9 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  vite-plugin-vue-devtools@7.6.4(rollup@4.27.4)(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4)):
+  vite-plugin-vue-devtools@7.6.4(rollup@4.27.4)(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3)):
     dependencies:
-      '@vue/devtools-core': 7.6.4(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.5.4))
+      '@vue/devtools-core': 7.6.4(vite@5.4.11(@types/node@20.17.10))(vue@3.5.13(typescript@5.6.3))
       '@vue/devtools-kit': 7.6.4
       '@vue/devtools-shared': 7.6.4
       execa: 8.0.1
@@ -9752,9 +9723,9 @@ snapshots:
 
   vue-component-type-helpers@2.1.10: {}
 
-  vue-demi@0.14.10(vue@3.5.13(typescript@5.5.4)):
+  vue-demi@0.14.10(vue@3.5.13(typescript@5.6.3)):
     dependencies:
-      vue: 3.5.13(typescript@5.5.4)
+      vue: 3.5.13(typescript@5.6.3)
 
   vue-eslint-parser@9.4.3(eslint@9.15.0):
     dependencies:
@@ -9781,11 +9752,6 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
-
-  vue-router@4.5.0(vue@3.5.13(typescript@5.5.4)):
-    dependencies:
-      '@vue/devtools-api': 6.6.4
-      vue: 3.5.13(typescript@5.5.4)
 
   vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)):
     dependencies:

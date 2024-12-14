@@ -31,7 +31,7 @@
     "nightwatch": "^3.9.0",
     "npm-run-all2": "^6.2.6",
     "ts-node": "^10.9.2",
-    "typescript": "~5.5.4",
+    "typescript": "~5.6.3",
     "vite": "^5.4.11",
     "vite-plugin-nightwatch": "^0.4.6",
     "vue-tsc": "^2.1.10"
