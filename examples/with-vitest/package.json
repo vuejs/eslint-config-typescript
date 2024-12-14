@@ -23,7 +23,7 @@
     "@vitest/eslint-plugin": "^1.1.16",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
-    "@vue/tsconfig": "^0.5.1",
+    "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.17.0",
     "eslint-plugin-vue": "^9.32.0",
     "jsdom": "^25.0.1",
