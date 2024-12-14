@@ -72,7 +72,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -112,7 +112,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -173,7 +173,7 @@ importers:
         version: 2.4.6
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       cypress:
         specifier: ^13.16.1
         version: 13.16.1
@@ -234,7 +234,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       cypress:
         specifier: ^13.16.1
         version: 13.16.1
@@ -286,7 +286,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -329,7 +329,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -375,7 +375,7 @@ importers:
         version: 2.4.6
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       chromedriver:
         specifier: ^129.0.4
         version: 129.0.4
@@ -433,7 +433,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -479,7 +479,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -525,7 +525,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -568,7 +568,7 @@ importers:
         version: link:../..
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -617,7 +617,7 @@ importers:
         version: 2.4.6
       '@vue/tsconfig':
         specifier: ^0.7.0
-        version: 0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -680,8 +680,8 @@ importers:
         specifier: ~5.6.3
         version: 5.6.3
       unplugin-vue-router:
-        specifier: ^0.10.8
-        version: 0.10.8(rollup@4.27.4)(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
+        specifier: ^0.10.9
+        version: 0.10.9(rollup@4.27.4)(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3))
       vite:
         specifier: ^5.4.11
         version: 5.4.11(@types/node@22.10.2)
@@ -3804,6 +3804,9 @@ packages:
   magic-string@0.30.13:
     resolution: {integrity: sha512-8rYBO+MsWkgjDSOvLomYnzhdwEG51olQ4zL5KXnNJWV5MNmrb4rTZdrtkhxjnD/QyZUqR/Z/XDsUs/4ej2nx0g==}
 
+  magic-string@0.30.15:
+    resolution: {integrity: sha512-zXeaYRgZ6ldS1RJJUrMrYgNJ4fdwnyI6tVqoiIhyCyv5IVTK9BU8Ic2l253GGETQHxI4HNUwhJ3fjDhKqEoaAw==}
+
   make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
 
@@ -4748,17 +4751,17 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  unplugin-vue-router@0.10.8:
-    resolution: {integrity: sha512-xi+eLweYAqolIoTRSmumbi6Yx0z5M0PLvl+NFNVWHJgmE2ByJG1SZbrn+TqyuDtIyln20KKgq8tqmL7aLoiFjw==}
+  unplugin-vue-router@0.10.9:
+    resolution: {integrity: sha512-DXmC0GMcROOnCmN56GRvi1bkkG1BnVs4xJqNvucBUeZkmB245URvtxOfbo3H6q4SOUQQbLPYWd6InzvjRh363A==}
     peerDependencies:
       vue-router: ^4.4.0
     peerDependenciesMeta:
       vue-router:
         optional: true
 
-  unplugin@1.16.0:
-    resolution: {integrity: sha512-5liCNPuJW8dqh3+DM6uNM2EI3MLLpCKp/KY+9pB5M2S2SR2qvvDHhKgBOaTWEbZTAws3CXfB0rKTIolWKL05VQ==}
-    engines: {node: '>=14.0.0'}
+  unplugin@2.0.0-beta.1:
+    resolution: {integrity: sha512-2qzQo5LN2DmUZXkWDHvGKLF5BP0WN+KthD6aPnPJ8plRBIjv4lh5O07eYcSxgO2znNw9s4MNhEO1sB+JDllDbQ==}
+    engines: {node: '>=18.12.0'}
 
   untildify@4.0.0:
     resolution: {integrity: sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==}
@@ -6454,11 +6457,6 @@ snapshots:
       vue-component-type-helpers: 2.1.10
 
   '@vue/tsconfig@0.5.1': {}
-
-  '@vue/tsconfig@0.7.0(typescript@5.5.4)(vue@3.5.13(typescript@5.5.4))':
-    optionalDependencies:
-      typescript: 5.5.4
-      vue: 3.5.13(typescript@5.5.4)
 
   '@vue/tsconfig@0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))':
     optionalDependencies:
@@ -8335,9 +8333,13 @@ snapshots:
 
   magic-string-ast@0.6.3:
     dependencies:
-      magic-string: 0.30.13
+      magic-string: 0.30.15
 
   magic-string@0.30.13:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
+  magic-string@0.30.15:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -9350,7 +9352,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-vue-router@0.10.8(rollup@4.27.4)(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3)):
+  unplugin-vue-router@0.10.9(rollup@4.27.4)(vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)))(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@babel/types': 7.26.0
       '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
@@ -9360,11 +9362,11 @@ snapshots:
       fast-glob: 3.3.2
       json5: 2.2.3
       local-pkg: 0.5.1
-      magic-string: 0.30.13
+      magic-string: 0.30.15
       mlly: 1.7.3
       pathe: 1.1.2
       scule: 1.3.0
-      unplugin: 1.16.0
+      unplugin: 2.0.0-beta.1
       yaml: 2.6.1
     optionalDependencies:
       vue-router: 4.5.0(vue@3.5.13(typescript@5.6.3))
@@ -9372,7 +9374,7 @@ snapshots:
       - rollup
       - vue
 
-  unplugin@1.16.0:
+  unplugin@2.0.0-beta.1:
     dependencies:
       acorn: 8.14.0
       webpack-virtual-modules: 0.6.2
