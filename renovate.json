@@ -4,7 +4,7 @@
     "github>haoqunjiang/renovate-presets:npm.json5"
   ],
   "ignorePaths": [
-    "!examples/**",
-    "!test/fixtures/file-based-routing"
+    "**/node_modules/**",
+    "**/test/fixtures/with-older-espree"
   ]
 }
