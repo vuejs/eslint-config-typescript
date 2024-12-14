@@ -5,6 +5,6 @@
   ],
   "ignorePaths": [
     "**/node_modules/**",
-    "**/test/fixtures/with-older-espree"
+    "**/test/fixtures/with-older-espree/**"
   ]
 }
