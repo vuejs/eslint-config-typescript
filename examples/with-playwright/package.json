@@ -19,7 +19,7 @@
     "@playwright/test": "^1.49.1",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.17.10",
-    "@vitejs/plugin-vue": "^5.2.0",
+    "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.17.0",
