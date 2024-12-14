@@ -377,8 +377,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
       chromedriver:
-        specifier: ^129.0.4
-        version: 129.0.4
+        specifier: ^131.0.3
+        version: 131.0.3
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -390,7 +390,7 @@ importers:
         version: 5.0.0
       nightwatch:
         specifier: ^3.9.0
-        version: 3.9.0(chromedriver@129.0.4)(geckodriver@5.0.0)
+        version: 3.9.0(chromedriver@131.0.3)(geckodriver@5.0.0)
       npm-run-all2:
         specifier: ^7.0.1
         version: 7.0.1
@@ -2361,8 +2361,8 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
-  chromedriver@129.0.4:
-    resolution: {integrity: sha512-j5I55cQwodFJUaYa1tWUmj2ss9KcPRBWmUa5Qonq3X8kqv2ASPyTboFYb4YB/YLztkYTUUw2E43txXw0wYzT/A==}
+  chromedriver@131.0.3:
+    resolution: {integrity: sha512-DKHFt0ilcA/RJzY1ApBiJAil6fh08f9mXM8XbdDE1u+S1V5YVUNTUi4bOtJFZoAwS9nlV0H5W6InWrpXqSs2xg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -6666,7 +6666,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  chromedriver@129.0.4:
+  chromedriver@131.0.3:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.7.7(debug@4.4.0)
@@ -8288,7 +8288,7 @@ snapshots:
     dependencies:
       axe-core: 4.10.2
 
-  nightwatch@3.9.0(chromedriver@129.0.4)(geckodriver@5.0.0):
+  nightwatch@3.9.0(chromedriver@131.0.3)(geckodriver@5.0.0):
     dependencies:
       '@nightwatch/chai': 5.0.3
       '@nightwatch/html-reporter-template': 0.3.0
@@ -8325,7 +8325,7 @@ snapshots:
       untildify: 4.0.0
       uuid: 8.3.2
     optionalDependencies:
-      chromedriver: 129.0.4
+      chromedriver: 131.0.3
       geckodriver: 5.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -8634,7 +8634,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.7(supports-color@8.1.1)
+      debug: 4.4.0
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.5
       lru-cache: 7.18.3
