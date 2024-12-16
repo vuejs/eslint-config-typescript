@@ -181,8 +181,8 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0
       eslint-plugin-cypress:
-        specifier: ^3.6.0
-        version: 3.6.0(eslint@9.17.0)
+        specifier: ^4.1.0
+        version: 4.1.0(eslint@9.17.0)
       eslint-plugin-vue:
         specifier: ^9.32.0
         version: 9.32.0(eslint@9.17.0)
@@ -242,8 +242,8 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0
       eslint-plugin-cypress:
-        specifier: ^3.6.0
-        version: 3.6.0(eslint@9.17.0)
+        specifier: ^4.1.0
+        version: 4.1.0(eslint@9.17.0)
       eslint-plugin-vue:
         specifier: ^9.32.0
         version: 9.32.0(eslint@9.17.0)
@@ -2878,10 +2878,10 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@3.6.0:
-    resolution: {integrity: sha512-7IAMcBbTVu5LpWeZRn5a9mQ30y4hKp3AfTz+6nSD/x/7YyLMoBI6X7XjDLYI6zFvuy4Q4QVGl563AGEXGW/aSA==}
+  eslint-plugin-cypress@4.1.0:
+    resolution: {integrity: sha512-JhqkMY02mw74USwK9OFhectx3YSj6Co1NgWBxlGdKvlqiAp9vdEuQqt33DKGQFvvGS/NWtduuhWXWNnU29xDSg==}
     peerDependencies:
-      eslint: '>=7'
+      eslint: '>=9'
 
   eslint-plugin-playwright@2.1.0:
     resolution: {integrity: sha512-wMbHOehofSB1cBdzz2CLaCYaKNLeTQ0YnOW+7AHa281TJqlpEJUBgTHbRUYOUxiXphfWwOyTPvgr6vvEmArbSA==}
@@ -3231,6 +3231,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@15.13.0:
+    resolution: {integrity: sha512-49TewVEz0UxZjr1WYYsWpPrhyC/B/pA8Bq0fUmet2n+eR7yn0IvNzNaoBwnK6mdkzcN+se7Ez9zUgULTz2QH4g==}
     engines: {node: '>=18'}
 
   gopd@1.0.1:
@@ -7166,10 +7170,10 @@ snapshots:
     dependencies:
       eslint: 9.17.0
 
-  eslint-plugin-cypress@3.6.0(eslint@9.17.0):
+  eslint-plugin-cypress@4.1.0(eslint@9.17.0):
     dependencies:
       eslint: 9.17.0
-      globals: 13.24.0
+      globals: 15.13.0
 
   eslint-plugin-playwright@2.1.0(eslint@9.17.0):
     dependencies:
@@ -7633,6 +7637,8 @@ snapshots:
       type-fest: 0.20.2
 
   globals@14.0.0: {}
+
+  globals@15.13.0: {}
 
   gopd@1.0.1:
     dependencies:
