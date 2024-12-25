@@ -27,10 +27,11 @@ Please also make sure that you have `typescript` and `eslint` installed.
 
 Because of the complexity of this config, it is exported as a factory function that takes an options object and returns an ESLint configuration object.
 
-This package exports 2 utility functions:
+This package exports:
 
-- `defineConfig`, as a re-export of the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
-- `createConfig`, used for creating an ESLint configuration array that extends from the [`typescript-eslint` shared configs](https://typescript-eslint.io/users/configs).
+- a utility function: `defineConfig`, as a re-export of the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
+- all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs), available as named exports (in camelCase, e.g. `recommendedTypeChecked`).  
+- a Vue-specific config factory: `configureVueProject({ supportedScriptLangs, rootDir })`. More info below.
 
 ### Minimal Setup
 
@@ -39,12 +40,12 @@ This package exports 2 utility functions:
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
-  createConfig as vueTsEslintConfig,
+  recommended,
 } from '@vue/eslint-config-typescript'
 
 export default defineConfig(
   pluginVue.configs['flat/essential'],
-  vueTsEslintConfig(),
+  recommended,
 )
 ```
 
@@ -59,26 +60,14 @@ All the `<script>` blocks in `.vue` files _MUST_ be written in TypeScript (shoul
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
-  createConfig as vueTsEslintConfig,
+  configureVueProject,
+  recommended,
 } from '@vue/eslint-config-typescript'
 
 export default defineConfig(
   pluginVue.configs['flat/essential'],
 
-  vueTsEslintConfig({
-    // Optional: extend additional configurations from `typescript-eslint`.
-    // Supports all the configurations in
-    // https://typescript-eslint.io/users/configs#recommended-configurations
-    extends: [
-      // By default, only the recommended rules are enabled.
-      'recommended',
-      // You can also manually enable the stylistic rules.
-      // "stylistic",
-
-      // Other utility configurations, such as `eslintRecommended`, (note that it's in camelCase)
-      // are also extendable here. But we don't recommend using them directly.
-    ],
-
+  configureVueProject({
     // Optional: specify the script langs in `.vue` files
     // Defaults to `{ ts: true, js: false, tsx: false, jsx: false }`
     supportedScriptLangs: {
@@ -110,6 +99,8 @@ export default defineConfig(
     // and only apply the loosened rules to the files that do need them.
     rootDir: import.meta.dirname,
   }),
+
+  recommended,
 )
 ```
 
@@ -122,36 +113,17 @@ It is not always easy to set up the type-checking environment for ESLint without
 So we don't recommend you to configure individual type-aware rules and the corresponding language options all by yourself.
 Instead, you can start by extending from the `recommendedTypeChecked` configuration and then turn on/off the rules you need.
 
-As of now, all the rules you need to turn on must appear _before_ calling `vueTsEslintConfig({ extends: ['recommendedTypeChecked'] })`, and all the rules you need to turn off must appear _after_ calling it.
-
 ```js
 // eslint.config.mjs
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
-  createConfig as vueTsEslintConfig,
+  recommendedTypeChecked,
 } from '@vue/eslint-config-typescript'
 
 export default defineConfig(
   pluginVue.configs['flat/essential'],
-
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
-    rules: {
-      // Turn on other rules that you need.
-      '@typescript-eslint/require-array-sort-compare': 'error',
-    },
-  },
-
-  vueTsEslintConfig({ extends: ['recommendedTypeChecked'] }),
-
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
-    rules: {
-      // Turn off the recommended rules that you don't need.
-      '@typescript-eslint/no-redundant-type-constituents': 'off',
-    },
-  },
+  recommendedTypeChecked
 )
 ```
 
