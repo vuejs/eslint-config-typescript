@@ -51,7 +51,7 @@ export default defineConfig(
 
 The above configuration enables [the essential rules for Vue 3](https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention) and [the recommended rules for TypeScript](https://typescript-eslint.io/rules/?=recommended).
 
-All the `<script>` blocks in `.vue` files _MUST_ be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
+All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
 
 ### Advanced Setup
 
@@ -64,8 +64,8 @@ import {
   recommended,
 } from '@vue/eslint-config-typescript'
 
-export default defineConfig(
-  pluginVue.configs['flat/essential'],
+export default [
+  ...pluginVue.configs["flat/essential"],
 
   configureVueProject({
     // Optional: specify the script langs in `.vue` files
