@@ -29,7 +29,7 @@ Because of the complexity of this config, it is exported as a factory function t
 
 This package exports:
 
-- a utility function: `defineConfig`, as a re-export of the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
+- a utility function: `defineConfig`, whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
 - all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs), available as named exports (in camelCase, e.g. `recommendedTypeChecked`).  
 - a Vue-specific config factory: `configureVueProject({ supportedScriptLangs, rootDir })`. More info below.
 
