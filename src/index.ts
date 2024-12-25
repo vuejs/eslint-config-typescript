@@ -49,7 +49,7 @@ export default function createConfig({
 
   const projectServiceConfigs: ConfigArray = [
     {
-      name: 'vue-typescript/skip-type-checking-for-js-files',
+      name: '@vue/typescript/skip-type-checking-for-js-files',
       files: ['**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
       ...tseslint.configs.disableTypeChecked,
     },
@@ -57,7 +57,7 @@ export default function createConfig({
 
   if (otherVueFiles.length > 0) {
     projectServiceConfigs.push({
-      name: 'vue-typescript/skip-type-checking-for-vue-files-without-ts',
+      name: '@vue/typescript/skip-type-checking-for-vue-files-without-ts',
       files: otherVueFiles.map(escapePathForGlob),
       ...tseslint.configs.disableTypeChecked,
       rules: {
@@ -100,7 +100,7 @@ export default function createConfig({
 
   if (needsTypeAwareLinting) {
     projectServiceConfigs.push({
-      name: 'vue-typescript/default-project-service-for-ts-files',
+      name: '@vue/typescript/default-project-service-for-ts-files',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts'],
       languageOptions: {
         parser: tseslint.parser,
@@ -113,7 +113,7 @@ export default function createConfig({
 
     if (vueFilesWithScriptTs.length > 0) {
       projectServiceConfigs.push({
-        name: 'vue-typescript/default-project-service-for-vue-files',
+        name: '@vue/typescript/default-project-service-for-vue-files',
         files: vueFilesWithScriptTs.map(escapePathForGlob),
         languageOptions: {
           parser: vueParser,
@@ -128,7 +128,7 @@ export default function createConfig({
 
     // Vue's own typing inevitably contains some `any`s, so some of the `no-unsafe-*` rules can't be used.
     projectServiceConfigs.push({
-      name: 'vue-typescript/type-aware-rules-in-conflit-with-vue',
+      name: '@vue/typescript/type-aware-rules-in-conflit-with-vue',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
       rules: {
         '@typescript-eslint/no-unsafe-argument': 'off',
@@ -165,7 +165,7 @@ export default function createConfig({
     ...pluginVue.configs['flat/base'],
 
     {
-      name: 'vue-typescript/setup',
+      name: '@vue/typescript/setup',
       files: ['*.vue', '**/*.vue'],
       languageOptions: {
         parser: vueParser,
