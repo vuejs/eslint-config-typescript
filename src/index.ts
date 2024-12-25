@@ -224,3 +224,6 @@ export default function createConfig({
 function escapePathForGlob(path: string) {
   return path.replace(/([*?{}[\]()])/g, '[$1]')
 }
+
+export { createConfig }
+export { config as defineConfig } from 'typescript-eslint'
