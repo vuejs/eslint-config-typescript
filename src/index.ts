@@ -6,6 +6,7 @@ import vueParser from 'vue-eslint-parser'
 import pluginVue from 'eslint-plugin-vue'
 
 import fg from 'fast-glob'
+import path from 'node:path'
 
 type ExtendableConfigName = keyof typeof tseslint.configs
 type ScriptLang = 'ts' | 'tsx' | 'js' | 'jsx'
@@ -33,7 +34,8 @@ export default function createConfig({
     })
     .reduce(
       (acc, file) => {
-        const contents = fs.readFileSync(file, 'utf8')
+        const absolutePath = path.resolve(rootDir, file)
+        const contents = fs.readFileSync(absolutePath, 'utf8')
         // contents matches the <script lang="ts"> (there can be anything but `>` between `script` and `lang`)
         if (/<script[^>]*\blang\s*=\s*"ts"[^>]*>/i.test(contents)) {
           acc.vueFilesWithScriptTs.push(file)
