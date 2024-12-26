@@ -217,6 +217,88 @@ importers:
         specifier: ^2.1.10
         version: 2.1.10(typescript@5.6.3)
 
+  examples/usage-before-14.3:
+    dependencies:
+      pinia:
+        specifier: ^2.3.0
+        version: 2.3.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.6.3)
+      vue-router:
+        specifier: ^4.5.0
+        version: 4.5.0(vue@3.5.13(typescript@5.6.3))
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.4
+        version: 20.1.4
+      '@types/jsdom':
+        specifier: ^21.1.7
+        version: 21.1.7
+      '@types/node':
+        specifier: ^20.17.10
+        version: 20.17.10
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.1
+        version: 5.2.1(vite@6.0.5(@types/node@20.17.10)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.6.3))
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^4.1.1
+        version: 4.1.1(vite@6.0.5(@types/node@20.17.10)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.6.3))
+      '@vitest/eslint-plugin':
+        specifier: ^1.1.20
+        version: 1.1.20(@typescript-eslint/utils@8.18.2(eslint@9.17.0)(typescript@5.6.3))(eslint@9.17.0)(typescript@5.6.3)(vitest@2.1.8(@types/node@20.17.10)(jsdom@25.0.1))
+      '@vue/eslint-config-prettier':
+        specifier: ^10.1.0
+        version: 10.1.0(eslint@9.17.0)(prettier@3.4.2)
+      '@vue/eslint-config-typescript':
+        specifier: workspace:*
+        version: link:../..
+      '@vue/test-utils':
+        specifier: ^2.4.6
+        version: 2.4.6
+      '@vue/tsconfig':
+        specifier: ^0.7.0
+        version: 0.7.0(typescript@5.6.3)(vue@3.5.13(typescript@5.6.3))
+      cypress:
+        specifier: ^13.17.0
+        version: 13.17.0
+      eslint:
+        specifier: ^9.17.0
+        version: 9.17.0
+      eslint-plugin-cypress:
+        specifier: ^4.1.0
+        version: 4.1.0(eslint@9.17.0)
+      eslint-plugin-vue:
+        specifier: ^9.32.0
+        version: 9.32.0(eslint@9.17.0)
+      jsdom:
+        specifier: ^25.0.1
+        version: 25.0.1
+      npm-run-all2:
+        specifier: ^7.0.2
+        version: 7.0.2
+      prettier:
+        specifier: ^3.4.2
+        version: 3.4.2
+      start-server-and-test:
+        specifier: ^2.0.9
+        version: 2.0.9
+      typescript:
+        specifier: ~5.6.3
+        version: 5.6.3
+      vite:
+        specifier: ^6.0.5
+        version: 6.0.5(@types/node@20.17.10)(tsx@4.19.2)(yaml@2.6.1)
+      vite-plugin-vue-devtools:
+        specifier: ^7.6.8
+        version: 7.6.8(rollup@4.27.4)(vite@6.0.5(@types/node@20.17.10)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.6.3))
+      vitest:
+        specifier: ^2.1.8
+        version: 2.1.8(@types/node@20.17.10)(jsdom@25.0.1)
+      vue-tsc:
+        specifier: ^2.1.10
+        version: 2.1.10(typescript@5.6.3)
+
   examples/with-cypress:
     dependencies:
       vue:
