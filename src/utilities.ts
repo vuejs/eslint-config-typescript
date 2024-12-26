@@ -22,25 +22,20 @@ import process from 'node:process'
 import type { ScriptLang } from './internals'
 
 export type ProjectOptions = {
-  supportedScriptLangs?: Record<ScriptLang, boolean>
+  scriptLangs?: ScriptLang[]
   rootDir?: string
 }
 
 let projectOptions: ProjectOptions = {
-  supportedScriptLangs: {
-    ts: true,
-    tsx: false,
-    js: false,
-    jsx: false,
-  },
+  scriptLangs: ['ts'],
   rootDir: process.cwd(),
 }
 
 // This function, if called, is guaranteed to be executed before `defineConfig`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
 export function configureVueProject(userOptions: ProjectOptions) {
-  if (userOptions.supportedScriptLangs) {
-    projectOptions.supportedScriptLangs = userOptions.supportedScriptLangs
+  if (userOptions.scriptLangs) {
+    projectOptions.scriptLangs = userOptions.scriptLangs
   }
   if (userOptions.rootDir) {
     projectOptions.rootDir = userOptions.rootDir
@@ -114,7 +109,7 @@ function insertAndReorderConfigs(
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
-    ...createBasicSetupConfigs(projectOptions.supportedScriptLangs!),
+    ...createBasicSetupConfigs(projectOptions.scriptLangs!),
 
     // user-turned-off type-aware rules must come after the last extended config
     // in case some rules re-enabled by the extended config

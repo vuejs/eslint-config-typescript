@@ -31,9 +31,10 @@ export const additionalRulesRequiringParserServices = [
 ]
 
 export function createBasicSetupConfigs(
-  supportedScriptLangs: Record<ScriptLang, boolean>,
+  scriptLangs: ScriptLang[],
 ): ConfigArray {
-  const mayHaveJsxInSfc = supportedScriptLangs.jsx || supportedScriptLangs.tsx
+  const mayHaveJsxInSfc =
+    scriptLangs.includes('jsx') || scriptLangs.includes('tsx')
 
   return [
     // Must set eslint-plugin-vue's base config again no matter whether the user
@@ -77,10 +78,8 @@ export function createBasicSetupConfigs(
           'error',
           {
             script: {
-              lang: Object.keys(supportedScriptLangs!).filter(
-                lang => supportedScriptLangs![lang as ScriptLang],
-              ),
-              allowNoLang: supportedScriptLangs!.js,
+              lang: scriptLangs,
+              allowNoLang: scriptLangs.includes('js'),
             },
           },
         ],

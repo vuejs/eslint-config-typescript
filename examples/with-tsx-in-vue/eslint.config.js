@@ -5,12 +5,7 @@ import {
   configs,
 } from '@vue/eslint-config-typescript'
 
-configureVueProject({
-  supportedScriptLangs: {
-    ts: true,
-    tsx: true,
-  }
-})
+configureVueProject({ scriptLangs: ['ts', 'tsx'] })
 
 export default defineConfig(
   {

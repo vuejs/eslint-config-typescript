@@ -31,7 +31,7 @@ This package exports:
 
 - `defineConfig`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
 - `configs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `configs.recommendedTypeChecked`).
-- a Vue-specific config factory: `configureVueProject({ supportedScriptLangs, rootDir })`. More info below.
+- a Vue-specific config factory: `configureVueProject({ scriptLangs, rootDir })`. More info below.
 
 ### Minimal Setup
 
@@ -66,27 +66,27 @@ import {
 
 configureVueProject({
   // Optional: specify the script langs in `.vue` files
-  // Defaults to `{ ts: true, js: false, tsx: false, jsx: false }`
-  supportedScriptLangs: {
-    ts: true,
+  // Defaults to `['ts']`.
+  scriptLangs: [
+    'ts',
 
     // [!DISCOURAGED]
-    // Set to `true` to allow plain `<script>` or `<script setup>` blocks.
+    // Include 'js' to allow plain `<script>` or `<script setup>` blocks.
     // This might result-in false positive or negatives in some rules for `.vue` files.
     // Note you also need to configure `allowJs: true` and `checkJs: true`
     // in corresponding `tsconfig.json` files.
-    js: false,
+    'js',
 
     // [!STRONGLY DISCOURAGED]
-    // Set to `true` to allow `<script lang="tsx">` blocks.
+    // Include 'tsx' to allow `<script lang="tsx">` blocks.
     // This would be in conflict with all type-aware rules.
-    tsx: false,
+    'tsx',
 
     // [!STRONGLY DISCOURAGED]
-    // Set to `true` to allow `<script lang="jsx">` blocks.
+    // Include 'jsx' to allow `<script lang="jsx">` blocks.
     // This would be in conflict with all type-aware rules and may result in false positives.
-    jsx: false,
-  },
+    'jsx',
+  ],
 
   // <https://github.com/vuejs/eslint-plugin-vue/issues/1910#issuecomment-1819993961>
   // Optional: the root directory to resolve the `.vue` files, defaults to `process.cwd()`.
