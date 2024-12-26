@@ -29,8 +29,8 @@ Because of the complexity of this config, it is exported as a factory function t
 
 This package exports:
 
-- a utility function: `defineConfig`, whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
-- all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs), available as named exports (in camelCase, e.g. `recommendedTypeChecked`).  
+- `defineConfig`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
+- `configs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `configs.recommendedTypeChecked`).
 - a Vue-specific config factory: `configureVueProject({ supportedScriptLangs, rootDir })`. More info below.
 
 ### Minimal Setup
@@ -40,12 +40,12 @@ This package exports:
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
-  recommended,
+  configs,
 } from '@vue/eslint-config-typescript'
 
 export default defineConfig(
   pluginVue.configs['flat/essential'],
-  recommended,
+  configs.recommended,
 )
 ```
 
@@ -60,12 +60,17 @@ All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (shoul
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
+  configs,
   configureVueProject,
-  recommended,
 } from '@vue/eslint-config-typescript'
 
 export default [
   ...pluginVue.configs["flat/essential"],
+
+  // We STRONGLY RECOMMEND you to start with `recommended` or `recommendedTypeChecked`.
+  // But if you are determined to configure all rules by yourself,
+  // you can start with `base`, and then turn on/off the rules you need.
+  configs.base,
 
   configureVueProject({
     // Optional: specify the script langs in `.vue` files
@@ -99,8 +104,6 @@ export default [
     // and only apply the loosened rules to the files that do need them.
     rootDir: import.meta.dirname,
   }),
-
-  recommended,
 )
 ```
 
@@ -118,12 +121,12 @@ Instead, you can start by extending from the `recommendedTypeChecked` configurat
 import pluginVue from 'eslint-plugin-vue'
 import {
   defineConfig,
-  recommendedTypeChecked,
+  configs,
 } from '@vue/eslint-config-typescript'
 
 export default defineConfig(
   pluginVue.configs['flat/essential'],
-  recommendedTypeChecked
+  configs.recommendedTypeChecked
 )
 ```
 
