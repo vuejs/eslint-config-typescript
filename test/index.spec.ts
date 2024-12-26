@@ -56,7 +56,7 @@ describe('should pass lint without error in new projects', () => {
     'with-playwright',
     'with-vitest',
     'type-checked',
-    'usage-before-14.3',
+    'api-before-14.3',
   ]) {
     test(projectName, async () => {
       const { stdout } = await runLintAgainst(projectName)
@@ -82,7 +82,7 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-playwright',
     'with-vitest',
     'type-checked',
-    'usage-before-14.3',
+    'api-before-14.3',
   ]) {
     test(`src/App.vue in ${projectName}`, async () => {
       const appVuePath = path.join(
@@ -122,7 +122,7 @@ describe('should report error on recommended rule violations in other script fil
     'with-playwright',
     'with-vitest',
     'type-checked',
-    'usage-before-14.3',
+    'api-before-14.3',
   ]) {
     test(`main.ts in ${projectName}`, async () => {
       const mainTsPath = path.join(
@@ -200,8 +200,8 @@ test('#102: should set configs correctly for paths with glob-like syntax (e.g. f
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
 
-test('(usage before 14.3) should guide user to use camelCase names in "extends"', async () => {
-  const eslintConfigPath = path.join(__dirname, '../examples/usage-before-14.3/eslint.config.js')
+test('(API before 14.3) should guide user to use camelCase names in "extends"', async () => {
+  const eslintConfigPath = path.join(__dirname, '../examples/api-before-14.3/eslint.config.js')
   const { modify, restore } = setupFileMutations(eslintConfigPath)
   modify((oldContents) => oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'))
   const { failed, stderr } = await runLintAgainst('type-checked')

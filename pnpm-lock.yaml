@@ -217,7 +217,7 @@ importers:
         specifier: ^2.1.10
         version: 2.1.10(typescript@5.6.3)
 
-  examples/usage-before-14.3:
+  examples/api-before-14.3:
     dependencies:
       pinia:
         specifier: ^2.3.0
