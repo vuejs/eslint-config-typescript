@@ -200,8 +200,8 @@ test('#102: should set configs correctly for paths with glob-like syntax (e.g. f
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
 
-test('should guide user to use camelCase names in "extends"', async () => {
-  const eslintConfigPath = path.join(__dirname, '../examples/type-checked/eslint.config.js')
+test('(usage before 14.3) should guide user to use camelCase names in "extends"', async () => {
+  const eslintConfigPath = path.join(__dirname, '../examples/usage-before-14.3/eslint.config.js')
   const { modify, restore } = setupFileMutations(eslintConfigPath)
   modify((oldContents) => oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'))
   const { failed, stderr } = await runLintAgainst('type-checked')
