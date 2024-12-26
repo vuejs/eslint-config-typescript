@@ -1,8 +1,8 @@
 import pluginVue from 'eslint-plugin-vue'
 import pluginVitest from '@vitest/eslint-plugin'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import { defineConfig, configs } from '@vue/eslint-config-typescript'
 
-export default [
+export default defineConfig(
   {
     name: 'app/files-to-lint',
     files: ['**/*.ts', '**/*.mts', '**/*.vue'],
@@ -13,11 +13,11 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig(),
+  pluginVue.configs['flat/essential'],
+  configs.recommended,
 
   {
     ...pluginVitest.configs['recommended'],
     files: ['src/**/__tests__/*'],
   },
-]
+)

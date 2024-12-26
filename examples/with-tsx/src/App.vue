@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import FooComp from './FooComp'
+// @ts-ignore
 </script>
 
 <template>

@@ -1,7 +1,18 @@
 import pluginVue from 'eslint-plugin-vue'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import {
+  defineConfig,
+  configureVueProject,
+  configs,
+} from '@vue/eslint-config-typescript'
 
-export default [
+configureVueProject({
+  supportedScriptLangs: {
+    ts: true,
+    tsx: true,
+  }
+})
+
+export default defineConfig(
   {
     name: 'app/files-to-lint',
     files: ['**/*.ts', '**/*.mts', '**/*.tsx', '**/*.vue'],
@@ -13,10 +24,5 @@ export default [
   },
 
   ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig({
-    supportedScriptLangs: {
-      ts: true,
-      tsx: true
-    }
-  }),
-]
+  configs.recommended,
+)

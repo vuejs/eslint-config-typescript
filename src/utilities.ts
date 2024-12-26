@@ -60,7 +60,7 @@ export function defineConfig(
       typeof config === 'string' ? getConfigForPlaceholder(config) : config,
   )
 
-  return tseslint.config(normalizedConfigs)
+  return tseslint.config(...normalizedConfigs)
 }
 
 // This function reorders the config array to make sure it satisfies the following layout:
@@ -103,7 +103,7 @@ function insertAndReorderConfigs(
 
   const vueFiles = groupVueFiles(projectOptions.rootDir!)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
-  // FIXME: also consider the extended configs
+
   const hasTypeAwarePresets = configs.some(
     config =>
       typeof config === 'string' &&
@@ -150,10 +150,12 @@ function extractTypeAwareRules(
     ([name]) => doesRuleRequireTypeInformation(name),
   )
 
-  userTypeAwareConfigs.push({
-    files: config.files,
-    rules: Object.fromEntries(typeAwareRuleEntries),
-  })
+  if (typeAwareRuleEntries.length > 0) {
+    userTypeAwareConfigs.push({
+      rules: Object.fromEntries(typeAwareRuleEntries),
+        ...(config.files && { files: config.files }),
+    })
+  }
 
   return {
     ...config,

@@ -1,21 +1,34 @@
 import tseslint from 'typescript-eslint'
 
-export type ExtendableConfigName = keyof typeof tseslint.configs
-type ConfigArray = (typeof tseslint.configs)[ExtendableConfigName]
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
-// TODO: use enum
-export type VueTsPreset =
-  `PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfig_${ExtendableConfigName}`
-export type VueTsPresets = Record<ExtendableConfigName, VueTsPreset>
+const PlaceholderPrefix =
+  'PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfig_'
 
-export const configs: VueTsPresets = Object.keys(tseslint.configs).reduce(
-  (configs, name) => {
-    configs[name as ExtendableConfigName] =
-      `PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfig_${name as ExtendableConfigName}`
-    return configs
-  },
-  {} as VueTsPresets,
-)
+// Manually declare all the available configs as enums to make the auto-completion more user-friendly.
+// It's also a good way to avoid the placeholder strings to appear in the auto-completion.
+export enum VueTsPreset {
+  all = `${PlaceholderPrefix}all`,
+  base = `${PlaceholderPrefix}base`,
+  disableTypeChecked = `${PlaceholderPrefix}disableTypeChecked`,
+  eslintRecommended = `${PlaceholderPrefix}eslintRecommended`,
+  recommended = `${PlaceholderPrefix}recommended`,
+  recommendedTypeChecked = `${PlaceholderPrefix}recommendedTypeChecked`,
+  recommendedTypeCheckedOnly = `${PlaceholderPrefix}recommendedTypeCheckedOnly`,
+  strict = `${PlaceholderPrefix}strict`,
+  strictTypeChecked = `${PlaceholderPrefix}strictTypeChecked`,
+  strictTypeCheckedOnly = `${PlaceholderPrefix}strictTypeCheckedOnly`,
+  stylistic = `${PlaceholderPrefix}stylistic`,
+  stylisticTypeChecked = `${PlaceholderPrefix}stylisticTypeChecked`,
+  stylisticTypeCheckedOnly = `${PlaceholderPrefix}stylisticTypeCheckedOnly`,
+}
+
+// `enum`s are just objects with reverse mapping during runtime.
+// We redefine the type here only to make the auto-completion more user-friendly.
+export type ExtendableConfigName = keyof typeof VueTsPreset
+export const configs = VueTsPreset as {
+  [key in ExtendableConfigName]: VueTsPreset
+}
 
 function toArray<T>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value]
@@ -23,11 +36,11 @@ function toArray<T>(value: T | T[]): T[] {
 
 export function getConfigForPlaceholder(
   placeholder: VueTsPreset,
-): ConfigArray {
+): FlatConfig.ConfigArray {
   return toArray(
     tseslint.configs[
       placeholder.replace(
-        /^PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfig_/,
+        new RegExp(`^${PlaceholderPrefix}`),
         '',
       ) as ExtendableConfigName
     ],

@@ -1,8 +1,8 @@
 import pluginVue from 'eslint-plugin-vue'
 import pluginPlaywright from 'eslint-plugin-playwright'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import { defineConfig, configs } from '@vue/eslint-config-typescript'
 
-export default [
+export default defineConfig(
   {
     name: 'app/files-to-lint',
     files: ['**/*.ts', '**/*.mts', '**/*.vue'],
@@ -13,11 +13,11 @@ export default [
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig(),
+  pluginVue.configs['flat/essential'],
+  configs.recommended,
 
   {
     ...pluginPlaywright.configs['flat/recommended'],
     files: ['e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
   },
-]
+)

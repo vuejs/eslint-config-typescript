@@ -1,10 +1,10 @@
 import pluginVue from 'eslint-plugin-vue'
-import { defineConfig, configs } from '@vue/eslint-config-typescript'
+import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import pluginVitest from '@vitest/eslint-plugin'
 import pluginCypress from 'eslint-plugin-cypress/flat'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 
-export default defineConfig(
+export default [
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
@@ -15,8 +15,8 @@ export default defineConfig(
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  pluginVue.configs['flat/essential'],
-  configs.recommendedTypeChecked,
+  ...pluginVue.configs['flat/essential'],
+  ...vueTsEslintConfig({ extends: ['recommendedTypeChecked'] }),
 
   {
     ...pluginVitest.configs.recommended,
@@ -27,8 +27,8 @@ export default defineConfig(
     ...pluginCypress.configs.recommended,
     files: [
       'cypress/e2e/**/*.{cy,spec}.{js,ts,jsx,tsx}',
-      'cypress/support/**/*.{js,ts,jsx,tsx}',
+      'cypress/support/**/*.{js,ts,jsx,tsx}'
     ],
   },
   skipFormatting,
-)
+]
