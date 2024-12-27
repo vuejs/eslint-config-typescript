@@ -24,7 +24,7 @@
 
     "verbatimModuleSyntax": true,
 
-		"lib": ["ES2020"],
+		"lib": ["ES2020", "ES2023.Array"],
 		"types": ["node"]
 	},
 }
