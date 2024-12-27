@@ -30,7 +30,7 @@ Because of the complexity of this config, it is exported as a factory function t
 This package exports:
 
 - `defineConfigWithVueTs`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config), but will modify the given config to work with Vue.js + TypeScript.
-- `vueTsConfigs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `configs.recommendedTypeChecked`).
+- `vueTsConfigs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `vueTsConfigs.recommendedTypeChecked`).
 - a Vue-specific config factory: `configureVueProject({ scriptLangs, rootDir })`. More info below.
 
 ### Minimal Setup
