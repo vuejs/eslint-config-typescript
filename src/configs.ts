@@ -3,7 +3,7 @@ import tseslint from 'typescript-eslint'
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
 const PlaceholderPrefix =
-  'PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfig_'
+  'PLACEHOLDER_THAT_MUST_BE_WRAPPED_INSIDE_defineConfigWithVueTs_'
 
 // Manually declare all the available configs as enums to make the auto-completion more user-friendly.
 // It's also a good way to avoid the placeholder strings to appear in the auto-completion.
@@ -26,7 +26,7 @@ export enum VueTsPreset {
 // `enum`s are just objects with reverse mapping during runtime.
 // We redefine the type here only to make the auto-completion more user-friendly.
 export type ExtendableConfigName = keyof typeof VueTsPreset
-export const configs = VueTsPreset as {
+export const vueTsConfigs = VueTsPreset as {
   [key in ExtendableConfigName]: VueTsPreset
 }
 

@@ -1,13 +1,13 @@
 import pluginVue from 'eslint-plugin-vue'
 import {
-  defineConfig,
+  defineConfigWithVueTs,
+  vueTsConfigs,
   configureVueProject,
-  configs,
 } from '@vue/eslint-config-typescript'
 
 configureVueProject({ scriptLangs: ['ts', 'tsx'] })
 
-export default defineConfig(
+export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
     files: ['**/*.ts', '**/*.mts', '**/*.tsx', '**/*.vue'],
@@ -18,6 +18,6 @@ export default defineConfig(
     ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
   },
 
-  ...pluginVue.configs['flat/essential'],
-  configs.recommended,
+  pluginVue.configs['flat/essential'],
+  vueTsConfigs.recommended,
 )

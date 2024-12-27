@@ -31,7 +31,7 @@ let projectOptions: ProjectOptions = {
   rootDir: process.cwd(),
 }
 
-// This function, if called, is guaranteed to be executed before `defineConfig`,
+// This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
 export function configureVueProject(userOptions: ProjectOptions) {
   if (userOptions.scriptLangs) {
@@ -45,7 +45,7 @@ export function configureVueProject(userOptions: ProjectOptions) {
   return []
 }
 
-export function defineConfig(
+export function defineConfigWithVueTs(
   ...configs: InfiniteDepthConfigWithVueSupport[]
 ): ConfigArray {
   // @ts-ignore

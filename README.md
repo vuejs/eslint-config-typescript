@@ -29,8 +29,8 @@ Because of the complexity of this config, it is exported as a factory function t
 
 This package exports:
 
-- `defineConfig`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config).
-- `configs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `configs.recommendedTypeChecked`).
+- `defineConfigWithVueTs`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config), but will modify the given config to work with Vue.js + TypeScript.
+- `vueTsConfigs`, contains all the [shared configruations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `configs.recommendedTypeChecked`).
 - a Vue-specific config factory: `configureVueProject({ scriptLangs, rootDir })`. More info below.
 
 ### Minimal Setup
@@ -39,13 +39,13 @@ This package exports:
 // eslint.config.mjs
 import pluginVue from 'eslint-plugin-vue'
 import {
-  defineConfig,
-  configs,
+  defineConfigWithVueTs,
+  vueTsConfigs,
 } from '@vue/eslint-config-typescript'
 
-export default defineConfig(
+export default defineConfigWithVueTs(
   pluginVue.configs['flat/essential'],
-  configs.recommended,
+  vueTsConfigs.recommended,
 )
 ```
 
@@ -59,9 +59,9 @@ All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (shoul
 // eslint.config.mjs
 import pluginVue from 'eslint-plugin-vue'
 import {
-  defineConfig,
+  defineConfigWithVueTs,
+  vueTsConfigs,
   configureVueProject,
-  configs,
 } from '@vue/eslint-config-typescript'
 
 configureVueProject({
@@ -97,13 +97,13 @@ configureVueProject({
   rootDir: import.meta.dirname,
 })
 
-export default defineConfig(
+export default defineConfigWithVueTs(
   pluginVue.configs["flat/essential"],
 
   // We STRONGLY RECOMMEND you to start with `recommended` or `recommendedTypeChecked`.
   // But if you are determined to configure all rules by yourself,
   // you can start with `base`, and then turn on/off the rules you need.
-  configs.base,
+  vueTsConfigs.base,
 )
 ```
 
@@ -120,13 +120,13 @@ Instead, you can start by extending from the `recommendedTypeChecked` configurat
 // eslint.config.mjs
 import pluginVue from 'eslint-plugin-vue'
 import {
-  defineConfig,
-  configs,
+  defineConfigWithVueTs,
+  vueTsConfigs,
 } from '@vue/eslint-config-typescript'
 
-export default defineConfig(
+export default defineConfigWithVueTs(
   pluginVue.configs['flat/essential'],
-  configs.recommendedTypeChecked
+  vueTsConfigs.recommendedTypeChecked
 )
 ```
 

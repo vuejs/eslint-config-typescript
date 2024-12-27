@@ -6,10 +6,10 @@ import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
 import {
   configureVueProject,
-  defineConfig,
+  defineConfigWithVueTs,
   type ProjectOptions,
 } from './utilities'
-import { configs, type ExtendableConfigName } from './configs'
+import { vueTsConfigs, type ExtendableConfigName } from './configs'
 import type { ScriptLang } from './internals'
 
 type ConfigOptions = ProjectOptions & {
@@ -17,6 +17,9 @@ type ConfigOptions = ProjectOptions & {
   supportedScriptLangs?: Record<ScriptLang, boolean>
 }
 
+/**
+ * @deprecated Use `defineConfigWithVueTs` + `vueTsConfigs` instead.
+ */
 export default function createConfig({
   extends: configNamesToExtend = ['recommended'],
   supportedScriptLangs = { ts: true, tsx: false, js: false, jsx: false },
@@ -47,7 +50,7 @@ export default function createConfig({
     ) as ScriptLang[],
     rootDir,
   })
-  return defineConfig(
-    ...configNamesToExtend.map(name => configs[name as ExtendableConfigName]),
+  return defineConfigWithVueTs(
+    ...configNamesToExtend.map(name => vueTsConfigs[name as ExtendableConfigName]),
   )
 }
