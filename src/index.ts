@@ -111,21 +111,6 @@ export default function createConfig({
       },
     })
 
-    if (vueFilesWithScriptTs.length > 0) {
-      projectServiceConfigs.push({
-        name: 'vue-typescript/default-project-service-for-vue-files',
-        files: vueFilesWithScriptTs.map(escapePathForGlob),
-        languageOptions: {
-          parser: vueParser,
-          parserOptions: {
-            projectService: true,
-            parser: tseslint.parser,
-            extraFileExtensions,
-          },
-        },
-      })
-    }
-
     // Vue's own typing inevitably contains some `any`s, so some of the `no-unsafe-*` rules can't be used.
     projectServiceConfigs.push({
       name: 'vue-typescript/type-aware-rules-in-conflit-with-vue',
@@ -171,16 +156,15 @@ export default function createConfig({
         parser: vueParser,
         parserOptions: {
           parser: {
-            // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
-            // for better performance.
-            js: 'espree',
-            jsx: 'espree',
+            // Using espree results in "`parseForESLint` from parser `context.languageOptions.parser` is invalid and will just be ignored"
+            js: tseslint.parser,
+            jsx: tseslint.parser,
 
             ts: tseslint.parser,
             tsx: tseslint.parser,
 
-            // Leave the template parser unspecified,
-            // so that it could be determined by `<script lang="...">`
+            // This makes a huge difference
+            '<template>': 'espree'
           },
           // The internal espree version used by vue-eslint-parser is 9.x, which supports ES2024 at most.
           // While the parser may try to load the latest version of espree, it's not guaranteed to work.
@@ -194,6 +178,8 @@ export default function createConfig({
             jsx: mayHaveJsxInSfc,
           },
           extraFileExtensions,
+          // Defining the tsconfigs was necessary
+          project: ['**/tsconfig.json', '**/tsconfig.*.json'],
         },
       },
       rules: {
