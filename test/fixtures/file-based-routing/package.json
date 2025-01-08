@@ -26,8 +26,8 @@
     "npm-run-all2": "^7.0.2",
     "typescript": "~5.6.3",
     "unplugin-vue-router": "^0.10.9",
-    "vite": "^6.0.5",
-    "vite-plugin-vue-devtools": "^7.6.8",
+    "vite": "^6.0.7",
+    "vite-plugin-vue-devtools": "^7.7.0",
     "vue-tsc": "^2.1.10"
   }
 }
