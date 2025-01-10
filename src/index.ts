@@ -128,7 +128,7 @@ export default function createConfig({
 
     // Vue's own typing inevitably contains some `any`s, so some of the `no-unsafe-*` rules can't be used.
     projectServiceConfigs.push({
-      name: 'vue-typescript/type-aware-rules-in-conflit-with-vue',
+      name: 'vue-typescript/type-aware-rules-in-conflict-with-vue',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
       rules: {
         '@typescript-eslint/no-unsafe-argument': 'off',
