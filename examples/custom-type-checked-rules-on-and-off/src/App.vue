@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-
-// Should not cause lint error
-export type UnionUnknown = unknown | 'foo';
-
-const array: number[] = [];
-// Should cause lint error
-array.sort();
 </script>
 
 <template>

@@ -57,6 +57,7 @@ describe('should pass lint without error in new projects', () => {
     'with-vitest',
     'type-checked',
     'api-before-14.3',
+    'custom-type-checked-rules-on-and-off',
   ]) {
     test(projectName, async () => {
       const { stdout } = await runLintAgainst(projectName)
@@ -83,6 +84,7 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-vitest',
     'type-checked',
     'api-before-14.3',
+    'custom-type-checked-rules-on-and-off',
   ]) {
     test(`src/App.vue in ${projectName}`, async () => {
       const appVuePath = path.join(
@@ -209,4 +211,24 @@ test('(API before 14.3) should guide user to use camelCase names in "extends"', 
 
   expect(failed).toBe(true)
   expect(stderr).contain('Please use "recommendedTypeChecked"')
+})
+
+test('should allow users to turn on/off type-aware rules by just targeting `**/*.vue` files', async () => {
+  const appVuePath = path.join(__dirname, '../examples/custom-type-checked-rules-on-and-off/src/App.vue')
+  const { modify, restore } = setupFileMutations(appVuePath)
+  modify((oldContents) => oldContents.replace('</script>', `
+// Should not cause lint error
+export type UnionUnknown = unknown | 'foo';
+
+const array: number[] = [];
+// Should cause lint error
+array.sort();
+</script>`))
+
+  const { failed, stdout } = await runLintAgainst('custom-type-checked-rules-on-and-off')
+  restore()
+
+  expect(failed).toBe(true)
+  expect(stdout).not.toContain('no-redundant-type-constituents')
+  expect(stdout).toContain('require-array-sort-compare')
 })
