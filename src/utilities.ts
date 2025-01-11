@@ -1,7 +1,6 @@
+import process from 'node:process'
 import * as tseslint from 'typescript-eslint'
-
-import type { VueTsPreset } from './configs'
-import { getConfigForPlaceholder } from './configs'
+import { TsEslintConfigForVue } from './configs'
 import groupVueFiles from './groupVueFiles'
 import {
   additionalRulesRequiringParserServices,
@@ -10,16 +9,15 @@ import {
   createTypeCheckingConfigs,
 } from './internals'
 
+import type { ScriptLang } from './internals'
+
 type ConfigArray = ReturnType<typeof tseslint.config>
 type Rules = NonNullable<ConfigArray[number]['rules']>
 
-type ConfigOrVueTsPreset = ConfigArray[number] | VueTsPreset
+type ConfigObjectOrPlaceholder = ConfigArray[number] | TsEslintConfigForVue
 type InfiniteDepthConfigWithVueSupport =
-  | ConfigOrVueTsPreset
+  | ConfigObjectOrPlaceholder
   | InfiniteDepthConfigWithVueSupport[]
-
-import process from 'node:process'
-import type { ScriptLang } from './internals'
 
 export type ProjectOptions = {
   scriptLangs?: ScriptLang[]
@@ -48,11 +46,14 @@ export function configureVueProject(userOptions: ProjectOptions) {
 export function defineConfigWithVueTs(
   ...configs: InfiniteDepthConfigWithVueSupport[]
 ): ConfigArray {
-  // @ts-ignore
-  const flattenedConfigs: Array<ConfigOrVueTsPreset> = configs.flat(Infinity)
-  const normalizedConfigs = insertAndReorderConfigs(flattenedConfigs).map(
-    config =>
-      typeof config === 'string' ? getConfigForPlaceholder(config) : config,
+  const flattenedConfigs: Array<ConfigObjectOrPlaceholder> =
+    // @ts-ignore
+    configs.flat(Infinity)
+
+  const reorderedConfigs = insertAndReorderConfigs(flattenedConfigs)
+
+  const normalizedConfigs = reorderedConfigs.map(config =>
+    config instanceof TsEslintConfigForVue ? config.toConfigArray() : config,
   )
 
   return tseslint.config(...normalizedConfigs)
@@ -86,10 +87,10 @@ type ExtractedConfig = {
 const userTypeAwareConfigs: ExtractedConfig[] = []
 
 function insertAndReorderConfigs(
-  configs: Array<ConfigOrVueTsPreset>,
-): Array<ConfigOrVueTsPreset> {
+  configs: Array<ConfigObjectOrPlaceholder>,
+): Array<ConfigObjectOrPlaceholder> {
   const lastExtendedConfigIndex = configs.findLastIndex(
-    config => typeof config === 'string',
+    config => config instanceof TsEslintConfigForVue,
   )
 
   if (lastExtendedConfigIndex === -1) {
@@ -99,13 +100,12 @@ function insertAndReorderConfigs(
   const vueFiles = groupVueFiles(projectOptions.rootDir!)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
-  const hasTypeAwarePresets = configs.some(
+  const hasTypeAwareConfigs = configs.some(
     config =>
-      typeof config === 'string' &&
-      !config.endsWith('disableTypeChecked') &&
-      (config.includes('TypeChecked') || config.endsWith('all')),
+      config instanceof TsEslintConfigForVue && config.needsTypeChecking(),
   )
-  const needsTypeAwareLinting = hasTypeAwarePresets || userTypeAwareConfigs.length > 0
+  const needsTypeAwareLinting =
+    hasTypeAwareConfigs || userTypeAwareConfigs.length > 0
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
@@ -130,9 +130,9 @@ function insertAndReorderConfigs(
 }
 
 function extractTypeAwareRules(
-  config: ConfigOrVueTsPreset,
-): ConfigOrVueTsPreset {
-  if (typeof config === 'string') {
+  config: ConfigObjectOrPlaceholder,
+): ConfigObjectOrPlaceholder {
+  if (config instanceof TsEslintConfigForVue) {
     return config
   }
 
@@ -148,7 +148,7 @@ function extractTypeAwareRules(
   if (typeAwareRuleEntries.length > 0) {
     userTypeAwareConfigs.push({
       rules: Object.fromEntries(typeAwareRuleEntries),
-        ...(config.files && { files: config.files }),
+      ...(config.files && { files: config.files }),
     })
   }
 
