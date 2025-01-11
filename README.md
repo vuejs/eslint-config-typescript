@@ -128,6 +128,12 @@ export default defineConfigWithVueTs(
 )
 ```
 
+## Use As a Normal Shared ESLint Config (Not Recommended)
+
+You can use this package as a normal ESLint config, without the `defineConfigWithVueTs` helper. But in this case, overriding the rules for `.vue` files would be more difficult and comes with many nuances. Please be cautious.
+
+You can check [the documentation for 14.1 and earlier versions](https://github.com/vuejs/eslint-config-typescript/tree/v14.1.4#usage) for more information.
+
 ## Further Reading
 
 - [All the extendable configurations from `typescript-eslint`](https://typescript-eslint.io/users/configs).
