@@ -56,6 +56,8 @@ describe('should pass lint without error in new projects', () => {
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'api-before-14.3',
+    'custom-type-checked-rules-on-and-off',
   ]) {
     test(projectName, async () => {
       const { stdout } = await runLintAgainst(projectName)
@@ -81,6 +83,8 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'api-before-14.3',
+    'custom-type-checked-rules-on-and-off',
   ]) {
     test(`src/App.vue in ${projectName}`, async () => {
       const appVuePath = path.join(
@@ -120,6 +124,7 @@ describe('should report error on recommended rule violations in other script fil
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'api-before-14.3',
   ]) {
     test(`main.ts in ${projectName}`, async () => {
       const mainTsPath = path.join(
@@ -197,13 +202,33 @@ test('#102: should set configs correctly for paths with glob-like syntax (e.g. f
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
 
-test('should guide user to use camelCase names in "extends"', async () => {
-  const eslintConfigPath = path.join(__dirname, '../examples/type-checked/eslint.config.js')
+test('(API before 14.3) should guide user to use camelCase names in "extends"', async () => {
+  const eslintConfigPath = path.join(__dirname, '../examples/api-before-14.3/eslint.config.js')
   const { modify, restore } = setupFileMutations(eslintConfigPath)
   modify((oldContents) => oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'))
-  const { failed, stderr } = await runLintAgainst('type-checked')
+  const { failed, stderr } = await runLintAgainst('api-before-14.3')
   restore()
 
   expect(failed).toBe(true)
   expect(stderr).contain('Please use "recommendedTypeChecked"')
+})
+
+test('should allow users to turn on/off type-aware rules by just targeting `**/*.vue` files', async () => {
+  const appVuePath = path.join(__dirname, '../examples/custom-type-checked-rules-on-and-off/src/App.vue')
+  const { modify, restore } = setupFileMutations(appVuePath)
+  modify((oldContents) => oldContents.replace('</script>', `
+// Should not cause lint error
+export type UnionUnknown = unknown | 'foo';
+
+const array: number[] = [];
+// Should cause lint error
+array.sort();
+</script>`))
+
+  const { failed, stdout } = await runLintAgainst('custom-type-checked-rules-on-and-off')
+  restore()
+
+  expect(failed).toBe(true)
+  expect(stdout).not.toContain('no-redundant-type-constituents')
+  expect(stdout).toContain('require-array-sort-compare')
 })
