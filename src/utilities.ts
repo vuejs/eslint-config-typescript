@@ -31,16 +31,13 @@ let projectOptions: ProjectOptions = {
 
 // This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
-export function configureVueProject(userOptions: ProjectOptions) {
+export function configureVueProject(userOptions: ProjectOptions): void {
   if (userOptions.scriptLangs) {
     projectOptions.scriptLangs = userOptions.scriptLangs
   }
   if (userOptions.rootDir) {
     projectOptions.rootDir = userOptions.rootDir
   }
-
-  // Return an empty array as it doesn't introduce any real ESLint configs by itself
-  return []
 }
 
 export function defineConfigWithVueTs(
