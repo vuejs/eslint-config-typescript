@@ -23,22 +23,29 @@ function toArray<T>(value: T | T[]): T[] {
 }
 
 export class TsEslintConfigForVue {
-  constructor(readonly configName: ExtendableConfigName) {
-    this.configName = configName
+  // the name property is here to provide better error messages when ESLint throws an error
+  name: string
+
+  #configName: ExtendableConfigName
+
+  constructor(configName: ExtendableConfigName) {
+    this.#configName = configName
+
+    this.name = `vueTsConfigs.${configName}`
   }
 
   needsTypeChecking(): boolean {
-    if (this.configName === 'disableTypeChecked') {
+    if (this.#configName === 'disableTypeChecked') {
       return false
     }
-    if (this.configName === 'all') {
+    if (this.#configName === 'all') {
       return true
     }
-    return this.configName.includes('TypeChecked')
+    return this.#configName.includes('TypeChecked')
   }
 
   toConfigArray(): FlatConfig.ConfigArray {
-    return toArray(tseslint.configs[this.configName])
+    return toArray(tseslint.configs[this.#configName])
       .flat()
       .map(config =>
         config.files && config.files.includes('**/*.ts')
@@ -52,5 +59,17 @@ export class TsEslintConfigForVue {
 }
 
 export const vueTsConfigs = Object.fromEntries(
-  CONFIG_NAMES.map(name => [name, new TsEslintConfigForVue(name)]),
+  CONFIG_NAMES.map(name => [
+    name,
+    new Proxy(new TsEslintConfigForVue(name), {
+      // `ownKeys` is called by ESLint when validating the config object.
+      // The only possible scenario where this is called is when the placeholder object
+      // isn't replaced, which means it's passed to ESLint without being wrapped by
+      // `defineConfigWithVueTs()`
+      // We throw an error here to provide a better error message to the user.
+      ownKeys() {
+        throw new Error('Please wrap the config object with `defineConfigWithVueTs()`')
+      },
+    }),
+  ]),
 ) as Record<ExtendableConfigName, TsEslintConfigForVue>
