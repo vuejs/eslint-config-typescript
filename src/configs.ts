@@ -24,28 +24,24 @@ function toArray<T>(value: T | T[]): T[] {
 
 export class TsEslintConfigForVue {
   // the name property is here to provide better error messages when ESLint throws an error
-  name: string
-
-  #configName: ExtendableConfigName
+  configName: ExtendableConfigName
 
   constructor(configName: ExtendableConfigName) {
-    this.#configName = configName
-
-    this.name = `vueTsConfigs.${configName}`
+    this.configName = configName
   }
 
   needsTypeChecking(): boolean {
-    if (this.#configName === 'disableTypeChecked') {
+    if (this.configName === 'disableTypeChecked') {
       return false
     }
-    if (this.#configName === 'all') {
+    if (this.configName === 'all') {
       return true
     }
-    return this.#configName.includes('TypeChecked')
+    return this.configName.includes('TypeChecked')
   }
 
   toConfigArray(): FlatConfig.ConfigArray {
-    return toArray(tseslint.configs[this.#configName])
+    return toArray(tseslint.configs[this.configName])
       .flat()
       .map(config =>
         config.files && config.files.includes('**/*.ts')
@@ -68,7 +64,18 @@ export const vueTsConfigs = Object.fromEntries(
       // `defineConfigWithVueTs()`
       // We throw an error here to provide a better error message to the user.
       ownKeys() {
-        throw new Error('Please wrap the config object with `defineConfigWithVueTs()`')
+        throw new Error(
+          'Please wrap the config object with `defineConfigWithVueTs()`',
+        )
+      },
+
+      get(target, prop) {
+        // for clearer error messages on where the config is coming from
+        if (prop === 'name') {
+          return `vueTsConfigs.${Reflect.get(target, 'configName')}`
+        }
+
+        return Reflect.get(target, prop)
       },
     }),
   ]),
