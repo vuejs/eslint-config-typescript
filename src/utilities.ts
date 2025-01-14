@@ -43,9 +43,8 @@ export function configureVueProject(userOptions: ProjectOptions): void {
 export function defineConfigWithVueTs(
   ...configs: InfiniteDepthConfigWithVueSupport[]
 ): ConfigArray {
-  const flattenedConfigs: Array<ConfigObjectOrPlaceholder> =
-    // @ts-ignore
-    configs.flat(Infinity)
+  // @ts-ignore
+  const flattenedConfigs: ConfigObjectOrPlaceholder[] = configs.flat(Infinity)
 
   const reorderedConfigs = insertAndReorderConfigs(flattenedConfigs)
 
@@ -84,8 +83,8 @@ type ExtractedConfig = {
 const userTypeAwareConfigs: ExtractedConfig[] = []
 
 function insertAndReorderConfigs(
-  configs: Array<ConfigObjectOrPlaceholder>,
-): Array<ConfigObjectOrPlaceholder> {
+  configs: ConfigObjectOrPlaceholder[],
+): ConfigObjectOrPlaceholder[] {
   const lastExtendedConfigIndex = configs.findLastIndex(
     config => config instanceof TsEslintConfigForVue,
   )

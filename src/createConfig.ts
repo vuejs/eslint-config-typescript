@@ -13,7 +13,7 @@ import { vueTsConfigs, type ExtendableConfigName } from './configs'
 import type { ScriptLang } from './internals'
 
 type ConfigOptions = ProjectOptions & {
-  extends?: Array<ExtendableConfigName>
+  extends?: ExtendableConfigName[]
   supportedScriptLangs?: Record<ScriptLang, boolean>
 }
 
