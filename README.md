@@ -141,6 +141,5 @@ You can check [the documentation for 14.1 and earlier versions](https://github.c
 
 ### With Other Community Configs
 
-Work-In-Progress.
-
-~~If you are following the [`standard`](https://standardjs.com/) or [`airbnb`](https://github.com/airbnb/javascript/) style guides, don't manually extend from this package. Please use `@vue/eslint-config-standard-with-typescript` or `@vue/eslint-config-airbnb-with-typescript` instead.~~
+- For [JavaScript Standard Style](https://standardjs.com/), use [`@vue/eslint-config-standard-with-typescript`](https://github.com/vuejs/eslint-config-standard/tree/main/packages/eslint-config-standard-with-typescript#usage)
+- Airbnb JavaScript Style Guide support is still in progress.
