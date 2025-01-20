@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.7.0",
-    "cypress": "^13.17.0",
+    "cypress": "^14.0.0",
     "eslint": "^9.18.0",
     "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-vue": "^9.32.0",
