@@ -505,8 +505,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
       chromedriver:
-        specifier: ^131.0.5
-        version: 131.0.5
+        specifier: ^132.0.0
+        version: 132.0.0
       eslint:
         specifier: ^9.18.0
         version: 9.18.0
@@ -518,7 +518,7 @@ importers:
         version: 5.0.0(bare-buffer@3.0.1)
       nightwatch:
         specifier: ^3.11.0
-        version: 3.11.0(chromedriver@131.0.5)(geckodriver@5.0.0(bare-buffer@3.0.1))
+        version: 3.11.0(chromedriver@132.0.0)(geckodriver@5.0.0(bare-buffer@3.0.1))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -2686,8 +2686,8 @@ packages:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
 
-  chromedriver@131.0.5:
-    resolution: {integrity: sha512-OQY4BHUe9JedxH4aAsPZJcf8Y0lMlE7y+3tiCvQSCQ6qDz2b99R0qsqyqzUUSW2DFx0bg4YxmK8CDVMKb9u5kg==}
+  chromedriver@132.0.0:
+    resolution: {integrity: sha512-jECVJjty5ypYKptQ/QCf8Q0Iq0qq2eW5x1WnYwlGCgmBBcwDH+XrdjFKc4mA3lFO1p3dpOUgTbayKCiGpMPBjg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7098,7 +7098,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  chromedriver@131.0.5:
+  chromedriver@132.0.0:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.7.9(debug@4.4.0)
@@ -8698,7 +8698,7 @@ snapshots:
     dependencies:
       axe-core: 4.10.2
 
-  nightwatch@3.11.0(chromedriver@131.0.5)(geckodriver@5.0.0(bare-buffer@3.0.1)):
+  nightwatch@3.11.0(chromedriver@132.0.0)(geckodriver@5.0.0(bare-buffer@3.0.1)):
     dependencies:
       '@nightwatch/chai': 5.0.3
       '@nightwatch/html-reporter-template': 0.3.0
@@ -8735,7 +8735,7 @@ snapshots:
       untildify: 4.0.0
       uuid: 8.3.2
     optionalDependencies:
-      chromedriver: 131.0.5
+      chromedriver: 132.0.0
       geckodriver: 5.0.0(bare-buffer@3.0.1)
     transitivePeerDependencies:
       - bufferutil
