@@ -1,6 +1,7 @@
 import * as tseslint from 'typescript-eslint'
 import vueParser from 'vue-eslint-parser'
 import pluginVue from 'eslint-plugin-vue'
+import type { Parser } from '@typescript-eslint/utils/ts-eslint'
 
 export type ScriptLang = 'ts' | 'tsx' | 'js' | 'jsx'
 
@@ -31,10 +32,30 @@ export const additionalRulesRequiringParserServices = [
 ]
 
 export function createBasicSetupConfigs(
+  tsInTemplates: boolean,
   scriptLangs: ScriptLang[],
 ): ConfigArray {
   const mayHaveJsxInSfc =
     scriptLangs.includes('jsx') || scriptLangs.includes('tsx')
+  
+  const parser: Record<string, string | Parser.LooseParserModule> = {
+    // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
+    // for better performance.
+    js: 'espree',
+    jsx: 'espree',
+
+    ts: tseslint.parser,
+    tsx: tseslint.parser,
+
+    // Leave the template parser unspecified,
+    // so that it could be determined by `<script lang="...">`
+  }
+
+  // If the user explicitly opts out of parsing TypeScript syntax in Vue templates,
+  // force using `espree` for the template parser for better performance.
+  if (!tsInTemplates) {
+    parser['<template>'] = 'espree'
+  }
 
   return [
     // Must set eslint-plugin-vue's base config again no matter whether the user
@@ -47,18 +68,7 @@ export function createBasicSetupConfigs(
       languageOptions: {
         parser: vueParser,
         parserOptions: {
-          parser: {
-            // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
-            // for better performance.
-            js: 'espree',
-            jsx: 'espree',
-
-            ts: tseslint.parser,
-            tsx: tseslint.parser,
-
-            // Leave the template parser unspecified,
-            // so that it could be determined by `<script lang="...">`
-          },
+          parser,
           // The internal espree version used by vue-eslint-parser is 9.x, which supports ES2024 at most.
           // While the parser may try to load the latest version of espree, it's not guaranteed to work.
           // For example, if npm accidentally hoists the older version to the top of the node_modules,
