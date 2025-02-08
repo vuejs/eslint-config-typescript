@@ -59,10 +59,6 @@ export function defineConfigWithVueTs(
     insertAndReorderConfigs,
     resolveVueTsConfigs,
     tseslint.config,
-    (configs: ConfigItem[]) => {
-      console.log(configs)
-      return configs
-    },
   )
 }
 
