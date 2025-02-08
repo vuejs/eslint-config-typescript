@@ -1,4 +1,4 @@
-import tseslint from 'typescript-eslint'
+import tseslint, { config } from 'typescript-eslint'
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
 const CONFIG_NAMES = [
@@ -22,12 +22,46 @@ function toArray<T>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value]
 }
 
+/**
+ * The options that a config in the `extends` should inherit.
+ */
+type ExtendsOptions = {
+  name?: string
+  files?: (string | string[])[]
+  ignores?: string[]
+}
+
 export class TsEslintConfigForVue {
-  // the name property is here to provide better error messages when ESLint throws an error
+  /**
+   * The name of the config object as defined in `typescript-eslint`.
+   */
   configName: ExtendableConfigName
+
+  /**
+   * the name property is here to provide better error messages when ESLint throws an error
+   */
+  name: string
 
   constructor(configName: ExtendableConfigName) {
     this.configName = configName
+    this.name = `vueTsConfigs.${configName}`
+  }
+
+  extendsOptions?: ExtendsOptions
+  /**
+   * Create a new instance of `TsEslintConfigForVue` with the `restOfConfig` merged into it.
+   * Should be used when the config is used in the `extends` field of another config.
+   */
+  asExtendedWith(restOfConfig: ExtendsOptions): TsEslintConfigForVue {
+    const extendedConfig = new TsEslintConfigForVue(this.configName)
+
+    extendedConfig.extendsOptions = {
+      name: [restOfConfig.name, this.name].filter(Boolean).join('__'),
+      ...(restOfConfig.files && { files: restOfConfig.files }),
+      ...(restOfConfig.ignores && { ignores: restOfConfig.ignores }),
+    }
+
+    return extendedConfig
   }
 
   needsTypeChecking(): boolean {
@@ -43,14 +77,13 @@ export class TsEslintConfigForVue {
   toConfigArray(): FlatConfig.ConfigArray {
     return toArray(tseslint.configs[this.configName])
       .flat()
-      .map(config =>
-        config.files && config.files.includes('**/*.ts')
-          ? {
-              ...config,
-              files: [...config.files, '**/*.vue'],
-            }
-          : config,
-      )
+      .map(config => ({
+        ...config,
+        ...(config.files && config.files.includes('**/*.ts')
+          ? { files: [...config.files, '**/*.vue'] }
+          : {}),
+        ...this.extendsOptions,
+      }))
   }
 }
 
@@ -67,15 +100,6 @@ export const vueTsConfigs = Object.fromEntries(
         throw new Error(
           'Please wrap the config object with `defineConfigWithVueTs()`',
         )
-      },
-
-      get(target, prop) {
-        // for clearer error messages on where the config is coming from
-        if (prop === 'name') {
-          return `vueTsConfigs.${Reflect.get(target, 'configName')}`
-        }
-
-        return Reflect.get(target, prop)
       },
     }),
   ]),
