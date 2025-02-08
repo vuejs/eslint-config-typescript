@@ -68,7 +68,7 @@ configureVueProject({
   // Setting it to `false` could improve performance.
   // But TypeScript syntax in Vue templates will then lead to syntax errors.
   // Also, type-aware rules won't be applied to expressions in templates in that case.
-  tsInTemplates: true,
+  tsSyntaxInTemplates: true,
 
   // Optional: specify the script langs in `.vue` files
   // Defaults to `['ts']`.

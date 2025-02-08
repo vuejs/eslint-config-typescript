@@ -32,7 +32,7 @@ export const additionalRulesRequiringParserServices = [
 ]
 
 export function createBasicSetupConfigs(
-  tsInTemplates: boolean,
+  tsSyntaxInTemplates: boolean,
   scriptLangs: ScriptLang[],
 ): ConfigArray {
   const mayHaveJsxInSfc =
@@ -53,7 +53,7 @@ export function createBasicSetupConfigs(
 
   // If the user explicitly opts out of parsing TypeScript syntax in Vue templates,
   // force using `espree` for the template parser for better performance.
-  if (!tsInTemplates) {
+  if (!tsSyntaxInTemplates) {
     parser['<template>'] = 'espree'
   }
 

@@ -27,7 +27,7 @@ export type ProjectOptions = {
    * But TypeScript syntax in Vue templates will then lead to syntax errors.
    * Also, type-aware rules won't be applied to expressions in templates in that case.
    */
-  tsInTemplates?: boolean
+  tsSyntaxInTemplates?: boolean
 
   /**
    * Allowed script languages in `vue` files.
@@ -43,7 +43,7 @@ export type ProjectOptions = {
 }
 
 let projectOptions: ProjectOptions = {
-  tsInTemplates: true,
+  tsSyntaxInTemplates: true,
   scriptLangs: ['ts'],
   rootDir: process.cwd(),
 }
@@ -51,8 +51,8 @@ let projectOptions: ProjectOptions = {
 // This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
 export function configureVueProject(userOptions: ProjectOptions): void {
-  if (userOptions.tsInTemplates !== undefined) {
-    projectOptions.tsInTemplates = userOptions.tsInTemplates
+  if (userOptions.tsSyntaxInTemplates !== undefined) {
+    projectOptions.tsSyntaxInTemplates = userOptions.tsSyntaxInTemplates
   }
   if (userOptions.scriptLangs) {
     projectOptions.scriptLangs = userOptions.scriptLangs
@@ -127,7 +127,7 @@ function insertAndReorderConfigs(
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
-    ...createBasicSetupConfigs(projectOptions.tsInTemplates!, projectOptions.scriptLangs!),
+    ...createBasicSetupConfigs(projectOptions.tsSyntaxInTemplates!, projectOptions.scriptLangs!),
 
     // user-turned-off type-aware rules must come after the last extended config
     // in case some rules re-enabled by the extended config

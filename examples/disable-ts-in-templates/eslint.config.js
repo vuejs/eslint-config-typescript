@@ -6,7 +6,7 @@ import {
 } from '@vue/eslint-config-typescript'
 
 configureVueProject({
-  tsInTemplates: false,
+  tsSyntaxInTemplates: false,
 })
 
 export default defineConfigWithVueTs(
