@@ -56,6 +56,7 @@ describe('should pass lint without error in new projects', () => {
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'disable-ts-in-templates',
     'api-before-14.3',
     'custom-type-checked-rules-on-and-off',
   ]) {
@@ -83,6 +84,7 @@ describe('should report error on recommended rule violations in .vue files', () 
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'disable-ts-in-templates',
     'api-before-14.3',
     'custom-type-checked-rules-on-and-off',
   ]) {
@@ -124,6 +126,7 @@ describe('should report error on recommended rule violations in other script fil
     'with-playwright',
     'with-vitest',
     'type-checked',
+    'disable-ts-in-templates',
     'api-before-14.3',
   ]) {
     test(`main.ts in ${projectName}`, async () => {

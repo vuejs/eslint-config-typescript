@@ -220,6 +220,46 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(typescript@5.7.3)
 
+  examples/disable-ts-in-templates:
+    dependencies:
+      vue:
+        specifier: ^3.5.13
+        version: 3.5.13(typescript@5.7.3)
+    devDependencies:
+      '@tsconfig/node20':
+        specifier: ^20.1.4
+        version: 20.1.4
+      '@types/node':
+        specifier: ^20.17.12
+        version: 20.17.14
+      '@vitejs/plugin-vue':
+        specifier: ^5.2.1
+        version: 5.2.1(vite@6.0.10(@types/node@20.17.14)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      '@vue/eslint-config-typescript':
+        specifier: workspace:*
+        version: link:../..
+      '@vue/tsconfig':
+        specifier: ^0.7.0
+        version: 0.7.0(typescript@5.7.3)(vue@3.5.13(typescript@5.7.3))
+      eslint:
+        specifier: ^9.18.0
+        version: 9.18.0
+      eslint-plugin-vue:
+        specifier: ^9.32.0
+        version: 9.32.0(eslint@9.18.0)
+      npm-run-all2:
+        specifier: ^7.0.2
+        version: 7.0.2
+      typescript:
+        specifier: ~5.7.3
+        version: 5.7.3
+      vite:
+        specifier: ^6.0.7
+        version: 6.0.10(@types/node@20.17.14)(tsx@4.19.2)(yaml@2.7.0)
+      vue-tsc:
+        specifier: ^2.2.0
+        version: 2.2.0(typescript@5.7.3)
+
   examples/disable-type-checked-for-yml:
     dependencies:
       pinia:
@@ -6256,7 +6296,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 22.10.7
+      '@types/node': 20.17.14
     optional: true
 
   '@typescript-eslint/eslint-plugin@8.21.0(@typescript-eslint/parser@8.21.0(eslint@9.18.0)(typescript@5.7.3))(eslint@9.18.0)(typescript@5.7.3)':
