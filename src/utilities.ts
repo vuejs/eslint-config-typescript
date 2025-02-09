@@ -20,18 +20,40 @@ type InfiniteDepthConfigWithVueSupport =
   | InfiniteDepthConfigWithVueSupport[]
 
 export type ProjectOptions = {
+  /**
+   * Whether to parse TypeScript syntax in Vue templates.
+   * Defaults to `true`.
+   * Setting it to `false` could improve performance.
+   * But TypeScript syntax in Vue templates will then lead to syntax errors.
+   * Also, type-aware rules won't be applied to expressions in templates in that case.
+   */
+  tsSyntaxInTemplates?: boolean
+
+  /**
+   * Allowed script languages in `vue` files.
+   * Defaults to `['ts']`
+   */
   scriptLangs?: ScriptLang[]
+
+  /**
+   * The root directory of the project.
+   * Defaults to `process.cwd()`.
+   */
   rootDir?: string
 }
 
-let projectOptions: ProjectOptions = {
-  scriptLangs: ['ts'],
+let projectOptions = {
+  tsSyntaxInTemplates: true as boolean,
+  scriptLangs: ['ts'] as ScriptLang[],
   rootDir: process.cwd(),
-}
+} satisfies ProjectOptions
 
 // This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
 export function configureVueProject(userOptions: ProjectOptions): void {
+  if (userOptions.tsSyntaxInTemplates !== undefined) {
+    projectOptions.tsSyntaxInTemplates = userOptions.tsSyntaxInTemplates
+  }
   if (userOptions.scriptLangs) {
     projectOptions.scriptLangs = userOptions.scriptLangs
   }
@@ -93,7 +115,7 @@ function insertAndReorderConfigs(
     return configs
   }
 
-  const vueFiles = groupVueFiles(projectOptions.rootDir!)
+  const vueFiles = groupVueFiles(projectOptions.rootDir)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
   const hasTypeAwareConfigs = configs.some(
@@ -105,7 +127,7 @@ function insertAndReorderConfigs(
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
-    ...createBasicSetupConfigs(projectOptions.scriptLangs!),
+    ...createBasicSetupConfigs(projectOptions.tsSyntaxInTemplates, projectOptions.scriptLangs),
 
     // user-turned-off type-aware rules must come after the last extended config
     // in case some rules re-enabled by the extended config

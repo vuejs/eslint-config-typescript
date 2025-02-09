@@ -16,7 +16,20 @@ export default defineConfigWithVueTs(
   },
 
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommendedTypeChecked,
+  vueTsConfigs.strictTypeChecked,
+  {
+    name: 'overrides',
+    files: ['**/*.{ts,vue}'],
+    rules: {
+      '@typescript-eslint/restrict-template-expressions': [
+          'error',
+          {
+            allowNumber: true,
+            allowBoolean: true,
+          },
+        ],
+    },
+  },
 
   {
     ...pluginVitest.configs.recommended,
