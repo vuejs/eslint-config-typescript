@@ -32,7 +32,7 @@
     "npm-run-all2": "^7.0.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.7.3",
-    "vite": "^6.0.10",
+    "vite": "^6.1.0",
     "vite-plugin-nightwatch": "^0.4.6",
     "vue-tsc": "^2.2.0"
   }
