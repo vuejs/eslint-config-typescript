@@ -1,4 +1,4 @@
-import * as tseslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 import vueParser from 'vue-eslint-parser'
 import pluginVue from 'eslint-plugin-vue'
 import type { Parser } from '@typescript-eslint/utils/ts-eslint'

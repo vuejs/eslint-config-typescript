@@ -1,4 +1,4 @@
-import tseslint, { config } from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
 const CONFIG_NAMES = [

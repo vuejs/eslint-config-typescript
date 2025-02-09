@@ -1,5 +1,5 @@
 import process from 'node:process'
-import * as tseslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 import type { TSESLint } from '@typescript-eslint/utils'
 
 import { TsEslintConfigForVue } from './configs'
@@ -80,7 +80,7 @@ export function defineConfigWithVueTs(
     flattenConfigs,
     insertAndReorderConfigs,
     resolveVueTsConfigs,
-    tseslint.config,
+    tseslint.config,  // this might not be necessary, but it doesn't hurt to keep it
   )
 }
 

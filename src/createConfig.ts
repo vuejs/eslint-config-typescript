@@ -1,7 +1,7 @@
 // This is a compatibility layer for the `createConfig` function in <= 14.2.0
 // Will be removed in 15.0.0
 
-import * as tseslint from 'typescript-eslint'
+import tseslint from 'typescript-eslint'
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
 import {
