@@ -42,11 +42,11 @@ export type ProjectOptions = {
   rootDir?: string
 }
 
-let projectOptions: ProjectOptions = {
-  tsSyntaxInTemplates: true,
-  scriptLangs: ['ts'],
+let projectOptions = {
+  tsSyntaxInTemplates: true as boolean,
+  scriptLangs: ['ts'] as ScriptLang[],
   rootDir: process.cwd(),
-}
+} satisfies ProjectOptions
 
 // This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
@@ -115,7 +115,7 @@ function insertAndReorderConfigs(
     return configs
   }
 
-  const vueFiles = groupVueFiles(projectOptions.rootDir!)
+  const vueFiles = groupVueFiles(projectOptions.rootDir)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
   const hasTypeAwareConfigs = configs.some(
@@ -127,7 +127,7 @@ function insertAndReorderConfigs(
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
-    ...createBasicSetupConfigs(projectOptions.tsSyntaxInTemplates!, projectOptions.scriptLangs!),
+    ...createBasicSetupConfigs(projectOptions.tsSyntaxInTemplates, projectOptions.scriptLangs),
 
     // user-turned-off type-aware rules must come after the last extended config
     // in case some rules re-enabled by the extended config
