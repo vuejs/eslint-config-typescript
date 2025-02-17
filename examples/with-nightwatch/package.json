@@ -19,21 +19,21 @@
   "devDependencies": {
     "@nightwatch/vue": "^3.1.2",
     "@tsconfig/node20": "^20.1.4",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
-    "chromedriver": "^133.0.0",
-    "eslint": "^9.20.0",
+    "chromedriver": "^133.0.1",
+    "eslint": "^9.20.1",
     "eslint-plugin-vue": "^9.32.0",
     "geckodriver": "^5.0.0",
-    "nightwatch": "^3.11.0",
+    "nightwatch": "^3.11.1",
     "npm-run-all2": "^7.0.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.7.3",
     "vite": "^6.1.0",
     "vite-plugin-nightwatch": "^0.4.6",
-    "vue-tsc": "^2.2.0"
+    "vue-tsc": "^2.2.2"
   }
 }
