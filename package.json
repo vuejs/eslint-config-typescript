@@ -73,7 +73,7 @@
     "@typescript-eslint/utils": "^8.26.0",
     "fast-glob": "^3.3.3",
     "typescript-eslint": "^8.26.0",
-    "vue-eslint-parser": "^9.4.3"
+    "vue-eslint-parser": "^10.1.1"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
