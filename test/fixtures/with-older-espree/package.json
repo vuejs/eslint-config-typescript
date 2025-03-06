@@ -24,7 +24,7 @@
     "eslint-plugin-vue": "^9.33.0",
     "espree": "^9.6.1",
     "npm-run-all2": "^7.0.2",
-    "typescript": "~5.7.3",
+    "typescript": "~5.8.2",
     "vite": "^6.2.0",
     "vue-tsc": "^2.2.8"
   }
