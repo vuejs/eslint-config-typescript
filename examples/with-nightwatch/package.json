@@ -26,7 +26,7 @@
     "@vue/tsconfig": "^0.7.0",
     "chromedriver": "^133.0.3",
     "eslint": "^9.21.0",
-    "eslint-plugin-vue": "^10.0.0",
+    "eslint-plugin-vue": "~10.0.0",
     "geckodriver": "^5.0.0",
     "nightwatch": "^3.11.1",
     "npm-run-all2": "^7.0.2",
