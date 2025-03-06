@@ -23,7 +23,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
     "@types/jsdom": "^21.1.7",
-    "@types/node": "^22.13.8",
+    "@types/node": "^22.13.9",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
     "@vitest/eslint-plugin": "^1.1.36",
@@ -34,7 +34,7 @@
     "cypress": "^14.1.0",
     "eslint": "^9.21.0",
     "eslint-plugin-cypress": "^4.1.0",
-    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue": "^9.33.0",
     "eslint-plugin-yml": "^1.17.0",
     "jsdom": "^26.0.0",
     "npm-run-all2": "^7.0.2",
@@ -44,6 +44,6 @@
     "vite": "^6.2.0",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vitest": "^3.0.7",
-    "vue-tsc": "^2.2.6"
+    "vue-tsc": "^2.2.8"
   }
 }
