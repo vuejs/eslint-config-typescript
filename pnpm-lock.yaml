@@ -31,8 +31,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       execa:
         specifier: ^9.5.2
         version: 9.5.2
@@ -80,8 +80,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -147,8 +147,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.21.0)
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       jsdom:
         specifier: ^26.0.0
         version: 26.0.0
@@ -202,8 +202,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -245,8 +245,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -312,8 +312,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.21.0)
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       eslint-plugin-yml:
         specifier: ^1.17.0
         version: 1.17.0(eslint@9.21.0)
@@ -370,8 +370,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -437,8 +437,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.21.0)
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       jsdom:
         specifier: ^26.0.0
         version: 26.0.0
@@ -498,8 +498,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.21.0)
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -544,8 +544,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -587,8 +587,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -636,8 +636,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       geckodriver:
         specifier: ^5.0.0
         version: 5.0.0(bare-buffer@3.0.1)
@@ -694,8 +694,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(eslint@9.21.0)
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -737,8 +737,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -783,8 +783,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -826,8 +826,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -875,8 +875,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       jsdom:
         specifier: ^26.0.0
         version: 26.0.0
@@ -924,8 +924,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -970,8 +970,8 @@ importers:
         specifier: ^9.21.0
         version: 9.21.0
       eslint-plugin-vue:
-        specifier: ^9.33.0
-        version: 9.33.0(eslint@9.21.0)
+        specifier: ^10.0.0
+        version: 10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0))
       espree:
         specifier: ^9.6.1
         version: 9.6.1
@@ -3221,11 +3221,12 @@ packages:
       eslint-config-prettier:
         optional: true
 
-  eslint-plugin-vue@9.33.0:
-    resolution: {integrity: sha512-174lJKuNsuDIlLpjeXc5E2Tss8P44uIimAfGD0b90k0NoirJqpG7stLuU9Vp/9ioTOrQdWVREc4mRd1BD+CvGw==}
-    engines: {node: ^14.17.0 || >=16.0.0}
+  eslint-plugin-vue@10.0.0:
+    resolution: {integrity: sha512-XKckedtajqwmaX6u1VnECmZ6xJt+YvlmMzBPZd+/sI3ub2lpYZyFnsyWo7c3nMOQKJQudeyk1lw/JxdgeKT64w==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
-      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      eslint: ^8.57.0 || ^9.0.0
+      vue-eslint-parser: ^10.0.0
 
   eslint-plugin-yml@1.17.0:
     resolution: {integrity: sha512-Q3LXFRnNpGYAK/PM0BY1Xs0IY1xTLfM0kC986nNQkx1l8tOGz+YS50N6wXkAJkrBpeUN9OxEMB7QJ+9MTDAqIQ==}
@@ -7542,19 +7543,16 @@ snapshots:
     optionalDependencies:
       eslint-config-prettier: 10.0.1(eslint@9.21.0)
 
-  eslint-plugin-vue@9.33.0(eslint@9.21.0):
+  eslint-plugin-vue@10.0.0(eslint@9.21.0)(vue-eslint-parser@9.4.3(eslint@9.21.0)):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.1(eslint@9.21.0)
       eslint: 9.21.0
-      globals: 13.24.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 6.1.2
       semver: 7.6.3
       vue-eslint-parser: 9.4.3(eslint@9.21.0)
       xml-name-validator: 4.0.0
-    transitivePeerDependencies:
-      - supports-color
 
   eslint-plugin-yml@1.17.0(eslint@9.21.0):
     dependencies:
