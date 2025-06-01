@@ -23,7 +23,7 @@
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.23.0",
     "eslint-plugin-vue": "~10.0.0",
-    "npm-run-all2": "^7.0.2",
+    "npm-run-all2": "^8.0.4",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
     "vue-tsc": "^2.2.8"

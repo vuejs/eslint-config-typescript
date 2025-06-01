@@ -83,8 +83,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -153,8 +153,8 @@ importers:
         specifier: ^26.0.0
         version: 26.0.0
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -205,8 +205,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -248,8 +248,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -321,8 +321,8 @@ importers:
         specifier: ^26.0.0
         version: 26.0.0
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -373,8 +373,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -443,8 +443,8 @@ importers:
         specifier: ^26.0.0
         version: 26.0.0
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -501,8 +501,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       start-server-and-test:
         specifier: ^2.0.11
         version: 2.0.11
@@ -547,8 +547,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -590,8 +590,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -645,8 +645,8 @@ importers:
         specifier: ^3.12.1
         version: 3.12.1(chromedriver@134.0.5)(geckodriver@5.0.0(bare-buffer@3.0.1))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.13.15)(typescript@5.8.2)
@@ -697,8 +697,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -740,8 +740,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -786,8 +786,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -829,8 +829,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -881,8 +881,8 @@ importers:
         specifier: ^26.0.0
         version: 26.0.0
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -927,8 +927,8 @@ importers:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -976,8 +976,8 @@ importers:
         specifier: ^9.6.1
         version: 9.6.1
       npm-run-all2:
-        specifier: ^7.0.2
-        version: 7.0.2
+        specifier: ^8.0.4
+        version: 8.0.4
       typescript:
         specifier: ~5.8.2
         version: 5.8.2
@@ -4521,6 +4521,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
@@ -4542,9 +4543,9 @@ packages:
     resolution: {integrity: sha512-TZKxPvItzai9kN9H/TkmCtx/ZN/hvr3vUycjlfmH0ootY9yFBzNOpiXAdIn1Iteqsvk4lQn6B5PTrt+n6h8k/w==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  npm-run-all2@7.0.2:
-    resolution: {integrity: sha512-7tXR+r9hzRNOPNTvXegM+QzCuMjzUIIq66VDunL6j60O4RrExx32XUhlrS7UK4VcdGw5/Wxzb3kfNcFix9JKDA==}
-    engines: {node: ^18.17.0 || >=20.5.0, npm: '>= 9'}
+  npm-run-all2@8.0.4:
+    resolution: {integrity: sha512-wdbB5My48XKp2ZfJUlhnLVihzeuA1hgBnqB2J9ahV77wLS+/YAJAlN8I+X3DIFIPZ3m5L7nplmlbhNiFDmXRDA==}
+    engines: {node: ^20.5.0 || >=22.0.0, npm: '>= 10'}
     hasBin: true
 
   npm-run-path@4.0.1:
@@ -9267,12 +9268,12 @@ snapshots:
 
   npm-normalize-package-bin@4.0.0: {}
 
-  npm-run-all2@7.0.2:
+  npm-run-all2@8.0.4:
     dependencies:
       ansi-styles: 6.2.1
       cross-spawn: 7.0.6
       memorystream: 0.3.1
-      minimatch: 9.0.5
+      picomatch: 4.0.2
       pidtree: 0.6.0
       read-package-json-fast: 4.0.0
       shell-quote: 1.8.2
