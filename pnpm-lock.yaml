@@ -144,8 +144,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       eslint-plugin-cypress:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.23.0)
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.23.0)
       eslint-plugin-vue:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
@@ -309,8 +309,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       eslint-plugin-cypress:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.23.0)
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.23.0)
       eslint-plugin-vue:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
@@ -434,8 +434,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       eslint-plugin-cypress:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.23.0)
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.23.0)
       eslint-plugin-vue:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
@@ -495,8 +495,8 @@ importers:
         specifier: ^9.23.0
         version: 9.23.0
       eslint-plugin-cypress:
-        specifier: ^4.2.0
-        version: 4.2.0(eslint@9.23.0)
+        specifier: ^5.1.0
+        version: 5.1.0(eslint@9.23.0)
       eslint-plugin-vue:
         specifier: ~10.0.0
         version: 10.0.0(eslint@9.23.0)(vue-eslint-parser@10.1.1(eslint@9.23.0))
@@ -3505,8 +3505,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@4.2.0:
-    resolution: {integrity: sha512-v5cyt0VYb1tEEODBJSE44PocYOwQsckyexJhCs7LtdD3FGO6D2GjnZB2s2Sts4RcxdxECTWX01nObOZRs26bQw==}
+  eslint-plugin-cypress@5.1.0:
+    resolution: {integrity: sha512-tdLXm4aq9vX2hTtKJTUFD3gdNseMKqsf8+P6hI4TtOPdz1LU4xvTpQBd1++qPAsPZP2lyYh71B5mvzu2lBr4Ow==}
     peerDependencies:
       eslint: '>=9'
 
@@ -3866,8 +3866,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.14.0:
-    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
+  globals@16.2.0:
+    resolution: {integrity: sha512-O+7l9tPdHCU320IigZZPj5zmRCFG9xHmx9cU8FqU2Rp+JN714seHV+2S9+JslCpY4gJwU2vOGox0wzgae/MCEg==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -4521,6 +4521,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
@@ -8154,10 +8155,10 @@ snapshots:
     dependencies:
       eslint: 9.23.0
 
-  eslint-plugin-cypress@4.2.0(eslint@9.23.0):
+  eslint-plugin-cypress@5.1.0(eslint@9.23.0):
     dependencies:
       eslint: 9.23.0
-      globals: 15.14.0
+      globals: 16.2.0
 
   eslint-plugin-playwright@2.2.0(eslint@9.23.0):
     dependencies:
@@ -8594,7 +8595,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.14.0: {}
+  globals@16.2.0: {}
 
   gopd@1.2.0: {}
 
