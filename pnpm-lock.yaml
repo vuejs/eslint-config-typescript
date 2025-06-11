@@ -630,8 +630,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
       chromedriver:
-        specifier: ^134.0.5
-        version: 134.0.5
+        specifier: ^137.0.3
+        version: 137.0.3
       eslint:
         specifier: ^9.23.0
         version: 9.23.0
@@ -643,7 +643,7 @@ importers:
         version: 5.0.0(bare-buffer@3.0.1)
       nightwatch:
         specifier: ^3.12.1
-        version: 3.12.1(chromedriver@134.0.5)(geckodriver@5.0.0(bare-buffer@3.0.1))
+        version: 3.12.1(chromedriver@137.0.3)(geckodriver@5.0.0(bare-buffer@3.0.1))
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
@@ -2978,9 +2978,9 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
-  chromedriver@134.0.5:
-    resolution: {integrity: sha512-edXbiuShAvH6Elx8Hobl4NQkgNRMIozcW7ZlEiE8TBynZHRazrepO9hfftQzZgztPvjMQiSWeWjZaDV3SecYaw==}
-    engines: {node: '>=18'}
+  chromedriver@137.0.3:
+    resolution: {integrity: sha512-ceBxOxaXl/3ddvxZicgASpL8HfxmUK/q/VI3STcyl0t+SvgydNqXQO1XWwqUIA/tMfREpUunumQvwH7r6hdT0Q==}
+    engines: {node: '>=20'}
     hasBin: true
 
   ci-info@3.3.0:
@@ -4521,6 +4521,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
@@ -7577,7 +7578,7 @@ snapshots:
     dependencies:
       readdirp: 4.1.2
 
-  chromedriver@134.0.5:
+  chromedriver@137.0.3:
     dependencies:
       '@testim/chrome-version': 1.1.4
       axios: 1.8.4(debug@4.4.0)
@@ -9196,7 +9197,7 @@ snapshots:
     dependencies:
       axe-core: 4.10.2
 
-  nightwatch@3.12.1(chromedriver@134.0.5)(geckodriver@5.0.0(bare-buffer@3.0.1)):
+  nightwatch@3.12.1(chromedriver@137.0.3)(geckodriver@5.0.0(bare-buffer@3.0.1)):
     dependencies:
       '@nightwatch/chai': 5.0.3
       '@nightwatch/html-reporter-template': 0.3.0
@@ -9233,7 +9234,7 @@ snapshots:
       untildify: 4.0.0
       uuid: 8.3.2
     optionalDependencies:
-      chromedriver: 134.0.5
+      chromedriver: 137.0.3
       geckodriver: 5.0.0(bare-buffer@3.0.1)
     transitivePeerDependencies:
       - bufferutil
