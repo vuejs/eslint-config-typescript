@@ -1,4 +1,9 @@
 packages:
-  - 'examples/*'
-  - 'test/fixtures/*'
-  - '.'
+  - examples/*
+  - test/fixtures/*
+  - .
+
+ignoredBuiltDependencies:
+  - chromedriver
+  - cypress
+  - esbuild
