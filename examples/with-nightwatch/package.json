@@ -29,7 +29,7 @@
     "eslint-plugin-vue": "~10.0.0",
     "geckodriver": "^5.0.0",
     "nightwatch": "^3.12.1",
-    "npm-run-all2": "^7.0.2",
+    "npm-run-all2": "^8.0.4",
     "ts-node": "^10.9.2",
     "typescript": "~5.8.2",
     "vite": "^6.2.0",
