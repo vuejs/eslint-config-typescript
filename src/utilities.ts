@@ -41,6 +41,27 @@ export type ProjectOptions = {
   scriptLangs?: ScriptLang[]
 
   /**
+   * Whether to override some `no-unsafe-*` rules to avoid false positives on Vue component operations.
+   * Defaults to `true`.
+   * 
+   * Due to limitations in the integration between Vue and TypeScript-ESLint,
+   * TypeScript-ESLint cannot get the full type information for `.vue` files
+   * and will use fallback types that contain some `any`s.
+   * Therefore, some `no-unsafe-*` rules will error on functions that operate on Vue components,
+   * such as `createApp`, `createRouter`, `useTemplateRef`, etc.
+   * 
+   * Setting this option to `true` will override those `no-unsafe-*` rules
+   * to allow these patterns in the project.
+   * 
+   * If you're using a metaframework such as Nuxt or Quasar
+   * that handles app creation & router configuration for you,
+   * you might not need to interact with component types directly.
+   * Similarly, if you're using TSX exclusively,
+   * you can set this to `false` for stricter type checking.
+   */
+  allowComponentTypeUnsafety?: boolean
+
+  /**
    * The root directory of the project.
    * Defaults to `process.cwd()`.
    */
@@ -50,6 +71,7 @@ export type ProjectOptions = {
 let projectOptions = {
   tsSyntaxInTemplates: true as boolean,
   scriptLangs: ['ts'] as ScriptLang[],
+  allowComponentTypeUnsafety: true as boolean,
   rootDir: process.cwd(),
 } satisfies ProjectOptions
 
@@ -58,6 +80,9 @@ let projectOptions = {
 export function configureVueProject(userOptions: ProjectOptions): void {
   if (userOptions.tsSyntaxInTemplates !== undefined) {
     projectOptions.tsSyntaxInTemplates = userOptions.tsSyntaxInTemplates
+  }
+  if (userOptions.allowComponentTypeUnsafety !== undefined) {
+    projectOptions.allowComponentTypeUnsafety = userOptions.allowComponentTypeUnsafety
   }
   if (userOptions.scriptLangs) {
     projectOptions.scriptLangs = userOptions.scriptLangs
@@ -208,7 +233,7 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     ...(needsTypeAwareLinting
       ? [
           ...createSkipTypeCheckingConfigs(vueFiles.nonTypeCheckable),
-          ...createTypeCheckingConfigs(vueFiles.typeCheckable),
+          ...createTypeCheckingConfigs(vueFiles.typeCheckable, projectOptions.allowComponentTypeUnsafety),
         ]
       : []),
 
