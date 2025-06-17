@@ -5,7 +5,8 @@
     "schedule:monthly"
   ],
   "ignorePaths": [
-    "**/node_modules/**"
+    "**/node_modules/**",
+    "test/fixtures/redefine-plugin-vue"
   ],
   "ignoreDeps": ["espree"]
 }

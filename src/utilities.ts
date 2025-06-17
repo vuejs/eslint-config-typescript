@@ -1,6 +1,7 @@
 import process from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { TSESLint } from '@typescript-eslint/utils'
+import pluginVue from 'eslint-plugin-vue'
 
 import { TsEslintConfigForVue } from './configs'
 import groupVueFiles from './groupVueFiles'
@@ -78,9 +79,10 @@ export function defineConfigWithVueTs(
   return pipe(
     configs,
     flattenConfigs,
+    deduplicateVuePlugin,
     insertAndReorderConfigs,
     resolveVueTsConfigs,
-    tseslint.config,  // this might not be necessary, but it doesn't hurt to keep it
+    tseslint.config, // this might not be necessary, but it doesn't hurt to keep it
   )
 }
 
@@ -191,7 +193,10 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
-    ...createBasicSetupConfigs(projectOptions.tsSyntaxInTemplates, projectOptions.scriptLangs),
+    ...createBasicSetupConfigs(
+      projectOptions.tsSyntaxInTemplates,
+      projectOptions.scriptLangs,
+    ),
 
     // user-turned-off type-aware rules must come after the last extended config
     // in case some rules re-enabled by the extended config
@@ -247,4 +252,35 @@ const rulesRequiringTypeInformation = new Set(
 )
 function doesRuleRequireTypeInformation(ruleName: string): boolean {
   return rulesRequiringTypeInformation.has(ruleName)
+}
+
+function deduplicateVuePlugin(configs: RawConfigItem[]): RawConfigItem[] {
+  return configs.map(config => {
+    if (config instanceof TsEslintConfigForVue || !config.plugins?.vue) {
+      return config
+    }
+
+    const currentVuePlugin = config.plugins.vue
+    if (currentVuePlugin !== pluginVue) {
+      const currentVersion: string = currentVuePlugin.meta?.version || 'unknown'
+      const expectedVersion: string = pluginVue.meta?.version || 'unknown'
+
+      const configName: string = config.name || 'unknown config'
+
+      console.warn(
+        `Warning: Multiple instances of eslint-plugin-vue detected in ${configName}. ` +
+          `Replacing version ${currentVersion} with version ${expectedVersion}.`,
+      )
+
+      return {
+        ...config,
+        plugins: {
+          ...config.plugins,
+          vue: pluginVue,
+        },
+      }
+    }
+
+    return config
+  })
 }

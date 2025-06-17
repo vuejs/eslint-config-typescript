@@ -200,6 +200,13 @@ test('#87: should not error if the project root has an older version of espree i
   expect(stdout).toMatch(WHITESPACE_ONLY)
 })
 
+test('#161: should warn and override the vue plugin if there are multiple versions of `eslint-plugin-vue` found in the config', async () => {
+  const { stderr } = await runLintAgainst('redefine-plugin-vue', FROM_FIXTURES)
+  expect(stderr).not.toMatch(`Cannot redefine plugin "vue"`)
+  expect(stderr).toMatch('Warning: Multiple instances of eslint-plugin-vue detected')
+})
+
+
 test('#102: should set configs correctly for paths with glob-like syntax (e.g. file-based-routing patterns)', async () => {
   const { stdout } = await runLintAgainst('file-based-routing', FROM_FIXTURES)
   expect(stdout).toMatch(WHITESPACE_ONLY)
