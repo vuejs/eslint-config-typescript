@@ -203,7 +203,7 @@ test('#87: should not error if the project root has an older version of espree i
 test.only('#161: should warn and override the vue plugin if there are multiple versions of `eslint-plugin-vue` found in the config', async () => {
   const { stderr } = await runLintAgainst('redefine-plugin-vue', FROM_FIXTURES)
   expect(stderr).not.toMatch(`Cannot redefine plugin "vue"`)
-  // TODO: test our warning message
+  expect(stderr).toMatch('Warning: Multiple instances of eslint-plugin-vue detected')
 })
 
 
