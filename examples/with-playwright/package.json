@@ -19,7 +19,7 @@
     "@playwright/test": "^1.53.0",
     "@tsconfig/node20": "^20.1.6",
     "@types/node": "^22.15.32",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.7.0",
     "eslint": "^9.29.0",
@@ -27,7 +27,7 @@
     "eslint-plugin-vue": "~10.2.0",
     "npm-run-all2": "^8.0.4",
     "typescript": "~5.8.2",
-    "vite": "^6.3.5",
+    "vite": "^7.0.0",
     "vue-tsc": "^2.2.10"
   }
 }

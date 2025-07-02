@@ -21,7 +21,7 @@
   "devDependencies": {
     "@tsconfig/node20": "^20.1.6",
     "@types/node": "^22.15.32",
-    "@vitejs/plugin-vue": "^5.2.4",
+    "@vitejs/plugin-vue": "^6.0.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.7.0",
     "cypress": "^14.4.1",
@@ -31,7 +31,7 @@
     "npm-run-all2": "^8.0.4",
     "start-server-and-test": "^2.0.12",
     "typescript": "~5.8.2",
-    "vite": "^6.3.5",
+    "vite": "^7.0.0",
     "vue-tsc": "^2.2.10"
   }
 }
