@@ -242,3 +242,53 @@ array.sort();
   expect(stdout).not.toContain('no-redundant-type-constituents')
   expect(stdout).toContain('require-array-sort-compare')
 })
+
+describe('allowComponentTypeUnsafety', () => {
+  function appendUnsafeType(oldContents: string) {
+    return (
+      oldContents +
+      `
+function foo() {
+  return Object.create(null);
+}
+foo()
+`
+    )
+  }
+
+  test('should relax some no-unsafe rules in type-checked projects', async () => {
+    const projectName = 'type-checked'
+    const mainTsPath = path.join(
+        __dirname,
+        '../examples',
+        projectName,
+        'src/main.ts',
+      )
+    const { modify, restore } = setupFileMutations(mainTsPath)
+    modify(appendUnsafeType)
+    const { failed, stdout } = await runLintAgainst(projectName, FROM_EXAMPLES)
+    restore()
+
+    expect(failed).toBe(false)
+    expect(stdout).toMatch(WHITESPACE_ONLY)
+  })
+
+  test('should not relax no-unsafe rules when allowComponentTypeUnsafety is false', async () => {
+    // Note: we've explicitly set the `allowComponentTypeUnsafety` to false in the quasar example
+    // because quasar projects by default don't contain the patterns in conflict with these rules
+    const projectName = 'quasar-project'
+    const routerPath = path.join(
+        __dirname,
+        '../examples',
+        projectName,
+        'src/router/index.ts',
+      )
+    const { modify, restore } = setupFileMutations(routerPath)
+    modify(appendUnsafeType)
+    const { failed, stdout } = await runLintAgainst(projectName, FROM_EXAMPLES)
+    restore()
+
+    expect(failed).toBe(true)
+    expect(stdout).toContain('@typescript-eslint/no-unsafe-return')
+  })
+})

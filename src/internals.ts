@@ -37,7 +37,7 @@ export function createBasicSetupConfigs(
 ): ConfigArray {
   const mayHaveJsxInSfc =
     scriptLangs.includes('jsx') || scriptLangs.includes('tsx')
-  
+
   const parser: Record<string, string | Parser.LooseParserModule> = {
     // Fallback to espree for js/jsx scripts, as well as SFCs without scripts
     // for better performance.
@@ -128,21 +128,9 @@ export function createSkipTypeCheckingConfigs(
 
 export function createTypeCheckingConfigs(
   typeCheckableVueFiles: string[],
+  allowComponentTypeUnsafety: boolean,
 ): ConfigArray {
   const configs: ConfigArray = [
-    // Vue's own typing inevitably contains some `any`s,
-    // so some of the `no-unsafe-*` rules can't be used.
-    {
-      name: '@vue/typescript/type-aware-rules-in-conflict-with-vue',
-      files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
-      rules: {
-        '@typescript-eslint/no-unsafe-argument': 'off',
-        '@typescript-eslint/no-unsafe-assignment': 'off',
-        '@typescript-eslint/no-unsafe-call': 'off',
-        '@typescript-eslint/no-unsafe-member-access': 'off',
-        '@typescript-eslint/no-unsafe-return': 'off',
-      },
-    },
     {
       name: '@vue/typescript/default-project-service-for-ts-files',
       files: ['**/*.ts', '**/*.tsx', '**/*.mts'],
@@ -155,6 +143,31 @@ export function createTypeCheckingConfigs(
       },
     },
   ]
+
+  if (allowComponentTypeUnsafety) {
+    configs.push(
+      // Due to limitations in the integration between Vue and TypeScript-ESLint,
+      // TypeScript-ESLint cannot get the full type information for `.vue` files
+      // and will use fallback types that contain some `any`s.
+      // Therefore, we need to disable some `no-unsafe-*` rules that would error on idiomatic Vue code.
+      {
+        name: '@vue/typescript/type-aware-rules-in-conflict-with-vue',
+        files: ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.vue'],
+        rules: {
+          // Would error on `createApp(App)`
+          '@typescript-eslint/no-unsafe-argument': 'off',
+          // Would error on route component configuration
+          '@typescript-eslint/no-unsafe-assignment': 'off',
+          // Would error on async components
+          '@typescript-eslint/no-unsafe-return': 'off',
+
+          // Might error on `defineExpose` + `useTemplateRef` usages
+          '@typescript-eslint/no-unsafe-call': 'off',
+          '@typescript-eslint/no-unsafe-member-access': 'off',
+        },
+      },
+    )
+  }
 
   if (typeCheckableVueFiles.length > 0) {
     configs.push({
