@@ -30,7 +30,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
-    "@vue/tsconfig": "^0.7.0",
+    "@vue/tsconfig": "^0.8.0",
     "cypress": "^14.5.4",
     "eslint": "^9.33.0",
     "eslint-plugin-cypress": "^5.1.1",
