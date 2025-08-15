@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "workspace:*",
-    "@vue/tsconfig": "^0.7.0",
+    "@vue/tsconfig": "^0.8.0",
     "eslint": "^9.33.0",
     "eslint-plugin-vue": "~10.4.0",
     "npm-run-all2": "^8.0.4",
