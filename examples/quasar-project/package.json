@@ -33,7 +33,7 @@
     "prettier": "3.5.3",
     "typescript": "~5.9.0",
     "vite-plugin-checker": "^0.9.3",
-    "vue-tsc": "^2.2.12"
+    "vue-tsc": "^3.0.5"
   },
   "engines": {
     "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",
