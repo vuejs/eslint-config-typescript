@@ -17,7 +17,7 @@
   "dependencies": {
     "@quasar/extras": "^1.17.0",
     "quasar": "^2.18.6",
-    "vue": "^3.5.24",
+    "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
@@ -28,12 +28,12 @@
     "@vue/eslint-config-typescript": "workspace:*",
     "autoprefixer": "^10.4.22",
     "eslint": "^9.39.1",
-    "eslint-plugin-vue": "~10.5.1",
+    "eslint-plugin-vue": "~10.6.2",
     "globals": "^16.5.0",
     "prettier": "3.7.4",
     "typescript": "~5.9.0",
     "vite-plugin-checker": "^0.11.0",
-    "vue-tsc": "^3.1.4"
+    "vue-tsc": "^3.1.5"
   },
   "engines": {
     "node": "^28 || ^26 || ^24 || ^22 || ^20 || ^18",

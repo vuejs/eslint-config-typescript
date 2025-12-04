@@ -14,7 +14,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.24"
+    "vue": "^3.5.25"
   },
   "devDependencies": {
     "@nightwatch/vue": "^3.1.2",
@@ -26,14 +26,14 @@
     "@vue/tsconfig": "^0.8.1",
     "chromedriver": "^142.0.3",
     "eslint": "^9.39.1",
-    "eslint-plugin-vue": "~10.5.1",
-    "geckodriver": "^6.0.2",
+    "eslint-plugin-vue": "~10.6.2",
+    "geckodriver": "^6.1.0",
     "nightwatch": "^3.12.3",
     "npm-run-all2": "^8.0.4",
     "ts-node": "^10.9.2",
     "typescript": "~5.9.0",
     "vite": "^7.2.6",
     "vite-plugin-nightwatch": "^0.4.6",
-    "vue-tsc": "^3.1.4"
+    "vue-tsc": "^3.1.5"
   }
 }
