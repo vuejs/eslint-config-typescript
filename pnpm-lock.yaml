@@ -988,8 +988,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       unplugin-vue-router:
-        specifier: ^0.17.2
-        version: 0.17.2(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^0.18.0
+        version: 0.18.0(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))
       vite:
         specifier: ^7.2.6
         version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
@@ -6524,8 +6524,8 @@ packages:
     resolution: {integrity: sha512-5lWVjgi6vuHhJ526bI4nlCOmkCIF3nnfXkCMDeMJrtdvxTs6ZFCM8oNufGTsDbKv/tJ/xj8RpvXjRuPBZJuJog==}
     engines: {node: '>=20.19.0'}
 
-  unplugin-vue-router@0.17.2:
-    resolution: {integrity: sha512-KzEpzUuvU/kryckOtcw5IGiL8PJ5IGLY+wFCb2yEa+ilOTEtVPkJ+Y+3auW9+e9NWLzL1iGHcFOG4AsaDcYL5Q==}
+  unplugin-vue-router@0.18.0:
+    resolution: {integrity: sha512-zpeMWqn1vEBlo0SMFS0aX7OA9PBJUDd/7mGnECXvurBb0xPGdOezWwHeQlg4LGaYECKhZ0szkDjYZse2++Y68Q==}
     peerDependencies:
       '@vue/compiler-sfc': ^3.5.17
       vue-router: ^4.6.0
@@ -8733,7 +8733,7 @@ snapshots:
 
   '@vue-macros/common@3.1.1(vue@3.5.25(typescript@5.9.2))':
     dependencies:
-      '@vue/compiler-sfc': 3.5.24
+      '@vue/compiler-sfc': 3.5.25
       ast-kit: 2.1.3
       local-pkg: 1.1.2
       magic-string-ast: 1.0.3
@@ -8784,7 +8784,7 @@ snapshots:
       '@babel/helper-module-imports': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/parser': 7.28.5
-      '@vue/compiler-sfc': 3.5.24
+      '@vue/compiler-sfc': 3.5.25
     transitivePeerDependencies:
       - supports-color
 
@@ -12653,7 +12653,7 @@ snapshots:
       pathe: 2.0.3
       picomatch: 4.0.3
 
-  unplugin-vue-router@0.17.2(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2)):
+  unplugin-vue-router@0.18.0(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2)):
     dependencies:
       '@babel/generator': 7.28.5
       '@vue-macros/common': 3.1.1(vue@3.5.25(typescript@5.9.2))
