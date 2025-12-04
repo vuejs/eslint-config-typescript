@@ -12,7 +12,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.24",
+    "vue": "^3.5.25",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
@@ -22,12 +22,12 @@
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.1",
-    "eslint-plugin-vue": "~10.5.1",
+    "eslint-plugin-vue": "~10.6.2",
     "npm-run-all2": "^8.0.4",
     "typescript": "~5.9.0",
     "unplugin-vue-router": "^0.17.2",
     "vite": "^7.2.6",
     "vite-plugin-vue-devtools": "^8.0.5",
-    "vue-tsc": "^3.1.4"
+    "vue-tsc": "^3.1.5"
   }
 }
