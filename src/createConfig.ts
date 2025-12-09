@@ -51,6 +51,8 @@ export default function createConfig({
     rootDir,
   })
   return defineConfigWithVueTs(
-    ...configNamesToExtend.map(name => vueTsConfigs[name as ExtendableConfigName]),
+    ...configNamesToExtend.map(
+      name => vueTsConfigs[name as ExtendableConfigName],
+    ),
   )
 }

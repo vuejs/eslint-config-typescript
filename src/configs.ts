@@ -77,7 +77,7 @@ export class TsEslintConfigForVue {
   toConfigArray(): FlatConfig.ConfigArray {
     return toArray(tseslint.configs[this.configName])
       .flat()
-      .map(config => ({
+      .map((config: FlatConfig.Config) => ({
         ...config,
         ...(config.files && config.files.includes('**/*.ts')
           ? { files: [...config.files, '**/*.vue'] }

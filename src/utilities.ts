@@ -1,6 +1,7 @@
 import process from 'node:process'
 import tseslint from 'typescript-eslint'
 import type { TSESLint } from '@typescript-eslint/utils'
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import pluginVue from 'eslint-plugin-vue'
 
 import { TsEslintConfigForVue } from './configs'
@@ -43,16 +44,16 @@ export type ProjectOptions = {
   /**
    * Whether to override some `no-unsafe-*` rules to avoid false positives on Vue component operations.
    * Defaults to `true`.
-   * 
+   *
    * Due to limitations in the integration between Vue and TypeScript-ESLint,
    * TypeScript-ESLint cannot get the full type information for `.vue` files
    * and will use fallback types that contain some `any`s.
    * Therefore, some `no-unsafe-*` rules will error on functions that operate on Vue components,
    * such as `createApp`, `createRouter`, `useTemplateRef`, etc.
-   * 
+   *
    * Setting this option to `true` will override those `no-unsafe-*` rules
    * to allow these patterns in the project.
-   * 
+   *
    * If you're using a metaframework such as Nuxt or Quasar
    * that handles app creation & router configuration for you,
    * you might not need to interact with component types directly.
@@ -82,7 +83,8 @@ export function configureVueProject(userOptions: ProjectOptions): void {
     projectOptions.tsSyntaxInTemplates = userOptions.tsSyntaxInTemplates
   }
   if (userOptions.allowComponentTypeUnsafety !== undefined) {
-    projectOptions.allowComponentTypeUnsafety = userOptions.allowComponentTypeUnsafety
+    projectOptions.allowComponentTypeUnsafety =
+      userOptions.allowComponentTypeUnsafety
   }
   if (userOptions.scriptLangs) {
     projectOptions.scriptLangs = userOptions.scriptLangs
@@ -104,6 +106,7 @@ export function defineConfigWithVueTs(
   return pipe(
     configs,
     flattenConfigs,
+    collectGlobalIgnores,
     deduplicateVuePlugin,
     insertAndReorderConfigs,
     resolveVueTsConfigs,
@@ -165,6 +168,29 @@ function flattenConfigs(
   )
 }
 
+let globalIgnores: string[] = []
+
+/**
+ * Fields that are considered metadata and not part of the config object.
+ */
+const META_FIELDS = new Set(['name', 'basePath'])
+
+function collectGlobalIgnores(configs: RawConfigItem[]): RawConfigItem[] {
+  configs.forEach(config => {
+    if (config instanceof TsEslintConfigForVue) return
+
+    if (!config.ignores) return
+
+    if (Object.keys(config).filter(key => !META_FIELDS.has(key)).length !== 1)
+      return
+
+    // Configs that only contain `ignores` (and possibly `name`/`basePath`) are treated as global ignores
+    globalIgnores.push(...config.ignores)
+  })
+
+  return configs
+}
+
 function resolveVueTsConfigs(configs: RawConfigItem[]): ConfigItem[] {
   return configs.flatMap(config =>
     config instanceof TsEslintConfigForVue ? config.toConfigArray() : config,
@@ -206,7 +232,7 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     return configs
   }
 
-  const vueFiles = groupVueFiles(projectOptions.rootDir)
+  const vueFiles = groupVueFiles(projectOptions.rootDir, globalIgnores)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
   const hasTypeAwareConfigs = configs.some(
@@ -233,7 +259,10 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     ...(needsTypeAwareLinting
       ? [
           ...createSkipTypeCheckingConfigs(vueFiles.nonTypeCheckable),
-          ...createTypeCheckingConfigs(vueFiles.typeCheckable, projectOptions.allowComponentTypeUnsafety),
+          ...createTypeCheckingConfigs(
+            vueFiles.typeCheckable,
+            projectOptions.allowComponentTypeUnsafety,
+          ),
         ]
       : []),
 
@@ -269,7 +298,7 @@ function extractTypeAwareRules(config: RawConfigItem): RawConfigItem {
 }
 
 const rulesRequiringTypeInformation = new Set(
-  Object.entries(tseslint.plugin.rules!)
+  Object.entries((tseslint.plugin as FlatConfig.Plugin).rules!)
     // @ts-expect-error
     .filter(([_name, def]) => def?.meta?.docs?.requiresTypeChecking)
     .map(([name, _def]) => `@typescript-eslint/${name}`)

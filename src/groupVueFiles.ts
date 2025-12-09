@@ -10,11 +10,24 @@ type VueFilesByGroup = {
   nonTypeCheckable: string[]
 }
 
-export default function groupVueFiles(rootDir: string): VueFilesByGroup {
+export default function groupVueFiles(
+  rootDir: string,
+  globalIgnores: string[],
+): VueFilesByGroup {
   debug(`Grouping .vue files in ${rootDir}`)
-  
-  const ignore = ['**/node_modules/**', '**/.git/**']
-  // FIXME: to get global ignore patterns from user config
+
+  const ignore = [
+    '**/node_modules/**',
+    '**/.git/**',
+
+    // Global ignore patterns from ESLint config are relative to the ESLint base path,
+    // which is usually the cwd, but could be different if `--config` is provided via CLI.
+    // This is way too complicated, so we only use process.cwd() as a best-effort guess here.
+    // Could be improved in the future if needed.
+    ...globalIgnores.map(pattern =>
+      fg.convertPathToPattern(path.resolve(process.cwd(), pattern)),
+    ),
+  ]
   debug(`Ignoring patterns: ${ignore.join(', ')}`)
 
   const { vueFilesWithScriptTs, otherVueFiles } = fg
