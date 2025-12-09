@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@typescript-eslint/utils':
         specifier: ^8.48.1
-        version: 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+        version: 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       fast-glob:
         specifier: ^3.3.3
         version: 3.3.3
       typescript-eslint:
         specifier: ^8.48.1
-        version: 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+        version: 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       vue-eslint-parser:
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))
     devDependencies:
       '@tsconfig/node20':
         specifier: ^20.1.8
@@ -29,10 +29,10 @@ importers:
         version: 22.19.1
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       execa:
         specifier: ^9.6.1
         version: 9.6.1
@@ -50,7 +50,7 @@ importers:
         version: 5.9.2
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue:
         specifier: ^3.5.25
         version: 3.5.25(typescript@5.9.2)
@@ -69,7 +69,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -78,10 +78,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -90,7 +90,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -118,16 +118,16 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.1
-        version: 1.5.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+        version: 1.5.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -142,13 +142,13 @@ importers:
         version: 15.7.1
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-cypress:
         specifier: ^5.2.0
-        version: 5.2.0(eslint@9.39.1(jiti@2.4.2))
+        version: 5.2.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       jsdom:
         specifier: ^27.2.0
         version: 27.2.0(postcss@8.5.6)
@@ -166,13 +166,13 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -191,7 +191,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:^
         version: link:../..
@@ -200,10 +200,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -212,10 +212,10 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -234,7 +234,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -243,10 +243,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -255,7 +255,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -283,16 +283,16 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.1
-        version: 1.5.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+        version: 1.5.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -307,16 +307,16 @@ importers:
         version: 15.7.1
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-cypress:
         specifier: ^5.2.0
-        version: 5.2.0(eslint@9.39.1(jiti@2.4.2))
+        version: 5.2.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       eslint-plugin-yml:
         specifier: ^1.19.0
-        version: 1.19.0(eslint@9.39.1(jiti@2.4.2))
+        version: 1.19.0(eslint@9.39.1(jiti@2.6.1))
       jsdom:
         specifier: ^27.2.0
         version: 27.2.0(postcss@8.5.6)
@@ -334,13 +334,13 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -359,7 +359,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -368,10 +368,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -380,7 +380,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -405,13 +405,13 @@ importers:
         version: 9.39.1
       '@quasar/app-vite':
         specifier: ^2.4.0
-        version: 2.4.0(@types/node@22.19.1)(eslint@9.39.1(jiti@2.4.2))(jiti@2.4.2)(pinia@3.0.4(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(rollup@4.53.3)(terser@5.42.0)(tsx@4.21.0)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))(yaml@2.8.1)
+        version: 2.4.0(@types/node@22.19.1)(eslint@9.39.1(jiti@2.6.1))(jiti@2.6.1)(pinia@3.0.4(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(rollup@4.53.3)(terser@5.42.0)(tsx@4.21.0)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))(yaml@2.8.1)
       '@types/node':
         specifier: ^22.19.1
         version: 22.19.1
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -420,10 +420,10 @@ importers:
         version: 10.4.22(postcss@8.5.6)
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       globals:
         specifier: ^16.5.0
         version: 16.5.0
@@ -435,7 +435,7 @@ importers:
         version: 5.9.2
       vite-plugin-checker:
         specifier: ^0.11.0
-        version: 0.11.0(eslint@9.39.1(jiti@2.4.2))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.5(typescript@5.9.2))
+        version: 0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.5(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -463,16 +463,16 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.1
-        version: 1.5.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+        version: 1.5.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -487,13 +487,13 @@ importers:
         version: 15.7.1
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-cypress:
         specifier: ^5.2.0
-        version: 5.2.0(eslint@9.39.1(jiti@2.4.2))
+        version: 5.2.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       jsdom:
         specifier: ^27.2.0
         version: 27.2.0(postcss@8.5.6)
@@ -511,13 +511,13 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -536,7 +536,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -548,13 +548,13 @@ importers:
         version: 15.7.1
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-cypress:
         specifier: ^5.2.0
-        version: 5.2.0(eslint@9.39.1(jiti@2.4.2))
+        version: 5.2.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -566,7 +566,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -585,10 +585,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -597,10 +597,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -609,7 +609,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -628,10 +628,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -640,10 +640,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -652,7 +652,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -674,7 +674,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -689,10 +689,10 @@ importers:
         version: 142.0.3
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       geckodriver:
         specifier: ^6.1.0
         version: 6.1.0
@@ -710,7 +710,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-nightwatch:
         specifier: ^0.4.6
         version: 0.4.6
@@ -735,7 +735,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -744,13 +744,13 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-playwright:
         specifier: ^2.4.0
-        version: 2.4.0(eslint@9.39.1(jiti@2.4.2))
+        version: 2.4.0(eslint@9.39.1(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -759,7 +759,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -778,10 +778,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -790,10 +790,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -805,7 +805,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -824,10 +824,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -836,10 +836,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -848,7 +848,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -867,10 +867,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -879,10 +879,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -891,7 +891,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -913,10 +913,10 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.1
-        version: 1.5.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+        version: 1.5.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -928,10 +928,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       jsdom:
         specifier: ^27.2.0
         version: 27.2.0(postcss@8.5.6)
@@ -943,10 +943,56 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vitest:
         specifier: ^4.0.15
-        version: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vue-tsc:
+        specifier: ^3.1.5
+        version: 3.1.5(typescript@5.9.2)
+
+  test/fixtures/custom-ignored-directory:
+    dependencies:
+      vue:
+        specifier: ^3.5.25
+        version: 3.5.25(typescript@5.9.2)
+    devDependencies:
+      '@tsconfig/node24':
+        specifier: ^24.0.3
+        version: 24.0.3
+      '@types/node':
+        specifier: ^24.10.1
+        version: 24.10.2
+      '@vitejs/plugin-vue':
+        specifier: ^6.0.2
+        version: 6.0.2(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vue/eslint-config-typescript':
+        specifier: workspace:*
+        version: link:../../..
+      '@vue/tsconfig':
+        specifier: ^0.8.1
+        version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
+      eslint:
+        specifier: ^9.39.1
+        version: 9.39.1(jiti@2.6.1)
+      eslint-plugin-vue:
+        specifier: ~10.6.2
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
+      jiti:
+        specifier: ^2.6.1
+        version: 2.6.1
+      npm-run-all2:
+        specifier: ^8.0.4
+        version: 8.0.4
+      typescript:
+        specifier: ~5.9.0
+        version: 5.9.2
+      vite:
+        specifier: ^7.2.4
+        version: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-plugin-vue-devtools:
+        specifier: ^8.0.5
+        version: 8.0.5(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -968,7 +1014,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../../..
@@ -977,10 +1023,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -992,10 +1038,10 @@ importers:
         version: 0.18.0(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -1060,7 +1106,7 @@ importers:
         version: 22.19.1
       '@vitejs/plugin-vue':
         specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../../..
@@ -1069,10 +1115,10 @@ importers:
         version: 0.8.1(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       eslint:
         specifier: ^9.39.1
-        version: 9.39.1(jiti@2.4.2)
+        version: 9.39.1(jiti@2.6.1)
       eslint-plugin-vue:
         specifier: ~10.6.2
-        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)))
+        version: 10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)))
       espree:
         specifier: ^9.6.1
         version: 9.6.1
@@ -1084,7 +1130,7 @@ importers:
         version: 5.9.2
       vite:
         specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        version: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.5
         version: 3.1.5(typescript@5.9.2)
@@ -2781,6 +2827,9 @@ packages:
   '@tsconfig/node22@22.0.5':
     resolution: {integrity: sha512-hLf2ld+sYN/BtOJjHUWOk568dvjFQkHnLNa6zce25GIH+vxKfvTgm3qpaH6ToF5tu/NN0IH66s+Bb5wElHrLcw==}
 
+  '@tsconfig/node24@24.0.3':
+    resolution: {integrity: sha512-vcERKtKQKHgzt/vfS3Gjasd8SUI2a0WZXpgJURdJsMySpS5+ctgbPfuLj2z/W+w4lAfTWxoN4upKfu2WzIRYnw==}
+
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
 
@@ -2846,6 +2895,9 @@ packages:
 
   '@types/node@22.19.1':
     resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
+
+  '@types/node@24.10.2':
+    resolution: {integrity: sha512-WOhQTZ4G8xZ1tjJTvKOpyEVSGgOTvJAfDK3FNFgELyaTpzhdgHVHeqW8V+UJvzF5BT+/B54T/1S2K6gd9c7bbA==}
 
   '@types/qs@6.14.0':
     resolution: {integrity: sha512-eOunJqu0K1923aExK6y8p6fsihYEn/BYuQ4g0CxAAgFc4b/ZLN4CrsRZ55srTdqoiLzU2B2evC+apEIxprEzkQ==}
@@ -5038,6 +5090,10 @@ packages:
     resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
     hasBin: true
 
+  jiti@2.6.1:
+    resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
+    hasBin: true
+
   joi@18.0.1:
     resolution: {integrity: sha512-IiQpRyypSnLisQf3PwuN2eIHAsAIGZIrLZkd4zdvIar2bDyhM91ubRjy8a3eYablXsh9BeI/c7dmPYHca5qtoA==}
     engines: {node: '>= 20'}
@@ -6504,6 +6560,9 @@ packages:
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
 
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
+
   unicorn-magic@0.3.0:
     resolution: {integrity: sha512-+QBBXBCvifc56fsbuxZQ6Sic3wqqc3WWaqxs58gvJrcOuN83HGTCwz3oS5phzU9LthRNE9VrJCFCLUgHeeFnfA==}
     engines: {node: '>=18'}
@@ -7824,9 +7883,9 @@ snapshots:
       eslint: 9.38.0(jiti@2.4.2)
       eslint-visitor-keys: 3.4.3
 
-  '@eslint-community/eslint-utils@4.9.0(eslint@9.39.1(jiti@2.4.2))':
+  '@eslint-community/eslint-utils@4.9.0(eslint@9.39.1(jiti@2.6.1))':
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
@@ -8093,16 +8152,16 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@quasar/app-vite@2.4.0(@types/node@22.19.1)(eslint@9.39.1(jiti@2.4.2))(jiti@2.4.2)(pinia@3.0.4(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(rollup@4.53.3)(terser@5.42.0)(tsx@4.21.0)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))(yaml@2.8.1)':
+  '@quasar/app-vite@2.4.0(@types/node@22.19.1)(eslint@9.39.1(jiti@2.6.1))(jiti@2.6.1)(pinia@3.0.4(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(rollup@4.53.3)(terser@5.42.0)(tsx@4.21.0)(typescript@5.9.2)(vue-router@4.6.3(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))(yaml@2.8.1)':
     dependencies:
       '@quasar/render-ssr-error': 1.0.3
       '@quasar/ssl-certificate': 1.0.0
-      '@quasar/vite-plugin': 1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@quasar/vite-plugin': 1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@types/chrome': 0.0.262
       '@types/compression': 1.8.1
       '@types/cordova': 11.0.3
       '@types/express': 4.17.23
-      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       archiver: 7.0.1
       chokidar: 3.6.0
       ci-info: 4.2.0
@@ -8131,12 +8190,12 @@ snapshots:
       serialize-javascript: 6.0.2
       tinyglobby: 0.2.15
       ts-essentials: 9.4.2(typescript@5.9.2)
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
       vue-router: 4.6.3(vue@3.5.25(typescript@5.9.2))
       webpack-merge: 6.0.1
     optionalDependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       pinia: 3.0.4(typescript@5.9.2)(vue@3.5.25(typescript@5.9.2))
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -8165,11 +8224,11 @@ snapshots:
       fs-extra: 11.3.0
       selfsigned: 2.4.1
 
-  '@quasar/vite-plugin@1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@quasar/vite-plugin@1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
-      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       quasar: 2.18.6
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
 
   '@rolldown/pluginutils@1.0.0-beta.50': {}
@@ -8414,6 +8473,8 @@ snapshots:
 
   '@tsconfig/node22@22.0.5': {}
 
+  '@tsconfig/node24@24.0.3': {}
+
   '@types/body-parser@1.19.6':
     dependencies:
       '@types/connect': 3.4.38
@@ -8498,6 +8559,10 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
+  '@types/node@24.10.2':
+    dependencies:
+      undici-types: 7.16.0
+
   '@types/qs@6.14.0': {}
 
   '@types/range-parser@1.2.7': {}
@@ -8537,15 +8602,15 @@ snapshots:
       '@types/node': 22.19.1
     optional: true
 
-  '@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)':
+  '@typescript-eslint/eslint-plugin@8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       '@typescript-eslint/scope-manager': 8.48.1
-      '@typescript-eslint/type-utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
-      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+      '@typescript-eslint/type-utils': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       '@typescript-eslint/visitor-keys': 8.48.1
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       graphemer: 1.4.0
       ignore: 7.0.5
       natural-compare: 1.4.0
@@ -8554,14 +8619,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)':
+  '@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.48.1
       '@typescript-eslint/types': 8.48.1
       '@typescript-eslint/typescript-estree': 8.48.1(typescript@5.9.2)
       '@typescript-eslint/visitor-keys': 8.48.1
       debug: 4.4.3(supports-color@8.1.1)
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -8589,13 +8654,13 @@ snapshots:
     dependencies:
       typescript: 5.9.2
 
-  '@typescript-eslint/type-utils@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)':
+  '@typescript-eslint/type-utils@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)':
     dependencies:
       '@typescript-eslint/types': 8.48.1
       '@typescript-eslint/typescript-estree': 8.48.1(typescript@5.9.2)
-      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       debug: 4.4.3(supports-color@8.1.1)
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       ts-api-utils: 2.1.0(typescript@5.9.2)
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -8620,13 +8685,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)':
+  '@typescript-eslint/utils@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.6.1))
       '@typescript-eslint/scope-manager': 8.48.1
       '@typescript-eslint/types': 8.48.1
       '@typescript-eslint/typescript-estree': 8.48.1(typescript@5.9.2)
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -8641,14 +8706,14 @@ snapshots:
       '@typescript-eslint/types': 8.48.1
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-vue-jsx@5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vitejs/plugin-vue-jsx@5.1.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       '@rolldown/pluginutils': 1.0.0-beta.53
       '@vue/babel-plugin-jsx': 2.0.1(@babel/core@7.28.5)
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
     transitivePeerDependencies:
       - supports-color
@@ -8663,20 +8728,26 @@ snapshots:
       vite: 6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.22(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-beta.50
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
 
-  '@vitest/eslint-plugin@1.5.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))':
+  '@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.0-beta.50
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vue: 3.5.25(typescript@5.9.2)
+
+  '@vitest/eslint-plugin@1.5.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))':
     dependencies:
       '@typescript-eslint/scope-manager': 8.47.0
-      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
-      eslint: 9.39.1(jiti@2.4.2)
+      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
+      eslint: 9.39.1(jiti@2.6.1)
     optionalDependencies:
       typescript: 5.9.2
-      vitest: 4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vitest: 4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -8689,13 +8760,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.15(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))':
+  '@vitest/mocker@4.0.15(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))':
     dependencies:
       '@vitest/spy': 4.0.15
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
   '@vitest/pretty-format@4.0.15':
     dependencies:
@@ -8912,14 +8983,26 @@ snapshots:
     transitivePeerDependencies:
       - vite
 
-  '@vue/devtools-core@8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vue/devtools-core@8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       mitt: 3.0.1
       nanoid: 5.1.5
       pathe: 2.0.3
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vue: 3.5.25(typescript@5.9.2)
+    transitivePeerDependencies:
+      - vite
+
+  '@vue/devtools-core@8.0.5(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+    dependencies:
+      '@vue/devtools-kit': 8.0.5
+      '@vue/devtools-shared': 8.0.5
+      mitt: 3.0.1
+      nanoid: 5.1.5
+      pathe: 2.0.3
+      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       vue: 3.5.25(typescript@5.9.2)
     transitivePeerDependencies:
       - vite
@@ -8966,11 +9049,11 @@ snapshots:
     dependencies:
       rfdc: 1.4.1
 
-  '@vue/eslint-config-prettier@10.2.0(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)':
+  '@vue/eslint-config-prettier@10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)':
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
-      eslint-config-prettier: 10.1.5(eslint@9.39.1(jiti@2.4.2))
-      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.4.2)))(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4)
+      eslint: 9.39.1(jiti@2.6.1)
+      eslint-config-prettier: 10.1.5(eslint@9.39.1(jiti@2.6.1))
+      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
       prettier: 3.7.4
     transitivePeerDependencies:
       - '@types/eslint'
@@ -10216,33 +10299,33 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-compat-utils@0.6.4(eslint@9.39.1(jiti@2.4.2)):
+  eslint-compat-utils@0.6.4(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       semver: 7.7.2
 
-  eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.4.2)):
+  eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
 
-  eslint-plugin-cypress@5.2.0(eslint@9.39.1(jiti@2.4.2)):
+  eslint-plugin-cypress@5.2.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       globals: 16.4.0
 
-  eslint-plugin-playwright@2.4.0(eslint@9.39.1(jiti@2.4.2)):
+  eslint-plugin-playwright@2.4.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       globals: 16.5.0
 
-  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.4.2)))(eslint@9.39.1(jiti@2.4.2))(prettier@3.7.4):
+  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.1(jiti@2.6.1)))(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4):
     dependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       prettier: 3.7.4
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
-      eslint-config-prettier: 10.1.5(eslint@9.39.1(jiti@2.4.2))
+      eslint-config-prettier: 10.1.5(eslint@9.39.1(jiti@2.6.1))
 
   eslint-plugin-vue@10.0.1(eslint@9.38.0(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.38.0(jiti@2.4.2))):
     dependencies:
@@ -10255,26 +10338,26 @@ snapshots:
       vue-eslint-parser: 10.2.0(eslint@9.38.0(jiti@2.4.2))
       xml-name-validator: 4.0.0
 
-  eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2))):
+  eslint-plugin-vue@10.6.2(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1))):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.4.2))
-      eslint: 9.39.1(jiti@2.4.2)
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.6.1))
+      eslint: 9.39.1(jiti@2.6.1)
       natural-compare: 1.4.0
       nth-check: 2.1.1
       postcss-selector-parser: 7.1.1
       semver: 7.7.2
-      vue-eslint-parser: 10.2.0(eslint@9.39.1(jiti@2.4.2))
+      vue-eslint-parser: 10.2.0(eslint@9.39.1(jiti@2.6.1))
       xml-name-validator: 4.0.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
 
-  eslint-plugin-yml@1.19.0(eslint@9.39.1(jiti@2.4.2)):
+  eslint-plugin-yml@1.19.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
       debug: 4.4.3(supports-color@8.1.1)
       diff-sequences: 27.5.1
       escape-string-regexp: 4.0.0
-      eslint: 9.39.1(jiti@2.4.2)
-      eslint-compat-utils: 0.6.4(eslint@9.39.1(jiti@2.4.2))
+      eslint: 9.39.1(jiti@2.6.1)
+      eslint-compat-utils: 0.6.4(eslint@9.39.1(jiti@2.6.1))
       natural-compare: 1.4.0
       yaml-eslint-parser: 1.2.3
     transitivePeerDependencies:
@@ -10330,9 +10413,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint@9.39.1(jiti@2.4.2):
+  eslint@9.39.1(jiti@2.6.1):
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.4.2))
+      '@eslint-community/eslint-utils': 4.9.0(eslint@9.39.1(jiti@2.6.1))
       '@eslint-community/regexpp': 4.12.1
       '@eslint/config-array': 0.21.1
       '@eslint/config-helpers': 0.4.2
@@ -10367,7 +10450,7 @@ snapshots:
       natural-compare: 1.4.0
       optionator: 0.9.4
     optionalDependencies:
-      jiti: 2.4.2
+      jiti: 2.6.1
     transitivePeerDependencies:
       - supports-color
 
@@ -11089,6 +11172,8 @@ snapshots:
       minimatch: 3.1.2
 
   jiti@2.4.2: {}
+
+  jiti@2.6.1: {}
 
   joi@18.0.1:
     dependencies:
@@ -12621,13 +12706,13 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript-eslint@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2):
+  typescript-eslint@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2):
     dependencies:
-      '@typescript-eslint/eslint-plugin': 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2))(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
-      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
+      '@typescript-eslint/eslint-plugin': 8.48.1(@typescript-eslint/parser@8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2))(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
+      '@typescript-eslint/parser': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
       '@typescript-eslint/typescript-estree': 8.48.1(typescript@5.9.2)
-      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.4.2))(typescript@5.9.2)
-      eslint: 9.39.1(jiti@2.4.2)
+      '@typescript-eslint/utils': 8.48.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
+      eslint: 9.39.1(jiti@2.6.1)
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -12639,6 +12724,8 @@ snapshots:
   ufo@1.6.1: {}
 
   undici-types@6.21.0: {}
+
+  undici-types@7.16.0: {}
 
   unicorn-magic@0.3.0: {}
 
@@ -12721,21 +12808,31 @@ snapshots:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  vite-dev-rpc@1.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-dev-rpc@1.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       birpc: 2.6.1
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+
+  vite-dev-rpc@1.1.0(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+    dependencies:
+      birpc: 2.6.1
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
 
   vite-hot-client@2.1.0(vite@6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       vite: 6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
-  vite-hot-client@2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-hot-client@2.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
-  vite-plugin-checker@0.11.0(eslint@9.39.1(jiti@2.4.2))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.5(typescript@5.9.2)):
+  vite-hot-client@2.1.0(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+    dependencies:
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+
+  vite-plugin-checker@0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.5(typescript@5.9.2)):
     dependencies:
       '@babel/code-frame': 7.27.1
       chokidar: 4.0.3
@@ -12744,10 +12841,10 @@ snapshots:
       picomatch: 4.0.3
       tiny-invariant: 1.3.3
       tinyglobby: 0.2.15
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vscode-uri: 3.1.0
     optionalDependencies:
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       optionator: 0.9.4
       typescript: 5.9.2
       vue-tsc: 3.1.5(typescript@5.9.2)
@@ -12768,7 +12865,7 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-inspect@11.3.3(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-inspect@11.3.3(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       ansis: 4.1.0
       debug: 4.4.3(supports-color@8.1.1)
@@ -12778,8 +12875,23 @@ snapshots:
       perfect-debounce: 2.0.0
       sirv: 3.0.2
       unplugin-utils: 0.3.1
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-dev-rpc: 1.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-dev-rpc: 1.1.0(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+    transitivePeerDependencies:
+      - supports-color
+
+  vite-plugin-inspect@11.3.3(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+    dependencies:
+      ansis: 4.1.0
+      debug: 4.4.3(supports-color@8.1.1)
+      error-stack-parser-es: 1.0.5
+      ohash: 2.0.11
+      open: 10.2.0
+      perfect-debounce: 2.0.0
+      sirv: 3.0.2
+      unplugin-utils: 0.3.1
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-dev-rpc: 1.1.0(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -12813,15 +12925,29 @@ snapshots:
       - supports-color
       - vue
 
-  vite-plugin-vue-devtools@8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
+  vite-plugin-vue-devtools@8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
     dependencies:
-      '@vue/devtools-core': 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vue/devtools-core': 8.0.5(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       sirv: 3.0.2
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-plugin-inspect: 11.3.3(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
-      vite-plugin-vue-inspector: 5.3.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-plugin-inspect: 11.3.3(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-plugin-vue-inspector: 5.3.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+    transitivePeerDependencies:
+      - '@nuxt/kit'
+      - supports-color
+      - vue
+
+  vite-plugin-vue-devtools@8.0.5(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
+    dependencies:
+      '@vue/devtools-core': 8.0.5(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vue/devtools-kit': 8.0.5
+      '@vue/devtools-shared': 8.0.5
+      sirv: 3.0.2
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-plugin-inspect: 11.3.3(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-plugin-vue-inspector: 5.3.2(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
@@ -12842,7 +12968,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-inspector@5.3.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-vue-inspector@5.3.2(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.28.4)
@@ -12853,7 +12979,22 @@ snapshots:
       '@vue/compiler-dom': 3.5.24
       kolorist: 1.8.0
       magic-string: 0.30.21
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+    transitivePeerDependencies:
+      - supports-color
+
+  vite-plugin-vue-inspector@5.3.2(vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+    dependencies:
+      '@babel/core': 7.28.4
+      '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.28.4)
+      '@babel/plugin-syntax-import-attributes': 7.26.0(@babel/core@7.28.4)
+      '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.28.4)
+      '@babel/plugin-transform-typescript': 7.28.0(@babel/core@7.28.4)
+      '@vue/babel-plugin-jsx': 1.5.0(@babel/core@7.28.4)
+      '@vue/compiler-dom': 3.5.24
+      kolorist: 1.8.0
+      magic-string: 0.30.21
+      vite: 7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -12884,7 +13025,7 @@ snapshots:
       tsx: 4.21.0
       yaml: 2.8.1
 
-  vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
+  vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -12895,16 +13036,33 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.19.1
       fsevents: 2.3.3
-      jiti: 2.4.2
+      jiti: 2.6.1
       sass-embedded: 1.89.2
       terser: 5.42.0
       tsx: 4.21.0
       yaml: 2.8.1
 
-  vitest@4.0.15(@types/node@22.19.1)(jiti@2.4.2)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
+  vite@7.2.6(@types/node@24.10.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
+    dependencies:
+      esbuild: 0.25.11
+      fdir: 6.5.0(picomatch@4.0.3)
+      picomatch: 4.0.3
+      postcss: 8.5.6
+      rollup: 4.52.5
+      tinyglobby: 0.2.15
+    optionalDependencies:
+      '@types/node': 24.10.2
+      fsevents: 2.3.3
+      jiti: 2.6.1
+      sass-embedded: 1.89.2
+      terser: 5.42.0
+      tsx: 4.21.0
+      yaml: 2.8.1
+
+  vitest@4.0.15(@types/node@22.19.1)(jiti@2.6.1)(jsdom@27.2.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
     dependencies:
       '@vitest/expect': 4.0.15
-      '@vitest/mocker': 4.0.15(vite@7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      '@vitest/mocker': 4.0.15(vite@7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       '@vitest/pretty-format': 4.0.15
       '@vitest/runner': 4.0.15
       '@vitest/snapshot': 4.0.15
@@ -12921,7 +13079,7 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.6(@types/node@22.19.1)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.6(@types/node@22.19.1)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.19.1
@@ -12955,10 +13113,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.4.2)):
+  vue-eslint-parser@10.2.0(eslint@9.39.1(jiti@2.6.1)):
     dependencies:
       debug: 4.4.3(supports-color@8.1.1)
-      eslint: 9.39.1(jiti@2.4.2)
+      eslint: 9.39.1(jiti@2.6.1)
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0

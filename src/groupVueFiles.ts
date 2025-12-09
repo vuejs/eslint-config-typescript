@@ -1,6 +1,9 @@
 import fs from 'node:fs'
 import fg from 'fast-glob'
 import path from 'node:path'
+import { debuglog } from 'node:util'
+
+const debug = debuglog('@vue/eslint-config-typescript:groupVueFiles')
 
 type VueFilesByGroup = {
   typeCheckable: string[]
@@ -8,10 +11,16 @@ type VueFilesByGroup = {
 }
 
 export default function groupVueFiles(rootDir: string): VueFilesByGroup {
+  debug(`Grouping .vue files in ${rootDir}`)
+  
+  const ignore = ['**/node_modules/**', '**/.git/**']
+  // FIXME: to get global ignore patterns from user config
+  debug(`Ignoring patterns: ${ignore.join(', ')}`)
+
   const { vueFilesWithScriptTs, otherVueFiles } = fg
     .sync(['**/*.vue'], {
       cwd: rootDir,
-      ignore: ['**/node_modules/**'],
+      ignore,
     })
     .reduce(
       (acc, file) => {
