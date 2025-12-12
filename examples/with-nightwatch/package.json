@@ -24,7 +24,7 @@
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.8.1",
-    "chromedriver": "^142.0.3",
+    "chromedriver": "^143.0.1",
     "eslint": "^9.39.1",
     "eslint-plugin-vue": "~10.6.2",
     "geckodriver": "^6.1.0",
