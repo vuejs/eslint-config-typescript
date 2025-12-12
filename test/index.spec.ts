@@ -14,8 +14,15 @@ const FROM_EXAMPLES = 'FROM_EXAMPLES'
 const FROM_FIXTURES = 'FROM_FIXTURES'
 type ProjectType = 'FROM_EXAMPLES' | 'FROM_FIXTURES'
 
-function runLintAgainst(projectName: string, projectType: ProjectType = FROM_EXAMPLES) {
-  const parentDir = path.join(__dirname, projectType === FROM_EXAMPLES ? '../examples' : './fixtures')
+function runLintAgainst(
+  projectName: string,
+  projectType: ProjectType = FROM_EXAMPLES,
+  env: Record<string, string> = {},
+) {
+  const parentDir = path.join(
+    __dirname,
+    projectType === FROM_EXAMPLES ? '../examples' : './fixtures',
+  )
   const projectDir = path.join(parentDir, projectName)
   // Use `pnpm` to avoid locating each `eslint` bin ourselves.
   // Use `--silent` to only print the output of the command, stripping the pnpm log.
@@ -23,6 +30,7 @@ function runLintAgainst(projectName: string, projectType: ProjectType = FROM_EXA
     preferLocal: true,
     cwd: projectDir,
     reject: false,
+    env,
   })`pnpm --silent lint`
 }
 
@@ -203,9 +211,10 @@ test('#87: should not error if the project root has an older version of espree i
 test('#161: should warn and override the vue plugin if there are multiple versions of `eslint-plugin-vue` found in the config', async () => {
   const { stderr } = await runLintAgainst('redefine-plugin-vue', FROM_FIXTURES)
   expect(stderr).not.toMatch(`Cannot redefine plugin "vue"`)
-  expect(stderr).toMatch('Warning: Multiple instances of eslint-plugin-vue detected')
+  expect(stderr).toMatch(
+    'Warning: Multiple instances of eslint-plugin-vue detected',
+  )
 })
-
 
 test('#102: should set configs correctly for paths with glob-like syntax (e.g. file-based-routing patterns)', async () => {
   const { stdout } = await runLintAgainst('file-based-routing', FROM_FIXTURES)
@@ -213,9 +222,14 @@ test('#102: should set configs correctly for paths with glob-like syntax (e.g. f
 })
 
 test('(API before 14.3) should guide user to use camelCase names in "extends"', async () => {
-  const eslintConfigPath = path.join(__dirname, '../examples/api-before-14.3/eslint.config.js')
+  const eslintConfigPath = path.join(
+    __dirname,
+    '../examples/api-before-14.3/eslint.config.js',
+  )
   const { modify, restore } = setupFileMutations(eslintConfigPath)
-  modify((oldContents) => oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'))
+  modify(oldContents =>
+    oldContents.replace('recommendedTypeChecked', 'recommended-type-checked'),
+  )
   const { failed, stderr } = await runLintAgainst('api-before-14.3')
   restore()
 
@@ -224,18 +238,28 @@ test('(API before 14.3) should guide user to use camelCase names in "extends"', 
 })
 
 test('should allow users to turn on/off type-aware rules by just targeting `**/*.vue` files', async () => {
-  const appVuePath = path.join(__dirname, '../examples/custom-type-checked-rules-on-and-off/src/App.vue')
+  const appVuePath = path.join(
+    __dirname,
+    '../examples/custom-type-checked-rules-on-and-off/src/App.vue',
+  )
   const { modify, restore } = setupFileMutations(appVuePath)
-  modify((oldContents) => oldContents.replace('</script>', `
+  modify(oldContents =>
+    oldContents.replace(
+      '</script>',
+      `
 // Should not cause lint error
 export type UnionUnknown = unknown | 'foo';
 
 const array: number[] = [];
 // Should cause lint error
 array.sort();
-</script>`))
+</script>`,
+    ),
+  )
 
-  const { failed, stdout } = await runLintAgainst('custom-type-checked-rules-on-and-off')
+  const { failed, stdout } = await runLintAgainst(
+    'custom-type-checked-rules-on-and-off',
+  )
   restore()
 
   expect(failed).toBe(true)
@@ -259,11 +283,11 @@ foo()
   test('should relax some no-unsafe rules in type-checked projects', async () => {
     const projectName = 'type-checked'
     const mainTsPath = path.join(
-        __dirname,
-        '../examples',
-        projectName,
-        'src/main.ts',
-      )
+      __dirname,
+      '../examples',
+      projectName,
+      'src/main.ts',
+    )
     const { modify, restore } = setupFileMutations(mainTsPath)
     modify(appendUnsafeType)
     const { failed, stdout } = await runLintAgainst(projectName, FROM_EXAMPLES)
@@ -278,11 +302,11 @@ foo()
     // because quasar projects by default don't contain the patterns in conflict with these rules
     const projectName = 'quasar-project'
     const routerPath = path.join(
-        __dirname,
-        '../examples',
-        projectName,
-        'src/router/index.ts',
-      )
+      __dirname,
+      '../examples',
+      projectName,
+      'src/router/index.ts',
+    )
     const { modify, restore } = setupFileMutations(routerPath)
     modify(appendUnsafeType)
     const { failed, stdout } = await runLintAgainst(projectName, FROM_EXAMPLES)
@@ -290,5 +314,18 @@ foo()
 
     expect(failed).toBe(true)
     expect(stdout).toContain('@typescript-eslint/no-unsafe-return')
+  })
+})
+
+describe('should skip looking up vue files in ignored directories', () => {
+  test('custom-ignored-directory', async () => {
+    const { stderr } = await runLintAgainst(
+      'custom-ignored-directory',
+      FROM_FIXTURES,
+      {
+        NODE_DEBUG: '@vue/eslint-config-typescript:*',
+      },
+    )
+    expect(stderr).toMatch(/@VUE\/ESLINT-CONFIG-TYPESCRIPT.*Ignoring.*ignored-directory/i)
   })
 })
