@@ -68,8 +68,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -89,8 +89,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -117,11 +117,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.2
         version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
@@ -165,11 +165,11 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
@@ -190,8 +190,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:^
         version: link:../..
@@ -211,11 +211,11 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -233,8 +233,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -254,8 +254,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -282,11 +282,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.2
         version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
@@ -333,11 +333,11 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
@@ -358,8 +358,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -379,8 +379,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -435,7 +435,7 @@ importers:
         version: 5.9.2
       vite-plugin-checker:
         specifier: ^0.11.0
-        version: 0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.8(typescript@5.9.2))
+        version: 0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.8(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -462,11 +462,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.2
         version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
@@ -510,11 +510,11 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vitest:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
@@ -535,8 +535,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -565,8 +565,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -584,11 +584,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -608,8 +608,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -627,11 +627,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -651,8 +651,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -673,8 +673,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -709,8 +709,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-nightwatch:
         specifier: ^0.4.6
         version: 0.4.6
@@ -734,8 +734,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -758,8 +758,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -777,8 +777,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
         version: 10.2.0(eslint@9.39.1(jiti@2.6.1))(prettier@3.7.4)
@@ -804,8 +804,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -823,11 +823,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -847,8 +847,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -866,11 +866,11 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitejs/plugin-vue-jsx':
         specifier: ^5.1.2
-        version: 5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -890,8 +890,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -912,8 +912,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vitest/eslint-plugin':
         specifier: ^1.5.2
         version: 1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
@@ -942,8 +942,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vitest:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
@@ -964,8 +964,8 @@ importers:
         specifier: ^24.10.3
         version: 24.10.3
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../../..
@@ -988,11 +988,11 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.4
-        version: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -1013,8 +1013,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../../..
@@ -1037,11 +1037,11 @@ importers:
         specifier: ^0.18.0
         version: 0.18.0(@vue/compiler-sfc@3.5.25)(typescript@5.9.2)(vue-router@4.6.4(vue@3.5.25(typescript@5.9.2)))(vue@3.5.25(typescript@5.9.2))
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vite-plugin-vue-devtools:
         specifier: ^8.0.5
-        version: 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        version: 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -1105,8 +1105,8 @@ importers:
         specifier: ^22.19.2
         version: 22.19.2
       '@vitejs/plugin-vue':
-        specifier: ^6.0.2
-        version: 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+        specifier: ^6.0.3
+        version: 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../../..
@@ -1129,8 +1129,8 @@ importers:
         specifier: ~5.9.0
         version: 5.9.2
       vite:
-        specifier: ^7.2.6
-        version: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+        specifier: ^7.2.7
+        version: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue-tsc:
         specifier: ^3.1.8
         version: 3.1.8(typescript@5.9.2)
@@ -2480,9 +2480,6 @@ packages:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
       vue: ^3.0.0
 
-  '@rolldown/pluginutils@1.0.0-beta.50':
-    resolution: {integrity: sha512-5e76wQiQVeL1ICOZVUg4LSOVYg9jyhGCin+icYozhsUzM+fHE7kddi1bdiE0jwVqTfkjba3jUFbEkoC9WkdvyA==}
-
   '@rolldown/pluginutils@1.0.0-beta.53':
     resolution: {integrity: sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ==}
 
@@ -3027,11 +3024,11 @@ packages:
       vite: ^5.0.0 || ^6.0.0
       vue: ^3.2.25
 
-  '@vitejs/plugin-vue@6.0.2':
-    resolution: {integrity: sha512-iHmwV3QcVGGvSC1BG5bZ4z6iwa1SOpAPWmnjOErd4Ske+lZua5K9TtAVdx0gMBClJ28DViCbSmZitjWZsWO3LA==}
+  '@vitejs/plugin-vue@6.0.3':
+    resolution: {integrity: sha512-TlGPkLFLVOY3T7fZrwdvKpjprR3s4fxRln0ORDo1VQ7HHyxJwTlrjKU3kpVWTlaAjIEuCTokmjkZnr8Tpc925w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
-      vite: ^5.0.0 || ^6.0.0 || ^7.0.0
+      vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
       vue: ^3.2.25
 
   '@vitest/eslint-plugin@1.5.2':
@@ -6850,6 +6847,46 @@ packages:
       yaml:
         optional: true
 
+  vite@7.2.7:
+    resolution: {integrity: sha512-ITcnkFeR3+fI8P1wMgItjGrR10170d8auB4EpMLPqmx6uxElH3a/hHGQabSHKdqd4FXWO1nFIp9rRn7JQ34ACQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^20.19.0 || >=22.12.0
+      jiti: '>=1.21.0'
+      less: ^4.0.0
+      lightningcss: ^1.21.0
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+
   vitest@4.0.15:
     resolution: {integrity: sha512-n1RxDp8UJm6N0IbJLQo+yzLZ2sQCDyl1o0LeugbPWf8+8Fttp29GghsQBjYJVmWq3gBFfe9Hs1spR44vovn2wA==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
@@ -8174,12 +8211,12 @@ snapshots:
     dependencies:
       '@quasar/render-ssr-error': 1.0.3
       '@quasar/ssl-certificate': 1.0.0
-      '@quasar/vite-plugin': 1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@quasar/vite-plugin': 1.10.0(@vitejs/plugin-vue@6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@types/chrome': 0.0.262
       '@types/compression': 1.8.1
       '@types/cordova': 11.0.3
       '@types/express': 4.17.23
-      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vitejs/plugin-vue': 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       archiver: 7.0.1
       chokidar: 3.6.0
       ci-info: 4.2.0
@@ -8208,7 +8245,7 @@ snapshots:
       serialize-javascript: 6.0.2
       tinyglobby: 0.2.15
       ts-essentials: 9.4.2(typescript@5.9.2)
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
       vue-router: 4.6.4(vue@3.5.25(typescript@5.9.2))
       webpack-merge: 6.0.1
@@ -8242,14 +8279,12 @@ snapshots:
       fs-extra: 11.3.0
       selfsigned: 2.4.1
 
-  '@quasar/vite-plugin@1.10.0(@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@quasar/vite-plugin@1.10.0(@vitejs/plugin-vue@6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)))(quasar@2.18.6)(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
-      '@vitejs/plugin-vue': 6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vitejs/plugin-vue': 6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       quasar: 2.18.6
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
-
-  '@rolldown/pluginutils@1.0.0-beta.50': {}
 
   '@rolldown/pluginutils@1.0.0-beta.53': {}
 
@@ -8723,14 +8758,14 @@ snapshots:
       '@typescript-eslint/types': 8.49.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-vue-jsx@5.1.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vitejs/plugin-vue-jsx@5.1.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@babel/core': 7.28.5
       '@babel/plugin-syntax-typescript': 7.27.1(@babel/core@7.28.5)
       '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       '@rolldown/pluginutils': 1.0.0-beta.53
       '@vue/babel-plugin-jsx': 2.0.1(@babel/core@7.28.5)
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
     transitivePeerDependencies:
       - supports-color
@@ -8745,16 +8780,16 @@ snapshots:
       vite: 6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.22(typescript@5.8.2)
 
-  '@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vitejs/plugin-vue@6.0.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
-      '@rolldown/pluginutils': 1.0.0-beta.50
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      '@rolldown/pluginutils': 1.0.0-beta.53
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
 
-  '@vitejs/plugin-vue@6.0.2(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vitejs/plugin-vue@6.0.3(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
-      '@rolldown/pluginutils': 1.0.0-beta.50
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      '@rolldown/pluginutils': 1.0.0-beta.53
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vue: 3.5.25(typescript@5.9.2)
 
   '@vitest/eslint-plugin@1.5.2(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.15(@types/node@22.19.2)(jiti@2.6.1)(jsdom@27.3.0(postcss@8.5.6))(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))':
@@ -9012,26 +9047,26 @@ snapshots:
     transitivePeerDependencies:
       - vite
 
-  '@vue/devtools-core@8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vue/devtools-core@8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       mitt: 3.0.1
       nanoid: 5.1.5
       pathe: 2.0.3
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-hot-client: 2.1.0(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       vue: 3.5.25(typescript@5.9.2)
     transitivePeerDependencies:
       - vite
 
-  '@vue/devtools-core@8.0.5(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
+  '@vue/devtools-core@8.0.5(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))':
     dependencies:
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       mitt: 3.0.1
       nanoid: 5.1.5
       pathe: 2.0.3
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-hot-client: 2.1.0(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
       vue: 3.5.25(typescript@5.9.2)
     transitivePeerDependencies:
       - vite
@@ -12849,31 +12884,31 @@ snapshots:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
 
-  vite-dev-rpc@1.1.0(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-dev-rpc@1.1.0(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       birpc: 2.6.1
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-hot-client: 2.1.0(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
 
-  vite-dev-rpc@1.1.0(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-dev-rpc@1.1.0(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       birpc: 2.6.1
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-hot-client: 2.1.0(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-hot-client: 2.1.0(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
 
   vite-hot-client@2.1.0(vite@6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       vite: 6.4.1(@types/node@22.18.11)(jiti@2.4.2)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
-  vite-hot-client@2.1.0(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-hot-client@2.1.0(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
-  vite-hot-client@2.1.0(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-hot-client@2.1.0(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
 
-  vite-plugin-checker@0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.8(typescript@5.9.2)):
+  vite-plugin-checker@0.11.0(eslint@9.39.1(jiti@2.6.1))(optionator@0.9.4)(typescript@5.9.2)(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue-tsc@3.1.8(typescript@5.9.2)):
     dependencies:
       '@babel/code-frame': 7.27.1
       chokidar: 4.0.3
@@ -12882,7 +12917,7 @@ snapshots:
       picomatch: 4.0.3
       tiny-invariant: 1.3.3
       tinyglobby: 0.2.15
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
       vscode-uri: 3.1.0
     optionalDependencies:
       eslint: 9.39.1(jiti@2.6.1)
@@ -12906,7 +12941,7 @@ snapshots:
       - rollup
       - supports-color
 
-  vite-plugin-inspect@11.3.3(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-inspect@11.3.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       ansis: 4.1.0
       debug: 4.4.3(supports-color@8.1.1)
@@ -12916,12 +12951,12 @@ snapshots:
       perfect-debounce: 2.0.0
       sirv: 3.0.2
       unplugin-utils: 0.3.1
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-dev-rpc: 1.1.0(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-dev-rpc: 1.1.0(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-inspect@11.3.3(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-inspect@11.3.3(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       ansis: 4.1.0
       debug: 4.4.3(supports-color@8.1.1)
@@ -12931,8 +12966,8 @@ snapshots:
       perfect-debounce: 2.0.0
       sirv: 3.0.2
       unplugin-utils: 0.3.1
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-dev-rpc: 1.1.0(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-dev-rpc: 1.1.0(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -12966,29 +13001,29 @@ snapshots:
       - supports-color
       - vue
 
-  vite-plugin-vue-devtools@8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
+  vite-plugin-vue-devtools@8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
     dependencies:
-      '@vue/devtools-core': 8.0.5(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vue/devtools-core': 8.0.5(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       sirv: 3.0.2
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-plugin-inspect: 11.3.3(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
-      vite-plugin-vue-inspector: 5.3.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-plugin-inspect: 11.3.3(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-plugin-vue-inspector: 5.3.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
       - vue
 
-  vite-plugin-vue-devtools@8.0.5(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
+  vite-plugin-vue-devtools@8.0.5(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2)):
     dependencies:
-      '@vue/devtools-core': 8.0.5(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      '@vue/devtools-core': 8.0.5(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
       '@vue/devtools-kit': 8.0.5
       '@vue/devtools-shared': 8.0.5
       sirv: 3.0.2
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
-      vite-plugin-inspect: 11.3.3(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
-      vite-plugin-vue-inspector: 5.3.2(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite-plugin-inspect: 11.3.3(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
+      vite-plugin-vue-inspector: 5.3.2(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - supports-color
@@ -13009,7 +13044,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-inspector@5.3.2(vite@7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-vue-inspector@5.3.2(vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.28.4)
@@ -13020,11 +13055,11 @@ snapshots:
       '@vue/compiler-dom': 3.5.24
       kolorist: 1.8.0
       magic-string: 0.30.21
-      vite: 7.2.6(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-inspector@5.3.2(vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
+  vite-plugin-vue-inspector@5.3.2(vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)):
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-proposal-decorators': 7.25.9(@babel/core@7.28.4)
@@ -13035,7 +13070,7 @@ snapshots:
       '@vue/compiler-dom': 3.5.24
       kolorist: 1.8.0
       magic-string: 0.30.21
-      vite: 7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
+      vite: 7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -13083,13 +13118,30 @@ snapshots:
       tsx: 4.21.0
       yaml: 2.8.1
 
-  vite@7.2.6(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
+  vite@7.2.7(@types/node@22.19.2)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.6
-      rollup: 4.52.5
+      rollup: 4.53.3
+      tinyglobby: 0.2.15
+    optionalDependencies:
+      '@types/node': 22.19.2
+      fsevents: 2.3.3
+      jiti: 2.6.1
+      sass-embedded: 1.89.2
+      terser: 5.42.0
+      tsx: 4.21.0
+      yaml: 2.8.1
+
+  vite@7.2.7(@types/node@24.10.3)(jiti@2.6.1)(sass-embedded@1.89.2)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.1):
+    dependencies:
+      esbuild: 0.25.11
+      fdir: 6.5.0(picomatch@4.0.3)
+      picomatch: 4.0.3
+      postcss: 8.5.6
+      rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
       '@types/node': 24.10.3
