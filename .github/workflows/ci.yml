@@ -25,7 +25,7 @@ jobs:
       CYPRESS_INSTALL_BINARY: 0
     name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           submodules: 'recursive'
       - uses: pnpm/action-setup@v3
