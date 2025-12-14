@@ -48,8 +48,8 @@
   "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.8",
-    "@types/node": "^22.19.2",
-    "eslint": "^9.39.1",
+    "@types/node": "^22.19.3",
+    "eslint": "^9.39.2",
     "eslint-plugin-vue": "~10.6.2",
     "execa": "^9.6.1",
     "pkgroll": "^2.21.4",
