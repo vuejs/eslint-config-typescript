@@ -48,16 +48,16 @@
   "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
   "devDependencies": {
     "@tsconfig/node20": "^20.1.8",
-    "@types/node": "^22.19.3",
+    "@types/node": "^22.19.7",
     "eslint": "^9.39.2",
-    "eslint-plugin-vue": "~10.6.2",
+    "eslint-plugin-vue": "~10.7.0",
     "execa": "^9.6.1",
-    "pkgroll": "^2.21.4",
+    "pkgroll": "^2.23.0",
     "prettier": "3.7.4",
     "tsx": "^4.21.0",
     "typescript": "~5.9.0",
-    "vitest": "^4.0.15",
-    "vue": "^3.5.25"
+    "vitest": "^4.0.18",
+    "vue": "^3.5.27"
   },
   "peerDependencies": {
     "eslint": "^9.10.0",
@@ -70,9 +70,9 @@
     }
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.49.0",
+    "@typescript-eslint/utils": "^8.54.0",
     "fast-glob": "^3.3.3",
-    "typescript-eslint": "^8.49.0",
+    "typescript-eslint": "^8.54.0",
     "vue-eslint-parser": "^10.2.0"
   },
   "engines": {
