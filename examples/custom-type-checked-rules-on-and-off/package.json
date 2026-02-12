@@ -15,7 +15,7 @@
     "vue": "^3.5.27"
   },
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.5",
+    "@tsconfig/node24": "^24.0.0",
     "@types/node": "^22.19.7",
     "@vitejs/plugin-vue": "^6.0.3",
     "@vue/eslint-config-typescript": "workspace:^",
