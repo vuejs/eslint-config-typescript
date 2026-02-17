@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/vuejs/eslint-config-typescript#readme",
   "devDependencies": {
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node24": "^24.0.0",
     "@types/node": "^22.19.11",
     "eslint": "^9.39.2",
     "eslint-plugin-vue": "~10.8.0",

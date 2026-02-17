@@ -21,9 +21,9 @@ importers:
         specifier: ^10.4.0
         version: 10.4.0(eslint@9.39.2(jiti@2.6.1))
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -61,9 +61,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -107,9 +107,9 @@ importers:
         specifier: ^4.6.4
         version: 4.6.4(vue@3.5.28(typescript@5.9.2))
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -226,9 +226,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -272,9 +272,9 @@ importers:
         specifier: ^4.6.4
         version: 4.6.4(vue@3.5.28(typescript@5.9.2))
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -351,9 +351,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -452,9 +452,9 @@ importers:
         specifier: ^4.6.4
         version: 4.6.4(vue@3.5.28(typescript@5.9.2))
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -528,9 +528,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -577,9 +577,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -620,9 +620,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -666,9 +666,9 @@ importers:
       '@nightwatch/vue':
         specifier: ^3.1.2
         version: 3.1.2(@types/node@22.19.11)(sass@1.97.3)(terser@5.42.0)(vue@3.5.28(typescript@5.9.2))
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -727,9 +727,9 @@ importers:
       '@playwright/test':
         specifier: ^1.58.2
         version: 1.58.2
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -770,9 +770,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -816,9 +816,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -859,9 +859,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
@@ -902,9 +902,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -1098,9 +1098,9 @@ importers:
         specifier: ^3.5.28
         version: 3.5.28(typescript@5.9.2)
     devDependencies:
-      '@tsconfig/node22':
-        specifier: ^22.0.0
-        version: 22.0.5
+      '@tsconfig/node24':
+        specifier: ^24.0.0
+        version: 24.0.4
       '@types/node':
         specifier: ^22.19.11
         version: 22.19.11
