@@ -53,7 +53,7 @@
     "eslint-plugin-vue": "~10.8.0",
     "execa": "^9.6.1",
     "pkgroll": "^2.25.2",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "tsx": "^4.21.0",
     "typescript": "~5.9.0",
     "vitest": "^4.0.18",

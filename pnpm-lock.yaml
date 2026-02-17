@@ -40,8 +40,8 @@ importers:
         specifier: ^2.25.2
         version: 2.25.2(typescript@5.9.2)(vite@7.2.7(@types/node@22.19.11)(jiti@2.6.1)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.2))
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       tsx:
         specifier: ^4.21.0
         version: 4.21.0
@@ -127,7 +127,7 @@ importers:
         version: 1.6.9(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.18(@types/node@22.19.11)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -156,8 +156,8 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       start-server-and-test:
         specifier: ^2.1.3
         version: 2.1.3
@@ -292,7 +292,7 @@ importers:
         version: 1.6.9(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.18(@types/node@22.19.11)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -324,8 +324,8 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       start-server-and-test:
         specifier: ^2.1.3
         version: 2.1.3
@@ -411,7 +411,7 @@ importers:
         version: 22.19.11
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -428,8 +428,8 @@ importers:
         specifier: ^16.5.0
         version: 16.5.0
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       typescript:
         specifier: ~5.9.0
         version: 5.9.2
@@ -472,7 +472,7 @@ importers:
         version: 1.6.9(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.2)(vitest@4.0.18(@types/node@22.19.11)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -501,8 +501,8 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       start-server-and-test:
         specifier: ^2.1.3
         version: 2.1.3
@@ -781,7 +781,7 @@ importers:
         version: 6.0.4(vite@7.3.1(@types/node@22.19.11)(jiti@2.6.1)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.42.0)(tsx@4.21.0)(yaml@2.8.2))(vue@3.5.28(typescript@5.9.2))
       '@vue/eslint-config-prettier':
         specifier: ^10.2.0
-        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
+        version: 10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
       '@vue/eslint-config-typescript':
         specifier: workspace:*
         version: link:../..
@@ -798,8 +798,8 @@ importers:
         specifier: ^8.0.4
         version: 8.0.4
       prettier:
-        specifier: 3.7.4
-        version: 3.7.4
+        specifier: 3.8.1
+        version: 3.8.1
       typescript:
         specifier: ~5.9.0
         version: 5.9.2
@@ -5603,8 +5603,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.7.4:
-    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
+  prettier@3.8.1:
+    resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -8871,12 +8871,12 @@ snapshots:
     dependencies:
       rfdc: 1.4.1
 
-  '@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)':
+  '@vue/eslint-config-prettier@10.2.0(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)':
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
       eslint-config-prettier: 10.1.5(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4)
-      prettier: 3.7.4
+      eslint-plugin-prettier: 5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1)
+      prettier: 3.8.1
     transitivePeerDependencies:
       - '@types/eslint'
 
@@ -10099,10 +10099,10 @@ snapshots:
       eslint: 9.39.2(jiti@2.6.1)
       globals: 16.5.0
 
-  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.7.4):
+  eslint-plugin-prettier@5.5.0(eslint-config-prettier@10.1.5(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(prettier@3.8.1):
     dependencies:
       eslint: 9.39.2(jiti@2.6.1)
-      prettier: 3.7.4
+      prettier: 3.8.1
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.8
     optionalDependencies:
@@ -11674,7 +11674,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.7.4: {}
+  prettier@3.8.1: {}
 
   pretty-bytes@5.6.0: {}
 
