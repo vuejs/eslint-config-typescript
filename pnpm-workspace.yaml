@@ -9,3 +9,6 @@ ignoredBuiltDependencies:
   - cypress
   - esbuild
   - geckodriver
+
+onlyBuiltDependencies:
+  - '@parcel/watcher'
