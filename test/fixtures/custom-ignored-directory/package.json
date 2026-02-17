@@ -23,7 +23,7 @@
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.8.1",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-plugin-vue": "~10.8.0",
     "jiti": "^2.6.1",
     "npm-run-all2": "^8.0.4",
