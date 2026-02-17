@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node24": "^24.0.0",
     "@types/node": "^22.19.11",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-typescript": "workspace:*",
