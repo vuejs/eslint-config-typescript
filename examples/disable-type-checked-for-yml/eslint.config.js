@@ -33,7 +33,7 @@ export default defineConfigWithVueTs(
   },
   skipFormatting,
 
-  ...pluginYml.configs['flat/recommended'],
+  ...pluginYml.configs.recommended,
 
   {
     files: ["**/*.yml", "**/*.yaml"],
