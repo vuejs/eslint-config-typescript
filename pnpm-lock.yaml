@@ -144,8 +144,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(jiti@2.6.1)
       eslint-plugin-cypress:
-        specifier: ^5.3.0
-        version: 5.3.0(eslint@10.0.0(jiti@2.6.1))
+        specifier: ^6.1.0
+        version: 6.1.0(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.8.0
         version: 10.8.0(@typescript-eslint/parser@8.56.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.2))(eslint@10.0.0(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.0.0(jiti@2.6.1)))
@@ -309,8 +309,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(jiti@2.6.1)
       eslint-plugin-cypress:
-        specifier: ^5.3.0
-        version: 5.3.0(eslint@10.0.0(jiti@2.6.1))
+        specifier: ^6.1.0
+        version: 6.1.0(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.8.0
         version: 10.8.0(@typescript-eslint/parser@8.56.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.2))(eslint@10.0.0(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.0.0(jiti@2.6.1)))
@@ -489,8 +489,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(jiti@2.6.1)
       eslint-plugin-cypress:
-        specifier: ^5.3.0
-        version: 5.3.0(eslint@10.0.0(jiti@2.6.1))
+        specifier: ^6.1.0
+        version: 6.1.0(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.8.0
         version: 10.8.0(@typescript-eslint/parser@8.56.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.2))(eslint@10.0.0(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.0.0(jiti@2.6.1)))
@@ -550,8 +550,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0(jiti@2.6.1)
       eslint-plugin-cypress:
-        specifier: ^5.3.0
-        version: 5.3.0(eslint@10.0.0(jiti@2.6.1))
+        specifier: ^6.1.0
+        version: 6.1.0(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-vue:
         specifier: ~10.8.0
         version: 10.8.0(@typescript-eslint/parser@8.56.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.2))(eslint@10.0.0(jiti@2.6.1))(vue-eslint-parser@10.4.0(eslint@10.0.0(jiti@2.6.1)))
@@ -3409,6 +3409,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
+    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
 
   bcrypt-pbkdf@1.0.2:
     resolution: {integrity: sha512-qeFIXtP4MSoi6NLqO12WfqARWWuCKi2Rn/9hJLEmtB5yTNr9DqFWkJRCf2qShWzPeAMRnOgCrq0sg/KLv5ES9w==}
@@ -4218,8 +4219,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-cypress@5.3.0:
-    resolution: {integrity: sha512-qjHF2Sdi3VkXSMnfQeUqsbYnessgc6T2dus/Q1U+e5102GpPy9eLd8MWW2Xp2SS9bMpPNLnSHwktMhCKr0dIBg==}
+  eslint-plugin-cypress@6.1.0:
+    resolution: {integrity: sha512-B8sxtNpINDxFkmsu1qKYjg70VsP8SGneEXgLcZMk1bUZcW08S+JyaiMdof1x6dmt02FgOD7YkT4wOaOD5HotJw==}
     peerDependencies:
       eslint: '>=9'
 
@@ -10208,10 +10209,10 @@ snapshots:
     dependencies:
       eslint: 10.0.0(jiti@2.6.1)
 
-  eslint-plugin-cypress@5.3.0(eslint@10.0.0(jiti@2.6.1)):
+  eslint-plugin-cypress@6.1.0(eslint@10.0.0(jiti@2.6.1)):
     dependencies:
       eslint: 10.0.0(jiti@2.6.1)
-      globals: 16.5.0
+      globals: 17.3.0
 
   eslint-plugin-playwright@2.5.1(eslint@10.0.0(jiti@2.6.1)):
     dependencies:
