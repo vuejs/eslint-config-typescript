@@ -74,8 +74,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -135,8 +135,8 @@ importers:
         specifier: ^2.4.6
         version: 2.4.6
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       cypress:
         specifier: ^15.13.0
         version: 15.13.0
@@ -196,8 +196,8 @@ importers:
         specifier: workspace:^
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -239,8 +239,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -300,8 +300,8 @@ importers:
         specifier: ^2.4.6
         version: 2.4.6
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       cypress:
         specifier: ^15.13.0
         version: 15.13.0
@@ -364,8 +364,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -480,8 +480,8 @@ importers:
         specifier: ^2.4.6
         version: 2.4.6
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       cypress:
         specifier: ^15.13.0
         version: 15.13.0
@@ -541,8 +541,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       cypress:
         specifier: ^15.13.0
         version: 15.13.0
@@ -593,8 +593,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -636,8 +636,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -679,8 +679,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -725,8 +725,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -771,8 +771,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -814,8 +814,8 @@ importers:
         specifier: workspace:*
         version: link:../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -863,8 +863,8 @@ importers:
         specifier: ^2.4.6
         version: 2.4.6
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -909,8 +909,8 @@ importers:
         specifier: workspace:*
         version: link:../../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -958,8 +958,8 @@ importers:
         specifier: workspace:*
         version: link:../../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -1047,8 +1047,8 @@ importers:
         specifier: workspace:*
         version: link:../../..
       '@vue/tsconfig':
-        specifier: ^0.8.1
-        version: 0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
+        specifier: ^0.9.1
+        version: 0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))
       eslint:
         specifier: ^10.1.0
         version: 10.1.0(jiti@2.6.1)
@@ -3365,10 +3365,10 @@ packages:
       vue:
         optional: true
 
-  '@vue/tsconfig@0.8.1':
-    resolution: {integrity: sha512-aK7feIWPXFSUhsCP9PFqPyFOcz4ENkb8hZ2pneL6m2UjCkccvaOhC/5KCKluuBufvp2KzkbdA2W2pk20vLzu3g==}
+  '@vue/tsconfig@0.9.1':
+    resolution: {integrity: sha512-buvjm+9NzLCJL29KY1j1991YYJ5e6275OiK+G4jtmfIb+z4POywbdm0wXusT9adVWqe0xqg70TbI7+mRx4uU9w==}
     peerDependencies:
-      typescript: 5.x
+      typescript: '>= 5.8'
       vue: ^3.4.0
     peerDependenciesMeta:
       typescript:
@@ -8687,7 +8687,7 @@ snapshots:
       typescript: 5.8.2
       vue: 3.5.25(typescript@5.8.2)
 
-  '@vue/tsconfig@0.8.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))':
+  '@vue/tsconfig@0.9.1(typescript@5.9.2)(vue@3.5.31(typescript@5.9.2))':
     optionalDependencies:
       typescript: 5.9.2
       vue: 3.5.31(typescript@5.9.2)
