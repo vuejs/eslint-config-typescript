@@ -20,7 +20,7 @@ jobs:
           - macos-latest
           - windows-latest
         node-version:
-          - 20
+          - 22
     env:
       CYPRESS_INSTALL_BINARY: 0
     name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
