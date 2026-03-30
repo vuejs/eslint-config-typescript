@@ -23,7 +23,7 @@
     "@types/node": "^22.19.15",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-typescript": "workspace:*",
-    "@vue/tsconfig": "^0.8.1",
+    "@vue/tsconfig": "^0.9.1",
     "cypress": "^15.13.0",
     "eslint": "^10.1.0",
     "eslint-plugin-cypress": "^6.2.1",
