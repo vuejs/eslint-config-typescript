@@ -4,11 +4,8 @@ packages:
   - .
 
 ignoredBuiltDependencies:
-  - '@nightwatch/nightwatch-inspector'
-  - chromedriver
   - cypress
   - esbuild
-  - geckodriver
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
