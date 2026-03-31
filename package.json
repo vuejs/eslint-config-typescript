@@ -55,7 +55,7 @@
     "pkgroll": "^2.27.0",
     "prettier": "3.8.1",
     "tsx": "^4.21.0",
-    "typescript": "~5.9.0",
+    "typescript": "~6.0.0",
     "vitest": "^4.1.2",
     "vue": "^3.5.31"
   },
