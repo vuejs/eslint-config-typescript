@@ -16,17 +16,17 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.31"
+    "vue": "^3.5.32"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
-    "@types/node": "^22.19.15",
+    "@types/node": "^22.19.17",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.9.1",
     "cypress": "^15.13.0",
-    "eslint": "^10.1.0",
-    "eslint-plugin-cypress": "^6.2.1",
+    "eslint": "^10.2.0",
+    "eslint-plugin-cypress": "^6.2.2",
     "eslint-plugin-vue": "~10.8.0",
     "npm-run-all2": "^8.0.4",
     "start-server-and-test": "^3.0.0",

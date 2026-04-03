@@ -13,16 +13,16 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.5.31"
+    "vue": "^3.5.32"
   },
   "devDependencies": {
     "@tsconfig/node24": "^24.0.4",
-    "@types/node": "^22.19.15",
+    "@types/node": "^22.19.17",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "workspace:*",
     "@vue/tsconfig": "^0.9.1",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.0",
     "eslint-plugin-vue": "~10.8.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.8.1",
