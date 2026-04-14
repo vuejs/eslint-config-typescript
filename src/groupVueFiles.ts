@@ -35,7 +35,7 @@ export default function groupVueFiles(
     .sync(['**/*.vue'], {
       cwd: rootDir,
       ignore,
-      dot: includeDotFolders
+      dot: includeDotFolders,
     })
     .reduce(
       (acc, file) => {

@@ -64,9 +64,9 @@ export type ProjectOptions = {
 
   /**
    * Allow patterns to match entries that begin with a period (.).
-   * Default is false.
+   * Default is `false`.
    */
-  includeDotFolders?: boolean;
+  includeDotFolders?: boolean
 
   /**
    * The root directory of the project.
@@ -99,7 +99,7 @@ export function configureVueProject(userOptions: ProjectOptions): void {
   if (userOptions.rootDir) {
     projectOptions.rootDir = userOptions.rootDir
   }
-  if(userOptions.includeDotFolders) {
+  if (userOptions.includeDotFolders) {
     projectOptions.includeDotFolders = userOptions.includeDotFolders
   }
 }
@@ -242,7 +242,11 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     return configs
   }
 
-  const vueFiles = groupVueFiles(projectOptions.rootDir, globalIgnores, projectOptions.includeDotFolders)
+  const vueFiles = groupVueFiles(
+    projectOptions.rootDir,
+    globalIgnores,
+    projectOptions.includeDotFolders,
+  )
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
   const hasTypeAwareConfigs = configs.some(
