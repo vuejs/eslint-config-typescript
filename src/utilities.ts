@@ -63,6 +63,12 @@ export type ProjectOptions = {
   allowComponentTypeUnsafety?: boolean
 
   /**
+   * Allow patterns to match entries that begin with a period (.).
+   * Default is false.
+   */
+  includeDotFolders?: boolean;
+
+  /**
    * The root directory of the project.
    * Defaults to `process.cwd()`.
    */
@@ -73,6 +79,7 @@ let projectOptions = {
   tsSyntaxInTemplates: true as boolean,
   scriptLangs: ['ts'] as ScriptLang[],
   allowComponentTypeUnsafety: true as boolean,
+  includeDotFolders: false as boolean,
   rootDir: process.cwd(),
 } satisfies ProjectOptions
 
@@ -91,6 +98,9 @@ export function configureVueProject(userOptions: ProjectOptions): void {
   }
   if (userOptions.rootDir) {
     projectOptions.rootDir = userOptions.rootDir
+  }
+  if(userOptions.includeDotFolders) {
+    projectOptions.includeDotFolders = userOptions.includeDotFolders
   }
 }
 
@@ -232,7 +242,7 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     return configs
   }
 
-  const vueFiles = groupVueFiles(projectOptions.rootDir, globalIgnores)
+  const vueFiles = groupVueFiles(projectOptions.rootDir, globalIgnores, projectOptions.includeDotFolders)
   const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
 
   const hasTypeAwareConfigs = configs.some(
