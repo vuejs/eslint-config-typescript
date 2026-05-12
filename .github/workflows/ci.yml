@@ -9,6 +9,10 @@ on:
   pull_request:
     branches:
       - '**'
+
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
