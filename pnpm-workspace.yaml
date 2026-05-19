@@ -3,6 +3,10 @@ packages:
   - test/fixtures/*
   - .
 
+allowBuilds:
+  cypress: false
+  esbuild: false
+
 ignoredBuiltDependencies:
   - cypress
   - esbuild
