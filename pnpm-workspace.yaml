@@ -4,12 +4,7 @@ packages:
   - .
 
 allowBuilds:
+  '@parcel/watcher': false
   cypress: false
   esbuild: false
 
-ignoredBuiltDependencies:
-  - cypress
-  - esbuild
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
