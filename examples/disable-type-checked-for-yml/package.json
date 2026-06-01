@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "~10.9.1",
     "eslint-plugin-yml": "^3.3.2",
     "jsdom": "^29.1.1",
-    "npm-run-all2": "^8.0.4",
+    "npm-run-all2": "^9.0.1",
     "prettier": "3.8.3",
     "start-server-and-test": "^3.0.5",
     "typescript": "~6.0.0",
