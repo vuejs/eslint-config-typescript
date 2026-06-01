@@ -13,6 +13,7 @@ type VueFilesByGroup = {
 export default function groupVueFiles(
   rootDir: string,
   globalIgnores: string[],
+  includeDotFolders?: boolean,
 ): VueFilesByGroup {
   debug(`Grouping .vue files in ${rootDir}`)
 
@@ -34,6 +35,7 @@ export default function groupVueFiles(
     .sync(['**/*.vue'], {
       cwd: rootDir,
       ignore,
+      dot: includeDotFolders,
     })
     .reduce(
       (acc, file) => {
