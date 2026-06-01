@@ -388,8 +388,8 @@ importers:
   examples/quasar-project:
     dependencies:
       '@quasar/extras':
-        specifier: ^1.18.0
-        version: 1.18.0
+        specifier: ^2.0.0
+        version: 2.0.0
       quasar:
         specifier: ^2.19.3
         version: 2.19.3
@@ -405,7 +405,7 @@ importers:
         version: 10.0.1(eslint@10.4.0(jiti@2.7.0))
       '@quasar/app-vite':
         specifier: ^2.6.1
-        version: 2.6.1(@quasar/extras@1.18.0)(@types/node@22.19.19)(eslint@10.4.0(jiti@2.7.0))(jiti@2.7.0)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(quasar@2.19.3)(rolldown@1.0.2)(rollup@4.60.4)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(typescript@6.0.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.35)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(vite@8.0.14(@types/node@22.19.19)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3)))(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)
+        version: 2.6.1(@quasar/extras@2.0.0)(@types/node@22.19.19)(eslint@10.4.0(jiti@2.7.0))(jiti@2.7.0)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(quasar@2.19.3)(rolldown@1.0.2)(rollup@4.60.4)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(typescript@6.0.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.35)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(vite@8.0.14(@types/node@22.19.19)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3)))(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)
       '@types/node':
         specifier: ^22.19.19
         version: 22.19.19
@@ -2415,8 +2415,8 @@ packages:
       workbox-build:
         optional: true
 
-  '@quasar/extras@1.18.0':
-    resolution: {integrity: sha512-hIqqw56sKGujWA3sTIT1ItlVglD+eA3hAWDVxY4qjA4/BSgYJDHk6ymJCbsDPIJFT7DJsG/F3A67vELXbBAIvA==}
+  '@quasar/extras@2.0.0':
+    resolution: {integrity: sha512-JiVq65j28Rp5AFLVpHBSv+MUV+NpE4x8cSGyfWquakOZe8FCV1E6qmbCDQhPY/e2fheFhaN8uGl1R3UbC8BxZw==}
 
   '@quasar/render-ssr-error@1.0.4':
     resolution: {integrity: sha512-pkP0uvhLHu2LWk9NbMwBjs37j1pdImXDz5hS9SX14QSqKZKepsfbre7Z28/GTwL6CrHcr+k9UTYorbpQGTI7EA==}
@@ -7477,7 +7477,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@quasar/app-vite@2.6.1(@quasar/extras@1.18.0)(@types/node@22.19.19)(eslint@10.4.0(jiti@2.7.0))(jiti@2.7.0)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(quasar@2.19.3)(rolldown@1.0.2)(rollup@4.60.4)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(typescript@6.0.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.35)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(vite@8.0.14(@types/node@22.19.19)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3)))(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)':
+  '@quasar/app-vite@2.6.1(@quasar/extras@2.0.0)(@types/node@22.19.19)(eslint@10.4.0(jiti@2.7.0))(jiti@2.7.0)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(quasar@2.19.3)(rolldown@1.0.2)(rollup@4.60.4)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(typescript@6.0.3)(vue-router@5.1.0(@vue/compiler-sfc@3.5.35)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(vite@8.0.14(@types/node@22.19.19)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3)))(vue@3.5.35(typescript@6.0.3))(yaml@2.9.0)':
     dependencies:
       '@quasar/render-ssr-error': 1.0.4
       '@quasar/ssl-certificate': 2.0.0
@@ -7520,7 +7520,7 @@ snapshots:
       vue-router: 5.1.0(@vue/compiler-sfc@3.5.35)(pinia@3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3)))(vite@8.0.14(@types/node@22.19.19)(esbuild@0.27.7)(jiti@2.7.0)(sass-embedded@1.99.0)(sass@1.99.0)(terser@5.47.1)(tsx@4.22.3)(yaml@2.9.0))(vue@3.5.35(typescript@6.0.3))
       webpack-merge: 6.0.1
     optionalDependencies:
-      '@quasar/extras': 1.18.0
+      '@quasar/extras': 2.0.0
       eslint: 10.4.0(jiti@2.7.0)
       pinia: 3.0.4(typescript@6.0.3)(vue@3.5.35(typescript@6.0.3))
       typescript: 6.0.3
@@ -7542,7 +7542,7 @@ snapshots:
       - tsx
       - yaml
 
-  '@quasar/extras@1.18.0': {}
+  '@quasar/extras@2.0.0': {}
 
   '@quasar/render-ssr-error@1.0.4':
     dependencies:
