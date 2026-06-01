@@ -52,12 +52,12 @@
     "eslint": "^10.4.0",
     "eslint-plugin-vue": "~10.9.1",
     "execa": "^9.6.1",
-    "pkgroll": "^2.27.0",
+    "pkgroll": "^2.27.1",
     "prettier": "3.8.3",
-    "tsx": "^4.22.0",
+    "tsx": "^4.22.3",
     "typescript": "~6.0.0",
-    "vitest": "^4.1.6",
-    "vue": "^3.5.34"
+    "vitest": "^4.1.7",
+    "vue": "^3.5.35"
   },
   "peerDependencies": {
     "eslint": "^9.10.0 || ^10.0.0",
@@ -70,9 +70,9 @@
     }
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.59.3",
+    "@typescript-eslint/utils": "^8.60.0",
     "fast-glob": "^3.3.3",
-    "typescript-eslint": "^8.59.3",
+    "typescript-eslint": "^8.60.0",
     "vue-eslint-parser": "^10.4.0"
   },
   "engines": {
