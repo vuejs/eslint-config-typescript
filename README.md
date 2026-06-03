@@ -29,7 +29,7 @@ Because of the complexity of the configurations, this package exports several ut
 
 - `defineConfigWithVueTs`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config), but will modify the given ESLint config to work with Vue.js + TypeScript.
 - `vueTsConfigs`, contains all the [shared configurations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `vueTsConfigs.recommendedTypeChecked`), and applies to `.vue` files in addition to TypeScript files.
-- a Vue-specific config factory: `configureVueProject({ scriptLangs, rootDir })`. More info below.
+- a Vue-specific config factory: `configureVueProject(options)`. More info below.
 
 ### Minimal Setup
 
@@ -111,6 +111,12 @@ configureVueProject({
   // Our config helper would resolve and parse all the `.vue` files under `rootDir`,
   // and only apply the loosened rules to the files that do need them.
   rootDir: import.meta.dirname,
+
+  // Whether to include dot folders when resolving `.vue` files under `rootDir`.
+  // Defaults to `false`.
+  // You may need to set this to `true` if your project stores Vue components
+  // under folders such as `.vitepress`.
+  includeDotFolders: false,
 })
 
 export default defineConfigWithVueTs(
