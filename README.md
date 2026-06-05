@@ -25,13 +25,113 @@ Please also make sure that you have `typescript` and `eslint` installed.
 
 ## Usage
 
-Because of the complexity of the configurations, this package exports several utilities:
+Starting in v14.9, `withVueTs` is the recommended way to compose this package with other flat configs. It returns a Promise, so you can export it directly from `eslint.config.js` / `eslint.config.mjs` / `eslint.config.ts`.
 
-- `defineConfigWithVueTs`, a utility function whose type signature is the same as the [`config` function from `typescript-eslint`](https://typescript-eslint.io/packages/typescript-eslint#config), but will modify the given ESLint config to work with Vue.js + TypeScript.
+The previous helpers remain available for backward compatibility and existing projects, but new setups should prefer `withVueTs`.
+
+This package exports:
+
+- `withVueTs`, a promise-driven utility for building a flat ESLint config that works with Vue.js + TypeScript. It accepts either `withVueTs(...configs)` or `withVueTs(options, ...configs)`, and also works with the result of `defineConfig()` from `eslint/config`.
 - `vueTsConfigs`, contains all the [shared configurations from `typescript-eslint`](https://typescript-eslint.io/users/configs) (in camelCase, e.g. `vueTsConfigs.recommendedTypeChecked`), and applies to `.vue` files in addition to TypeScript files.
-- a Vue-specific config factory: `configureVueProject(options)`. More info below.
+- `defineConfigWithVueTs`, the previous helper API. It is still supported, but new configs should prefer `withVueTs`.
+- `configureVueProject({ scriptLangs, rootDir, includeDotFolders, ... })`, the previous project-wide configuration API. In new configs, prefer passing the same options as the first argument to `withVueTs(...)`.
 
-### Minimal Setup
+### Recommended in v14.9+
+
+```js
+// eslint.config.mjs
+import pluginVue from 'eslint-plugin-vue'
+import { withVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+
+export default withVueTs(
+  pluginVue.configs['flat/essential'],
+  vueTsConfigs.recommended,
+)
+```
+
+The above configuration enables [the essential rules for Vue 3](https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention) and [the recommended rules for TypeScript](https://typescript-eslint.io/rules/?=recommended).
+
+All the `<script>` blocks in `.vue` files _MUST_ be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
+
+If you need Vue-specific options such as `rootDir`, `includeDotFolders`, `scriptLangs`, `tsSyntaxInTemplates`, or `allowComponentTypeUnsafety`, pass them as the first argument:
+
+```js
+export default withVueTs(
+  {
+    rootDir: import.meta.dirname,
+    includeDotFolders: false,
+    scriptLangs: ['ts', 'js'],
+  },
+  pluginVue.configs['flat/essential'],
+  vueTsConfigs.recommendedTypeChecked,
+)
+```
+
+> [!NOTE]
+> If you prefer to compose with ESLint's built-in `defineConfig()` helper from `eslint/config`, that helper is available in ESLint 9.22.0 and later:
+>
+> ```js
+> import { defineConfig } from 'eslint/config'
+> import pluginVue from 'eslint-plugin-vue'
+> import { withVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+>
+> export default withVueTs(
+>   defineConfig(pluginVue.configs['flat/essential'], vueTsConfigs.recommended),
+> )
+> ```
+
+### Linting with Type Information
+
+Some `typescript-eslint` rules utilize type information to provide deeper insights into your code.
+But type-checking is a much slower process than linting with only syntax information.
+It is not always easy to set up the type-checking environment for ESLint without severe performance penalties.
+
+So we don't recommend you to configure individual type-aware rules and the corresponding language options all by yourself.
+Instead, you can start by extending from the `recommendedTypeChecked` configuration and then turn on/off the rules you need.
+
+```js
+// eslint.config.mjs
+import pluginVue from 'eslint-plugin-vue'
+import { withVueTs, vueTsConfigs } from '@vue/eslint-config-typescript'
+
+export default withVueTs(
+  pluginVue.configs['flat/essential'],
+  vueTsConfigs.recommendedTypeChecked,
+)
+```
+
+### Previous APIs
+
+`defineConfigWithVueTs` and `configureVueProject` remain supported for existing setups. If you already use them, you do not need to migrate immediately. For new configs, prefer `withVueTs(...)`.
+
+Most uses of `configureVueProject(...)` can now be expressed by passing the same options as the first argument to `withVueTs(...)`.
+
+### Migration
+
+If you want to migrate an existing flat config from `defineConfigWithVueTs(...)` / `configureVueProject(...)` to `withVueTs(...)`, the primary migration interface is:
+
+```sh
+npx @vue/eslint-config-typescript migrate-to-with-vue-ts
+```
+
+This command is interactive by default. It discovers `eslint.config.{js,mjs,ts,mts}`, shows the planned changes, and asks before writing files.
+
+The codemod is intentionally conservative. It auto-fixes the common top-level helper patterns, and reports unusual cases such as non-top-level `configureVueProject(...)` calls or ambiguous first arguments for manual migration instead of guessing.
+
+You can also pass explicit paths or skip the prompt:
+
+```sh
+npx @vue/eslint-config-typescript migrate-to-with-vue-ts eslint.config.ts
+npx @vue/eslint-config-typescript migrate-to-with-vue-ts "packages/*/eslint.config.ts" --yes
+```
+
+There is also a versioned alias:
+
+```sh
+npx @vue/eslint-config-typescript migrate-14.9
+```
+
+But `migrate-to-with-vue-ts` should be treated as the primary interface. The alias is only a convenience for this specific migration and future releases may add other migrations.
 
 ```js
 // eslint.config.mjs
@@ -43,15 +143,29 @@ import {
 
 export default defineConfigWithVueTs(
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
+
+  // We STRONGLY RECOMMEND you to start with `recommended` or `recommendedTypeChecked`.
+  // But if you are determined to configure all rules by yourself,
+  // you can start with `base`, and then turn on/off the rules you need.
+  vueTsConfigs.base,
 )
 ```
 
-The above configuration enables [the essential rules for Vue 3](https://eslint.vuejs.org/rules/#priority-a-essential-error-prevention) and [the recommended rules for TypeScript](https://typescript-eslint.io/rules/?=recommended).
+You can still configure the project globally when you need to keep the previous API shape:
 
-All the `<script>` blocks in `.vue` files *MUST* be written in TypeScript (should be either `<script setup lang="ts">` or `<script lang="ts">`).
+```js
+import { configureVueProject } from '@vue/eslint-config-typescript'
 
-### Advanced Setup
+configureVueProject({
+  tsSyntaxInTemplates: true,
+  scriptLangs: ['ts', 'js'],
+  allowComponentTypeUnsafety: true,
+  rootDir: import.meta.dirname,
+  includeDotFolders: false,
+})
+```
+
+### Detailed Legacy Example
 
 ```js
 // eslint.config.mjs
@@ -120,41 +234,14 @@ configureVueProject({
 })
 
 export default defineConfigWithVueTs(
-  pluginVue.configs["flat/essential"],
-
-  // We STRONGLY RECOMMEND you to start with `recommended` or `recommendedTypeChecked`.
-  // But if you are determined to configure all rules by yourself,
-  // you can start with `base`, and then turn on/off the rules you need.
-  vueTsConfigs.base,
-)
-```
-
-### Linting with Type Information
-
-Some `typescript-eslint` rules utilizes type information to provide deeper insights into your code.
-But type-checking is a much slower process than linting with only syntax information.
-It is not always easy to set up the type-checking environment for ESLint without severe performance penalties.
-
-So we don't recommend you to configure individual type-aware rules and the corresponding language options all by yourself.
-Instead, you can start by extending from the `recommendedTypeChecked` configuration and then turn on/off the rules you need.
-
-```js
-// eslint.config.mjs
-import pluginVue from 'eslint-plugin-vue'
-import {
-  defineConfigWithVueTs,
-  vueTsConfigs,
-} from '@vue/eslint-config-typescript'
-
-export default defineConfigWithVueTs(
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommendedTypeChecked
+  vueTsConfigs.recommendedTypeChecked,
 )
 ```
 
 ## Use As a Normal Shared ESLint Config (Not Recommended)
 
-You can use this package as a normal ESLint config, without the `defineConfigWithVueTs` helper. But in this case, overriding the rules for `.vue` files would be more difficult and comes with many nuances. Please be cautious.
+You can use this package as a normal ESLint config, without `withVueTs` or `defineConfigWithVueTs`. But in this case, overriding the rules for `.vue` files would be more difficult and comes with many nuances. Please be cautious.
 
 You can check [the documentation for 14.1 and earlier versions](https://github.com/vuejs/eslint-config-typescript/tree/v14.1.4#usage) for more information.
 

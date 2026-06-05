@@ -1,4 +1,8 @@
-export { defineConfigWithVueTs, configureVueProject } from './utilities'
+export {
+  defineConfigWithVueTs,
+  withVueTs,
+  configureVueProject,
+} from './utilities'
 export { vueTsConfigs } from './configs'
 
 // Compatibility layer for the `createConfig` function in <= 14.2.0

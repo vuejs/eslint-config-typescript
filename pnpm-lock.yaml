@@ -1071,6 +1071,25 @@ importers:
         specifier: ^3.3.2
         version: 3.3.3(typescript@6.0.3)
 
+  test/fixtures/with-vue-ts-api:
+    dependencies:
+      vue:
+        specifier: ^3.5.35
+        version: 3.5.35(typescript@6.0.3)
+    devDependencies:
+      '@vue/eslint-config-typescript':
+        specifier: workspace:*
+        version: link:../../..
+      eslint:
+        specifier: ^10.4.0
+        version: 10.4.1(jiti@2.7.0)
+      eslint-plugin-vue:
+        specifier: ~10.9.1
+        version: 10.9.1(@typescript-eslint/parser@8.60.1(eslint@10.4.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.4.1(jiti@2.7.0))(vue-eslint-parser@10.4.0(eslint@10.4.1(jiti@2.7.0)))
+      typescript:
+        specifier: ~6.0.0
+        version: 6.0.3
+
 packages:
 
   '@asamuzakjp/css-color@5.1.11':

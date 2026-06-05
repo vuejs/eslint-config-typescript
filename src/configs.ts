@@ -22,85 +22,126 @@ function toArray<T>(value: T | T[]): T[] {
   return Array.isArray(value) ? value : [value]
 }
 
-/**
- * The options that a config in the `extends` should inherit.
- */
-type ExtendsOptions = {
+const VUE_TS_CONFIG = Symbol('@vue/eslint-config-typescript/vue-ts-config')
+const TS_FILES_GLOB = '**/*.ts'
+const VUE_FILES_GLOB = '**/*.vue'
+
+type VueTsConfigMeta = {
+  configName: ExtendableConfigName
+  needsTypeChecking: boolean
+}
+
+export type VueTsConfig = FlatConfig.Config & {
+  [VUE_TS_CONFIG]: VueTsConfigMeta
+}
+
+export type ExtendConfigOptions = {
   name?: string
   files?: (string | string[])[]
   ignores?: string[]
 }
 
-export class TsEslintConfigForVue {
-  /**
-   * The name of the config object as defined in `typescript-eslint`.
-   */
-  configName: ExtendableConfigName
-
-  /**
-   * the name property is here to provide better error messages when ESLint throws an error
-   */
-  name: string
-
-  constructor(configName: ExtendableConfigName) {
-    this.configName = configName
-    this.name = `vueTsConfigs.${configName}`
+function needsTypeChecking(configName: ExtendableConfigName): boolean {
+  if (configName === 'disableTypeChecked') {
+    return false
   }
-
-  extendsOptions?: ExtendsOptions
-  /**
-   * Create a new instance of `TsEslintConfigForVue` with the `restOfConfig` merged into it.
-   * Should be used when the config is used in the `extends` field of another config.
-   */
-  asExtendedWith(restOfConfig: ExtendsOptions): TsEslintConfigForVue {
-    const extendedConfig = new TsEslintConfigForVue(this.configName)
-
-    extendedConfig.extendsOptions = {
-      name: [restOfConfig.name, this.name].filter(Boolean).join('__'),
-      ...(restOfConfig.files && { files: restOfConfig.files }),
-      ...(restOfConfig.ignores && { ignores: restOfConfig.ignores }),
-    }
-
-    return extendedConfig
+  if (configName === 'all') {
+    return true
   }
+  return configName.includes('TypeChecked')
+}
 
-  needsTypeChecking(): boolean {
-    if (this.configName === 'disableTypeChecked') {
-      return false
-    }
-    if (this.configName === 'all') {
-      return true
-    }
-    return this.configName.includes('TypeChecked')
+function markVueTsConfig(
+  config: FlatConfig.Config,
+  meta: VueTsConfigMeta,
+): VueTsConfig {
+  return {
+    ...config,
+    [VUE_TS_CONFIG]: meta,
   }
+}
 
-  toConfigArray(): FlatConfig.ConfigArray {
-    return toArray(tseslint.configs[this.configName])
-      .flat()
-      .map((config: FlatConfig.Config) => ({
-        ...config,
-        ...(config.files && config.files.includes('**/*.ts')
-          ? { files: [...config.files, '**/*.vue'] }
-          : {}),
-        ...this.extendsOptions,
-      }))
+function createVueTsConfig(
+  configName: ExtendableConfigName,
+): FlatConfig.ConfigArray {
+  const meta = {
+    configName,
+    needsTypeChecking: needsTypeChecking(configName),
+  } satisfies VueTsConfigMeta
+
+  return toArray(tseslint.configs[configName])
+    .flat()
+    .map((config: FlatConfig.Config) => markVueTsConfig(config, meta))
+}
+
+function hasTsMatcher(files: (string | string[])[]): boolean {
+  return files.some(fileMatcher =>
+    Array.isArray(fileMatcher)
+      ? fileMatcher.includes(TS_FILES_GLOB)
+      : fileMatcher === TS_FILES_GLOB,
+  )
+}
+
+function addVueMatcher(files: (string | string[])[]): (string | string[])[] {
+  const vueMatchers = files.reduce<(string | string[])[]>(
+    (result, fileMatcher) => {
+      if (Array.isArray(fileMatcher)) {
+        if (fileMatcher.includes(TS_FILES_GLOB)) {
+          result.push(
+            fileMatcher.map(matcher =>
+              matcher === TS_FILES_GLOB ? VUE_FILES_GLOB : matcher,
+            ),
+          )
+        }
+        return result
+      }
+
+      if (fileMatcher === TS_FILES_GLOB) {
+        result.push(VUE_FILES_GLOB)
+      }
+      return result
+    },
+    [],
+  )
+
+  return vueMatchers.length > 0 ? [...files, ...vueMatchers] : files
+}
+
+export function isVueTsConfig(
+  config: FlatConfig.Config,
+): config is VueTsConfig {
+  return VUE_TS_CONFIG in config
+}
+
+export function extendVueTsConfig(
+  config: VueTsConfig,
+  restOfConfig: ExtendConfigOptions,
+): VueTsConfig {
+  const name = [restOfConfig.name, config.name].filter(Boolean).join('__')
+
+  return {
+    ...config,
+    ...(restOfConfig.files && { files: restOfConfig.files }),
+    ...(restOfConfig.ignores && { ignores: restOfConfig.ignores }),
+    ...(name && { name }),
+  }
+}
+
+export function vueTsConfigNeedsTypeChecking(config: VueTsConfig): boolean {
+  return config[VUE_TS_CONFIG].needsTypeChecking
+}
+
+export function resolveVueTsConfig(config: VueTsConfig): FlatConfig.Config {
+  const { [VUE_TS_CONFIG]: _meta, ...resolvedConfig } = config
+
+  return {
+    ...resolvedConfig,
+    ...(resolvedConfig.files && hasTsMatcher(resolvedConfig.files)
+      ? { files: addVueMatcher(resolvedConfig.files) }
+      : {}),
   }
 }
 
 export const vueTsConfigs = Object.fromEntries(
-  CONFIG_NAMES.map(name => [
-    name,
-    new Proxy(new TsEslintConfigForVue(name), {
-      // `ownKeys` is called by ESLint when validating the config object.
-      // The only possible scenario where this is called is when the placeholder object
-      // isn't replaced, which means it's passed to ESLint without being wrapped by
-      // `defineConfigWithVueTs()`
-      // We throw an error here to provide a better error message to the user.
-      ownKeys() {
-        throw new Error(
-          'Please wrap the config object with `defineConfigWithVueTs()`',
-        )
-      },
-    }),
-  ]),
-) as Record<ExtendableConfigName, TsEslintConfigForVue>
+  CONFIG_NAMES.map(name => [name, createVueTsConfig(name)]),
+) as Record<ExtendableConfigName, FlatConfig.Config | FlatConfig.ConfigArray>

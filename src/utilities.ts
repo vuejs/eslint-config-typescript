@@ -4,7 +4,12 @@ import type { TSESLint } from '@typescript-eslint/utils'
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import pluginVue from 'eslint-plugin-vue'
 
-import { TsEslintConfigForVue } from './configs'
+import {
+  extendVueTsConfig,
+  isVueTsConfig,
+  resolveVueTsConfig,
+  vueTsConfigNeedsTypeChecking,
+} from './configs'
 import groupVueFiles from './groupVueFiles'
 import {
   additionalRulesRequiringParserServices,
@@ -17,12 +22,9 @@ import type { ScriptLang } from './internals'
 import { omit, pipe, partition } from './fpHelpers'
 
 type ConfigItem = TSESLint.FlatConfig.Config
-type InfiniteDepthConfigWithExtendsAndVueSupport =
-  | TsEslintConfigForVue
-  | ConfigItemWithExtendsAndVueSupport
-  | InfiniteDepthConfigWithExtendsAndVueSupport[]
+type ConfigInput = ConfigItemWithExtendsAndVueSupport | ConfigInput[]
 interface ConfigItemWithExtendsAndVueSupport extends ConfigItem {
-  extends?: InfiniteDepthConfigWithExtendsAndVueSupport[]
+  extends?: ConfigInput[]
 }
 
 export type ProjectOptions = {
@@ -75,13 +77,159 @@ export type ProjectOptions = {
   rootDir?: string
 }
 
-let projectOptions = {
-  tsSyntaxInTemplates: true as boolean,
-  scriptLangs: ['ts'] as ScriptLang[],
-  allowComponentTypeUnsafety: true as boolean,
-  includeDotFolders: false as boolean,
+type ResolvedProjectOptions = {
+  tsSyntaxInTemplates: boolean
+  scriptLangs: ScriptLang[]
+  allowComponentTypeUnsafety: boolean
+  includeDotFolders: boolean
+  rootDir: string
+}
+
+type RawConfigItem = ConfigItem
+
+type ExtractedConfig = {
+  files?: (string | string[])[]
+  rules: NonNullable<ConfigItem['rules']>
+}
+
+type TransformState = {
+  globalIgnores: string[]
+  userTypeAwareConfigs: ExtractedConfig[]
+}
+
+type MaybePromise<T> = T | PromiseLike<T>
+type AwaitableConfigInput = MaybePromise<ConfigInput | ConfigInput[]>
+
+const PROJECT_OPTION_KEYS = new Set([
+  'tsSyntaxInTemplates',
+  'scriptLangs',
+  'allowComponentTypeUnsafety',
+  'includeDotFolders',
+  'rootDir',
+])
+
+const DEFAULT_PROJECT_OPTIONS = {
+  tsSyntaxInTemplates: true,
+  scriptLangs: ['ts'],
+  allowComponentTypeUnsafety: true,
+  includeDotFolders: false,
   rootDir: process.cwd(),
-} satisfies ProjectOptions
+} satisfies ResolvedProjectOptions
+
+let projectOptions: ResolvedProjectOptions = { ...DEFAULT_PROJECT_OPTIONS }
+
+function resolveProjectOptions(
+  userOptions: ProjectOptions = {},
+): ResolvedProjectOptions {
+  return {
+    tsSyntaxInTemplates:
+      userOptions.tsSyntaxInTemplates ?? projectOptions.tsSyntaxInTemplates,
+    scriptLangs: userOptions.scriptLangs ?? projectOptions.scriptLangs,
+    allowComponentTypeUnsafety:
+      userOptions.allowComponentTypeUnsafety ??
+      projectOptions.allowComponentTypeUnsafety,
+    includeDotFolders:
+      userOptions.includeDotFolders ?? projectOptions.includeDotFolders,
+    rootDir: userOptions.rootDir ?? projectOptions.rootDir,
+  }
+}
+
+function createTransformState(): TransformState {
+  return {
+    globalIgnores: [],
+    userTypeAwareConfigs: [],
+  }
+}
+
+function normalizeConfigInput(
+  config: ConfigInput | ConfigInput[],
+): ConfigInput[] {
+  return Array.isArray(config) ? config : [config]
+}
+
+function isPlainObject(
+  value: unknown,
+): value is Record<string | number | symbol, unknown> {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    return false
+  }
+
+  const prototype = Object.getPrototypeOf(value)
+  return prototype === Object.prototype || prototype === null
+}
+
+function classifyFirstArg(
+  value: unknown,
+): 'options' | 'config' | 'mixed-options-and-config' {
+  if (!isPlainObject(value)) {
+    return 'config'
+  }
+
+  const keys = Object.keys(value)
+  if (keys.length === 0) {
+    return 'config'
+  }
+
+  const optionKeyCount = keys.filter(key => PROJECT_OPTION_KEYS.has(key)).length
+  if (optionKeyCount === 0) {
+    return 'config'
+  }
+  if (optionKeyCount === keys.length) {
+    return 'options'
+  }
+
+  return 'mixed-options-and-config'
+}
+
+function splitOptionsAndConfigInputs(args: unknown[]): {
+  configInputs: AwaitableConfigInput[]
+  userOptions: ProjectOptions
+} {
+  if (args.length === 0) {
+    return {
+      configInputs: [],
+      userOptions: {},
+    }
+  }
+
+  const firstArg = args[0]
+  const firstArgKind = classifyFirstArg(firstArg)
+
+  if (firstArgKind === 'mixed-options-and-config') {
+    throw new TypeError(
+      'The first argument to `withVueTs(...)` cannot mix Vue project options with ESLint config keys. Pass project options as the first argument and move ESLint config fields into a separate config object.',
+    )
+  }
+
+  if (firstArgKind !== 'options') {
+    return {
+      configInputs: args as AwaitableConfigInput[],
+      userOptions: {},
+    }
+  }
+
+  return {
+    configInputs: args.slice(1) as AwaitableConfigInput[],
+    userOptions: firstArg as ProjectOptions,
+  }
+}
+
+function applyVueTsTransform(
+  configs: ConfigInput[],
+  options: ResolvedProjectOptions,
+): ConfigItem[] {
+  const state = createTransformState()
+
+  return pipe(
+    configs,
+    flattenConfigs,
+    rawConfigs => collectGlobalIgnores(rawConfigs, state),
+    deduplicateVuePlugin,
+    rawConfigs => insertAndReorderConfigs(rawConfigs, options, state),
+    resolveVueTsConfigs,
+    tseslint.config, // this might not be necessary, but it doesn't hurt to keep it
+  )
+}
 
 // This function, if called, is guaranteed to be executed before `defineConfigWithVueTs`,
 // so mutating the `projectOptions` object is safe and will be reflected in the final ESLint config.
@@ -99,47 +247,51 @@ export function configureVueProject(userOptions: ProjectOptions): void {
   if (userOptions.rootDir) {
     projectOptions.rootDir = userOptions.rootDir
   }
-  if (userOptions.includeDotFolders) {
+  if (userOptions.includeDotFolders !== undefined) {
     projectOptions.includeDotFolders = userOptions.includeDotFolders
   }
 }
 
-// The *Raw* types are those with placeholders not yet resolved.
-type RawConfigItemWithExtends =
-  | ConfigItemWithExtendsAndVueSupport
-  | TsEslintConfigForVue
-type RawConfigItem = ConfigItem | TsEslintConfigForVue
+export function defineConfigWithVueTs(...configs: ConfigInput[]): ConfigItem[] {
+  return applyVueTsTransform(configs, resolveProjectOptions())
+}
 
-export function defineConfigWithVueTs(
-  ...configs: InfiniteDepthConfigWithExtendsAndVueSupport[]
-): ConfigItem[] {
-  return pipe(
-    configs,
-    flattenConfigs,
-    collectGlobalIgnores,
-    deduplicateVuePlugin,
-    insertAndReorderConfigs,
-    resolveVueTsConfigs,
-    tseslint.config, // this might not be necessary, but it doesn't hurt to keep it
+export function withVueTs(
+  ...configs: AwaitableConfigInput[]
+): Promise<ConfigItem[]>
+export function withVueTs(
+  options: ProjectOptions,
+  ...configs: AwaitableConfigInput[]
+): Promise<ConfigItem[]>
+export async function withVueTs(...args: unknown[]): Promise<ConfigItem[]> {
+  const { configInputs, userOptions } = splitOptionsAndConfigInputs(args)
+  const resolvedConfigs = await Promise.all(configInputs)
+
+  return applyVueTsTransform(
+    resolvedConfigs.flatMap(config => normalizeConfigInput(config)),
+    resolveProjectOptions(userOptions),
   )
 }
 
-function flattenConfigs(
-  configs: InfiniteDepthConfigWithExtendsAndVueSupport[],
-): RawConfigItem[] {
+function flattenConfigs(configs: ConfigInput[]): RawConfigItem[] {
   // Be careful that our TS types don't guarantee that `extends` is removed from the final config
   // Modified from
   // https://github.com/typescript-eslint/typescript-eslint/blob/d30a497ef470b5a06ca0a5dde9543b6e00c87a5f/packages/typescript-eslint/src/config-helper.ts#L98-L143
   // No handling of undefined for now for simplicity
 
-  // @ts-expect-error -- intentionally an infinite type
-  return (configs.flat(Infinity) as RawConfigItemWithExtends[]).flatMap(
-    (c: RawConfigItemWithExtends): RawConfigItem | RawConfigItem[] => {
-      if (c instanceof TsEslintConfigForVue) {
-        return c
+  const flattenedConfigs = (configs as unknown[]).flat(
+    Infinity,
+  ) as ConfigItemWithExtendsAndVueSupport[]
+
+  return flattenedConfigs.flatMap(
+    (
+      config: ConfigItemWithExtendsAndVueSupport,
+    ): RawConfigItem | RawConfigItem[] => {
+      if (isVueTsConfig(config)) {
+        return config
       }
 
-      const { extends: extendsArray, ...restOfConfig } = c
+      const { extends: extendsArray, ...restOfConfig } = config
       if (extendsArray == null || extendsArray.length === 0) {
         return restOfConfig
       }
@@ -153,18 +305,18 @@ function flattenConfigs(
 
       return [
         ...flattenedExtends.map((extension: RawConfigItem) => {
-          if (extension instanceof TsEslintConfigForVue) {
-            return extension.asExtendedWith(restOfConfig)
-          } else {
-            const name = [restOfConfig.name, extension.name]
-              .filter(Boolean)
-              .join('__')
-            return {
-              ...extension,
-              ...(restOfConfig.files && { files: restOfConfig.files }),
-              ...(restOfConfig.ignores && { ignores: restOfConfig.ignores }),
-              ...(name && { name }),
-            }
+          if (isVueTsConfig(extension)) {
+            return extendVueTsConfig(extension, restOfConfig)
+          }
+
+          const name = [restOfConfig.name, extension.name]
+            .filter(Boolean)
+            .join('__')
+          return {
+            ...extension,
+            ...(restOfConfig.files && { files: restOfConfig.files }),
+            ...(restOfConfig.ignores && { ignores: restOfConfig.ignores }),
+            ...(name && { name }),
           }
         }),
 
@@ -178,40 +330,35 @@ function flattenConfigs(
   )
 }
 
-let globalIgnores: string[] = []
-
 /**
  * Fields that are considered metadata and not part of the config object.
  */
 const META_FIELDS = new Set(['name', 'basePath'])
 
-function collectGlobalIgnores(configs: RawConfigItem[]): RawConfigItem[] {
+function collectGlobalIgnores(
+  configs: RawConfigItem[],
+  state: TransformState,
+): RawConfigItem[] {
   configs.forEach(config => {
-    if (config instanceof TsEslintConfigForVue) return
-
-    if (!config.ignores) return
+    if (isVueTsConfig(config) || !config.ignores) {
+      return
+    }
 
     if (Object.keys(config).filter(key => !META_FIELDS.has(key)).length !== 1)
       return
 
     // Configs that only contain `ignores` (and possibly `name`/`basePath`) are treated as global ignores
-    globalIgnores.push(...config.ignores)
+    state.globalIgnores.push(...config.ignores)
   })
 
   return configs
 }
 
 function resolveVueTsConfigs(configs: RawConfigItem[]): ConfigItem[] {
-  return configs.flatMap(config =>
-    config instanceof TsEslintConfigForVue ? config.toConfigArray() : config,
+  return configs.map(config =>
+    isVueTsConfig(config) ? resolveVueTsConfig(config) : config,
   )
 }
-
-type ExtractedConfig = {
-  files?: (string | string[])[]
-  rules: NonNullable<ConfigItem['rules']>
-}
-const userTypeAwareConfigs: ExtractedConfig[] = []
 
 /**
  * This function reorders the config array to make sure it satisfies the following layout:
@@ -233,34 +380,41 @@ const userTypeAwareConfigs: ExtractedConfig[] = []
  *   '@vue/typescript/type-aware-rules-in-conflit-with-vue'
  * ```
  */
-function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
-  const lastExtendedConfigIndex = configs.findLastIndex(
-    config => config instanceof TsEslintConfigForVue,
+function insertAndReorderConfigs(
+  configs: RawConfigItem[],
+  options: ResolvedProjectOptions,
+  state: TransformState,
+): RawConfigItem[] {
+  const lastExtendedConfigIndex = configs.findLastIndex(config =>
+    isVueTsConfig(config),
   )
 
   if (lastExtendedConfigIndex === -1) {
     return configs
   }
 
+  // TODO: Avoid scanning all `.vue` files eagerly here. This should be deferred
+  // until we actually need file-by-file type-checkability information.
   const vueFiles = groupVueFiles(
-    projectOptions.rootDir,
-    globalIgnores,
-    projectOptions.includeDotFolders,
+    options.rootDir,
+    state.globalIgnores,
+    options.includeDotFolders,
   )
-  const configsWithoutTypeAwareRules = configs.map(extractTypeAwareRules)
+  const configsWithoutTypeAwareRules = configs.map(config =>
+    extractTypeAwareRules(config, state),
+  )
 
   const hasTypeAwareConfigs = configs.some(
-    config =>
-      config instanceof TsEslintConfigForVue && config.needsTypeChecking(),
+    config => isVueTsConfig(config) && vueTsConfigNeedsTypeChecking(config),
   )
   const needsTypeAwareLinting =
-    hasTypeAwareConfigs || userTypeAwareConfigs.length > 0
+    hasTypeAwareConfigs || state.userTypeAwareConfigs.length > 0
 
   return [
     ...configsWithoutTypeAwareRules.slice(0, lastExtendedConfigIndex + 1),
     ...createBasicSetupConfigs(
-      projectOptions.tsSyntaxInTemplates,
-      projectOptions.scriptLangs,
+      options.tsSyntaxInTemplates,
+      options.scriptLangs,
     ),
 
     // user-turned-off type-aware rules must come after the last extended config
@@ -268,14 +422,14 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
     // user-turned-on type-aware rules must come before skipping type-checking
     // in case some rules targets those can't be type-checked files
     // So we extract all type-aware rules by users and put them in the middle
-    ...userTypeAwareConfigs,
+    ...state.userTypeAwareConfigs,
 
     ...(needsTypeAwareLinting
       ? [
           ...createSkipTypeCheckingConfigs(vueFiles.nonTypeCheckable),
           ...createTypeCheckingConfigs(
             vueFiles.typeCheckable,
-            projectOptions.allowComponentTypeUnsafety,
+            options.allowComponentTypeUnsafety,
           ),
         ]
       : []),
@@ -284,12 +438,11 @@ function insertAndReorderConfigs(configs: RawConfigItem[]): RawConfigItem[] {
   ]
 }
 
-function extractTypeAwareRules(config: RawConfigItem): RawConfigItem {
-  if (config instanceof TsEslintConfigForVue) {
-    return config
-  }
-
-  if (!config.rules) {
+function extractTypeAwareRules(
+  config: RawConfigItem,
+  state: TransformState,
+): RawConfigItem {
+  if (isVueTsConfig(config) || !config.rules) {
     return config
   }
 
@@ -299,7 +452,7 @@ function extractTypeAwareRules(config: RawConfigItem): RawConfigItem {
   )
 
   if (typeAwareRuleEntries.length > 0) {
-    userTypeAwareConfigs.push({
+    state.userTypeAwareConfigs.push({
       rules: Object.fromEntries(typeAwareRuleEntries),
       ...(config.files && { files: config.files }),
     })
@@ -324,7 +477,7 @@ function doesRuleRequireTypeInformation(ruleName: string): boolean {
 
 function deduplicateVuePlugin(configs: RawConfigItem[]): RawConfigItem[] {
   return configs.map(config => {
-    if (config instanceof TsEslintConfigForVue || !config.plugins?.vue) {
+    if (isVueTsConfig(config) || !config.plugins?.vue) {
       return config
     }
 
