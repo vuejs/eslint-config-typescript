@@ -15,5 +15,5 @@ export default withVueTs(
   globalIgnores(['**/dist/**', '**/coverage/**']),
 
   pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommendedTypeChecked,
+  vueTsConfigs.recommended,
 )

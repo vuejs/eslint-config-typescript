@@ -105,7 +105,7 @@ describe('withVueTs', () => {
     const { failed, stdout } = await runLintAgainst('with-vue-ts-api')
     expect(failed).toBe(false)
     expect(stdout).toMatch(WHITESPACE_ONLY)
-  }, 15000)
+  })
 
   test('still accepts the config-only form', async () => {
     const config = await withVueTs(vueTsConfigs.recommended)
@@ -115,7 +115,29 @@ describe('withVueTs', () => {
     )
   })
 
-  test('applies TypeScript rules to .vue files through defineConfig extends', async () => {
+  test('adds project service configs for type-checked presets', async () => {
+    const config = await withVueTs(
+      {
+        rootDir: path.join(__dirname, './fixtures/with-vue-ts-api'),
+      },
+      vueTsConfigs.recommendedTypeChecked,
+    )
+
+    expect(
+      config.some(
+        item =>
+          item.name === '@vue/typescript/default-project-service-for-ts-files',
+      ),
+    ).toBe(true)
+    expect(
+      config.some(
+        item =>
+          item.name === '@vue/typescript/default-project-service-for-vue-files',
+      ),
+    ).toBe(true)
+  })
+
+  test('applies TypeScript rules to .vue files', async () => {
     const appVuePath = path.join(
       __dirname,
       './fixtures/with-vue-ts-api/src/App.vue',
@@ -132,7 +154,7 @@ describe('withVueTs', () => {
     expect(failed).toBe(true)
     expect(output).toContain('App.vue')
     expect(output).toContain('@typescript-eslint/ban-ts-comment')
-  }, 15000)
+  })
 
   test('rejects mixed first-argument option/config objects', async () => {
     const ambiguousFirstArg = {
