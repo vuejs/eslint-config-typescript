@@ -17,6 +17,9 @@
       "default": "./dist/index.mjs"
     }
   },
+  "bin": {
+    "vue-eslint-config-typescript": "./dist/bin.js"
+  },
   "scripts": {
     "dev": "pkgroll --watch",
     "build": "pkgroll",
