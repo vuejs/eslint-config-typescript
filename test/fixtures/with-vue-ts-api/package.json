@@ -7,12 +7,12 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.35"
+    "vue": "^3.5.39"
   },
   "devDependencies": {
     "@vue/eslint-config-typescript": "workspace:*",
-    "eslint": "^10.4.0",
-    "eslint-plugin-vue": "~10.9.1",
+    "eslint": "^10.6.0",
+    "eslint-plugin-vue": "~10.9.2",
     "typescript": "~6.0.0"
   }
 }
