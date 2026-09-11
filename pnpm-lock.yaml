@@ -11,9 +11,9 @@ importers:
       '@typescript-eslint/utils':
         specifier: ^8.60.0
         version: 8.62.0(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3)
-      fast-glob:
-        specifier: ^3.3.3
-        version: 3.3.3
+      tinyglobby:
+        specifier: ^0.2.17
+        version: 0.2.17
       typescript-eslint:
         specifier: ^8.60.0
         version: 8.62.0(eslint@10.5.0(jiti@2.7.0))(typescript@6.0.3)

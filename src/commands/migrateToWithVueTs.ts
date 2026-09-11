@@ -3,7 +3,7 @@ import path from 'node:path'
 import process from 'node:process'
 import { createInterface } from 'node:readline/promises'
 
-import fg from 'fast-glob'
+import { globSync } from 'tinyglobby'
 
 import {
   analyzeToWithVueTsMigrationText,
@@ -84,12 +84,12 @@ async function resolveTargetFiles(patterns: string[]): Promise<string[]> {
     globPatterns.push(pattern)
   }
 
-  const entries = await fg(globPatterns, {
+  const entries = globSync(globPatterns, {
     cwd: process.cwd(),
     absolute: true,
-    onlyFiles: true,
-    unique: true,
     ignore: DEFAULT_IGNORE,
+    // Keep `fast-glob`'s pattern semantics, as recommended by tinyglobby.
+    expandDirectories: false,
   })
 
   return [...new Set([...explicitFiles, ...entries])].sort()
