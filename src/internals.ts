@@ -10,7 +10,7 @@ type ConfigArray = ReturnType<typeof tseslint.config>
 // https://typescript-eslint.io/troubleshooting/typed-linting/performance#changes-to-extrafileextensions-with-projectservice
 const extraFileExtensions = ['.vue']
 
-// Note that ESLint uses minimatch while we use fast-glob (which uses micromatch underlyingly). They differ on how to handle backslashes.
+// Note that ESLint uses minimatch while we use tinyglobby (which uses picomatch underlyingly). They differ on how to handle backslashes.
 // <https://github.com/micromatch/micromatch#backslashes>
 // Here we use `[]` to escape the special characters in the glob pattern.
 // This should work with any glob implementation.

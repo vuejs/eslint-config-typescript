@@ -1,9 +1,16 @@
 import fs from 'node:fs'
-import fg from 'fast-glob'
+import { globSync } from 'tinyglobby'
 import path from 'node:path'
 import { debuglog } from 'node:util'
 
 const debug = debuglog('@vue/eslint-config-typescript:groupVueFiles')
+
+// `path.resolve` yields backslashes on Windows, which globbers read as escapes.
+// Note that we deliberately don't use tinyglobby's `convertPathToPattern` here:
+// it also escapes `*`, which would neutralize the very patterns we resolve.
+function resolvePattern(pattern: string, cwd: string) {
+  return path.resolve(cwd, pattern).replace(/\\/g, '/')
+}
 
 type VueFilesByGroup = {
   typeCheckable: string[]
@@ -25,32 +32,30 @@ export default function groupVueFiles(
     // which is usually the cwd, but could be different if `--config` is provided via CLI.
     // This is way too complicated, so we only use process.cwd() as a best-effort guess here.
     // Could be improved in the future if needed.
-    ...globalIgnores.map(pattern =>
-      fg.convertPathToPattern(path.resolve(process.cwd(), pattern)),
-    ),
+    ...globalIgnores.map(pattern => resolvePattern(pattern, process.cwd())),
   ]
   debug(`Ignoring patterns: ${ignore.join(', ')}`)
 
-  const { vueFilesWithScriptTs, otherVueFiles } = fg
-    .sync(['**/*.vue'], {
-      cwd: rootDir,
-      ignore,
-      dot: includeDotFolders,
-    })
-    .reduce(
-      (acc, file) => {
-        const absolutePath = path.resolve(rootDir, file)
-        const contents = fs.readFileSync(absolutePath, 'utf8')
-        // contents matches the <script lang="ts"> (there can be anything but `>` between `script` and `lang`)
-        if (/<script[^>]*\blang\s*=\s*"ts"[^>]*>/i.test(contents)) {
-          acc.vueFilesWithScriptTs.push(file)
-        } else {
-          acc.otherVueFiles.push(file)
-        }
-        return acc
-      },
-      { vueFilesWithScriptTs: [] as string[], otherVueFiles: [] as string[] },
-    )
+  const { vueFilesWithScriptTs, otherVueFiles } = globSync(['**/*.vue'], {
+    cwd: rootDir,
+    ignore,
+    dot: includeDotFolders,
+    // Keep `fast-glob`'s pattern semantics, as recommended by tinyglobby.
+    expandDirectories: false,
+  }).reduce(
+    (acc, file) => {
+      const absolutePath = path.resolve(rootDir, file)
+      const contents = fs.readFileSync(absolutePath, 'utf8')
+      // contents matches the <script lang="ts"> (there can be anything but `>` between `script` and `lang`)
+      if (/<script[^>]*\blang\s*=\s*"ts"[^>]*>/i.test(contents)) {
+        acc.vueFilesWithScriptTs.push(file)
+      } else {
+        acc.otherVueFiles.push(file)
+      }
+      return acc
+    },
+    { vueFilesWithScriptTs: [] as string[], otherVueFiles: [] as string[] },
+  )
 
   return {
     // Only `.vue` files with `<script lang="ts">` or `<script setup lang="ts">` can be type-checked.
