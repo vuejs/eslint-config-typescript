@@ -40,7 +40,17 @@ export default function groupVueFiles(
     .reduce(
       (acc, file) => {
         const absolutePath = path.resolve(rootDir, file)
-        const contents = fs.readFileSync(absolutePath, 'utf8')
+        let contents: string
+        try {
+          contents = fs.readFileSync(absolutePath, 'utf8')
+        } catch (error) {
+          // The file may be removed between globbing and reading,
+          // e.g. when a branch is checked out while a long-lived ESLint process loads the config.
+          if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+            return acc
+          }
+          throw error
+        }
         // contents matches the <script lang="ts"> (there can be anything but `>` between `script` and `lang`)
         if (/<script[^>]*\blang\s*=\s*"ts"[^>]*>/i.test(contents)) {
           acc.vueFilesWithScriptTs.push(file)
